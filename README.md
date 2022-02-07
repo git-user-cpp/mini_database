@@ -2,7 +2,8 @@
 
 This database is implemented in the C++ programming language. It was developed in order to complete the task of the course work.
 
-## LICENSE
+## ⚠️ LICENSE ⚠️
+
 MIT License
 
 Copyright (c) 2022 m!haly4
@@ -25,5 +26,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## How to use 💻
+## How to use this database 💻
 
