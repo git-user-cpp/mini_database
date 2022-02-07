@@ -1,5 +1,8 @@
-# mini_database
+## mini_database
 
+This database is implemented in the C++ programming language. It was developed in order to complete the task of the course work.
+
+## LICENSE
 MIT License
 
 Copyright (c) 2022 m!haly4
