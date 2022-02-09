@@ -32,26 +32,59 @@ void Menu()
 
     std::cout << "Select an option:" << std::endl;
 
-    std::cout << "(0) Exit the program" << std::endl
-     << "(1) Output of employee data" << std::endl
-     << "(2) Output of crew data" << std::endl
-     << "(3) Output of medical examination data of locomotive drivers" << std::endl
-     << "(4) Output of station locomotives" << std::endl
-     << "(5) Output of inspection data of locomotives of the station" << std::endl
-     << "(6) Output of station trains" << std::endl
-     << "(7) Output of canceled flights" << std::endl
-     << "(8) Output of data of detained flights" << std::endl
-     << "(9) Output of data on ticket sales" << std::endl
-     << "(10) Output of route category data" << std::endl
-     << "(11) Output of passenger data" << std::endl
-     << "(12) Output of data of unredeemed tickets" << std::endl
-     << "(13) Output of data on returned tickets" << std::endl
-     << "(14) Display information about the creator of the program" << std::endl
-     << "Your choise: ";
+    std::cout   << "(0) Exit the program" << std::endl
+                << "(1) Output of employee data" << std::endl
+                << "(2) Output of crew data" << std::endl
+                << "(3) Output of medical examination data of locomotive drivers" << std::endl
+                << "(4) Output of station locomotives" << std::endl
+                << "(5) Output of inspection data of locomotives of the station" << std::endl
+                << "(6) Output of station trains" << std::endl
+                << "(7) Output of canceled flights" << std::endl
+                << "(8) Output of data of detained flights" << std::endl
+                << "(9) Output of data on ticket sales" << std::endl
+                << "(10) Output of route category data" << std::endl
+                << "(11) Output of passenger data" << std::endl
+                << "(12) Output of data of unredeemed tickets" << std::endl
+                << "(13) Output of data on returned tickets" << std::endl
+                << "(14) Display information about the creator of the program" << std::endl
+                << "Your choise: ";
 
     std::cin >> choise;
 
     std::cout << "---------------------------------------------\n";
+}
+
+//second menu for displaying department information
+void worker_second_menu(std::string sort_by)
+{
+    std::cout   << "(1) Show administrative department " << sort_by << std::endl
+                << "(2) Show driver department " << sort_by << std::endl
+                << "(3) Show dispatch department " << sort_by << std::endl
+                << "(4) Show the department of rolling stock repairmen " << sort_by << std::endl
+                << "(5) Show the department of road repairmen " << sort_by << std::endl
+                << "(6) Show checkout department " << sort_by << std::endl
+                << "(7) Show warehouse department " << sort_by << std::endl
+                << "(8) Show help desk department " << sort_by << std::endl
+                << "(9) Show accounting department " << sort_by << std::endl
+                << "\nYour choise: ";
+}
+
+//second menu for displaying brigades information
+void brig_second_menu(std::string sort_by)
+{
+    std::cout   << "(1) Display drivers brigades\n"
+                << "(2) Display dispatchers brigades\n"
+                << "(3) Show repair brigades\n"
+                << "(4) Show brigades of road repairmen\n"
+                << "\nYour choise: ";
+}
+
+//menu for displaying information sorted by sex
+void men_or_women_menu()
+{
+    std::cout   << "(1) Display men\n"
+                << "(2) Display weman\n"
+                << "\nYour choise: ";
 }
 
 int main()
@@ -63,9 +96,11 @@ int main()
             handed_over_tickets, Creator_of_the_program};
 
     int second_choise;
+    int third_choise;
 
     //delimiters for better look in the terminal
-    std::string single_delimeter = "______________________________________________________________\n";
+    std::string single_delimiter = "\n______________________________________________________________\n";
+    std::string double_delimiter = "\n==============================================================\n";
 
     //the main cycle of the program
     Menu();
@@ -81,31 +116,129 @@ int main()
                         workers_by_sex, workers_by_age, workers_by_child,
                         workers_by_num_child, workers_by_salary, directors};
 
-                std::cout << "Select the required data: " << std::endl;
-                    std::cout << "(0) Return to the menu" << std::endl;
-                    std::cout << "(1) Display data of all employees\n";
-                    std::cout << "(2) Display workers' data sorted by departments\n";
-                    std::cout << "(3) Display workers' data sorted by experience\n";
-                    std::cout << "(4) Display workers' data sorted by sex\n";
-                    std::cout << "(5) Display workers' data sorted by age\n";
-                    std::cout << "(6) Display workers' data sorted by the presence of children\n";
-                    std::cout << "(7) Display workers' data sorted by number of children\n";
-                    std::cout << "(8) Display workers' data sorted by salary\n";
-                    std::cout << "(9) Display directors data\n\n";
-                    std::cout << "Your choise: ";
+                std::cout   << "Select the required data: \n"
+                            << "(0) Return to the menu\n"
+                            << "(1) Display data of all employees\n"
+                            << "(2) Display workers' data sorted by departments\n"
+                            << "(3) Display workers' data sorted by experience\n"
+                            << "(4) Display workers' data sorted by sex\n"
+                            << "(5) Display workers' data sorted by age\n"
+                            << "(6) Display workers' data sorted by the presence of children\n"
+                            << "(7) Display workers' data sorted by number of children\n"
+                            << "(8) Display workers' data sorted by salary\n"
+                            << "(9) Display directors data\n\n"
+                            << "Your choise: ";
 
                 std::cin >> second_choise;
-                std::cout << single_delimeter;
+                std::cout << single_delimiter;
 
                 if(second_choise == menu)
                 {
                     Menu();
                 }
-
+                else if(second_choise == all_employers)
+                {
+                    worker_second_menu("");
+                    //show all directors and employees here (not sorted)
+                }
+                else if(second_choise == workers_by_dep)
+                {
+                    worker_second_menu("sorted by department");
+                    //show all information about workers (sort by department)
+                }
+                else if(second_choise == workers_by_exp)
+                {
+                    worker_second_menu("sorted by experience");
+                    //show all information about workers (sort by experience)
+                }
+                else if(second_choise == workers_by_sex)
+                {
+                    worker_second_menu("sorted by sex");
+                    //show all information about workers (sort by sex)
+                }
+                else if(second_choise == workers_by_age)
+                {
+                    worker_second_menu("sorted by age");
+                    //show all information about workers (sort by age)
+                }
+                else if(second_choise == workers_by_child)
+                {
+                    worker_second_menu("sorted by the presence of children");
+                    //show all information about workers (sort by presence of children)
+                }
+                else if(second_choise == workers_by_num_child)
+                {
+                    worker_second_menu("sorted by number of children");
+                    //show all information about workers (sort by number of children)
+                }
+                else if(second_choise == workers_by_salary)
+                {
+                    worker_second_menu("sorted by salary");
+                    //show all information about workers (sort by salary)
+                }
+                else if(second_choise == directors)
+                {
+                    //show all information about all directors
+                }
+                else
+                {
+                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    Menu();
+                }
             break;
 
             case brigades:
-                //data about brigades
+                //enum type to use the menu (for code readability)
+                enum {menu, all_brig, brig_by_dep, brig_by_loc,
+                        brig_by_age, brig_by_sum_salary,
+                        brig_by_avar_salary};
+
+                std::cout << "Select the required data: \n"
+                << "(1) Return to the menu\n"
+                << "(2) Display brigade from all departments\n"
+                << "(3) Display brigade in chosen department\n"
+                << "(4) Display the locomotives' brigade\n"
+                << "(5) Display brigade (sorted by age)\n"
+                << "(6) Display brigade (sorted by summary salary)\n"
+                << "(7) Display brigade (sorted by avarage salary)\n"
+                << "Your choise: ";
+                
+                std::cin >> second_choise;
+                std::cout << single_delimiter;
+
+                if(second_choise == menu)
+                {
+                    Menu();
+                }
+                else if(second_choise == all_brig)
+                {
+                    //show information about all brigades
+                }
+                else if(second_choise == brig_by_dep)
+                {
+                    //show information about brigades (sort by department)
+                }
+                else if(second_choise == brig_by_loc)
+                {
+                    //show information about brigades (sort by locomotives)
+                }
+                else if(second_choise == brig_by_age)
+                {
+                    //show information about brigades (sort by age)
+                }
+                else if(second_choise == brig_by_sum_salary)
+                {
+                    //show information about brigades (sort by summary salary)
+                }
+                else if(second_choise == brig_by_avar_salary)
+                {
+                    //show information about brigades (sort by avarage salary)
+                }
+                else
+                {
+                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    Menu();
+                }
             break;
 
             case medical_examination:
