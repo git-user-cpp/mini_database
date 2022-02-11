@@ -28,8 +28,6 @@ SOFTWARE.
     int choise;
 void Menu()
 {
-    std::cout << "---------------------------------------------\n";
-
     std::cout << "Select an option:" << std::endl;
 
     std::cout   << "(0) Exit the program" << std::endl
@@ -57,33 +55,33 @@ void Menu()
 //second menu for displaying department information
 void worker_second_menu(std::string sort_by)
 {
-    std::cout   << "(1) Show administrative department " << sort_by << std::endl
-                << "(2) Show driver department " << sort_by << std::endl
-                << "(3) Show dispatch department " << sort_by << std::endl
-                << "(4) Show the department of rolling stock repairmen " << sort_by << std::endl
-                << "(5) Show the department of road repairmen " << sort_by << std::endl
-                << "(6) Show checkout department " << sort_by << std::endl
-                << "(7) Show warehouse department " << sort_by << std::endl
-                << "(8) Show help desk department " << sort_by << std::endl
-                << "(9) Show accounting department " << sort_by << std::endl
+    std::cout   << "(0) Show administrative department " << sort_by << std::endl
+                << "(1) Show driver department " << sort_by << std::endl
+                << "(2) Show dispatch department " << sort_by << std::endl
+                << "(3) Show the department of rolling stock repairmen " << sort_by << std::endl
+                << "(4) Show the department of road repairmen " << sort_by << std::endl
+                << "(5) Show checkout department " << sort_by << std::endl
+                << "(6) Show warehouse department " << sort_by << std::endl
+                << "(7) Show help desk department " << sort_by << std::endl
+                << "(8) Show accounting department " << sort_by << std::endl
                 << "\nYour choise: ";
 }
 
 //second menu for displaying brigades information
 void brig_second_menu(std::string sort_by)
 {
-    std::cout   << "(1) Display drivers brigades\n"
-                << "(2) Display dispatchers brigades\n"
-                << "(3) Show repair brigades\n"
-                << "(4) Show brigades of road repairmen\n"
+    std::cout   << "(0) Display drivers brigades\n"
+                << "(1) Display dispatchers brigades\n"
+                << "(2) Show repair brigades\n"
+                << "(3) Show brigades of road repairmen\n"
                 << "\nYour choise: ";
 }
 
 //menu for displaying information sorted by sex
 void men_or_women_menu()
 {
-    std::cout   << "(1) Display men\n"
-                << "(2) Display weman\n"
+    std::cout   << "(0) Display men\n"
+                << "(1) Display women\n"
                 << "\nYour choise: ";
 }
 
@@ -189,24 +187,24 @@ int main()
 
             case brigades:
                 //enum type to use the menu (for code readability)
-                enum {menu, all_brig, brig_by_dep, brig_by_loc,
+                enum {menu_b, all_brig, brig_by_dep, brig_by_loc,
                         brig_by_age, brig_by_sum_salary,
                         brig_by_avar_salary};
 
-                std::cout << "Select the required data: \n"
-                << "(1) Return to the menu\n"
-                << "(2) Display brigade from all departments\n"
-                << "(3) Display brigade in chosen department\n"
-                << "(4) Display the locomotives' brigade\n"
-                << "(5) Display brigade (sorted by age)\n"
-                << "(6) Display brigade (sorted by summary salary)\n"
-                << "(7) Display brigade (sorted by avarage salary)\n"
-                << "Your choise: ";
+                std::cout   << "Select the required data: \n"
+                            << "(0) Return to the menu\n"
+                            << "(1) Display brigade from all departments\n"
+                            << "(2) Display brigade in chosen department\n"
+                            << "(3) Display the locomotives' brigade\n"
+                            << "(4) Display brigade (sorted by age)\n"
+                            << "(5) Display brigade (sorted by summary salary)\n"
+                            << "(6) Display brigade (sorted by avarage salary)\n"
+                            << "Your choise: ";
                 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
 
-                if(second_choise == menu)
+                if(second_choise == menu_b)
                 {
                     Menu();
                 }
@@ -242,23 +240,198 @@ int main()
             break;
 
             case medical_examination:
-                //data about medical_examination
+                //enum type to use the menu (for code readability)
+                enum {menu_c, mexam_sex, mexam_age, mexam_salary};
+
+                std::cout   << "Select the required data: \n"
+                            << "(0) Return to the menu\n"
+                            << "(1) Show data about driver's medical examination (sorted by sex)\n"
+                            << "(2) Show data about driver's medical examination (sorted by age)\n"
+                            << "(3) Show data about driver's medical examination (sorted by salary)\n"
+                            << "Your choise: ";
+
+                std::cin >> second_choise;
+                std::cout << single_delimiter;
+
+                if(second_choise == menu_c)
+                {
+                    Menu();
+                }
+                else if(second_choise == mexam_sex)
+                {
+                    //show information about driver's medical examination (sorted by sex)
+                }
+                else if(second_choise == mexam_age)
+                {
+                    //show information about driver's medical examination (sorted by age)
+                }
+                else if(second_choise == mexam_salary)
+                {
+                    //show information about driver's medical examination (sorted by salary)
+                }
+                else
+                {
+                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    Menu();
+                }
             break;
 
             case locomotives:
-                //data about locomotives
+                //enum type to use the menu (for code readability)
+                enum{menu_d, loc_stay, loc_comeback, loc_count_trips};
+
+                std::cout   << "Select the required data: \n"
+                            << "(0) Return to the menu\n"
+                            << "(1) Show data about the locomotive's stay at the station\n"
+                            << "(2) Show locomotive come back time data\n"
+                            << "(3) Show data on the number of trips of the locomotive\n"
+                            << "Your choise: ";
+
+                std::cin >> second_choise;;
+                std::cout << single_delimiter;
+
+                if(second_choise == menu_d)
+                {
+                    Menu();
+                }
+                else if(second_choise == loc_stay)
+                {
+                    //show information about the locomotive's stay at the station
+                }
+                else if(second_choise == loc_comeback)
+                {
+                    //show information about locomotive come back time data
+                }
+                else if(second_choise == loc_count_trips)
+                {
+                    //show information about the number of trips of the locomotive
+                }
+                else
+                {
+                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    Menu();
+                }
             break;
 
             case locomotive_inspection:
-                //data about locomotive_inspection
+                //enum type to use the menu (for code readability)
+                enum{menu_e, insp_by_time, insp_by_repair, insp_by_rep_count, insp_by_flights, insp_by_age};
+
+                std::cout   << "Select the required data: \n"
+                            << "(0) Return to the menu\n"
+                            << "(1) Show locomotive inspection data (sorted by time period)\n"
+                            << "(2) Show locomotive inspection data (sorted by repair time)\n"
+                            << "(3) Show data on the number of repairs of the locomotive\n"
+                            << "(4) Show locomotive inspection data (sorted by flights before overhaul)\n"
+                            << "(5) Show locomotive inspection data (sorted by age)\n"
+                            << "Your choise: ";
+
+                std::cin >> second_choise;
+                std::cout << single_delimiter;
+
+                if(second_choise == menu_e)
+                {
+                    Menu();
+                }
+                else if(second_choise == insp_by_time)
+                {
+                    //show information about locomotive inspection data (sorted by time period)
+                }
+                else if(second_choise == insp_by_repair)
+                {
+                    //show information about locomotive inspection data (sorted by repair time)
+                }
+                else if(second_choise == insp_by_rep_count)
+                {
+                    //show information about the number of repairs of the locomotive
+                }
+                else if(second_choise == insp_by_flights)
+                {
+                    //show information about locomotive inspection data (sorted by flights before overhaul)
+                }
+                else if(second_choise == insp_by_age)
+                {
+                    //show information about locomotive inspection data (sorted by age)
+                }
+                else
+                {
+                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    Menu();
+                }
             break;
 
             case trains:
-                //data about trains
+                //enum type to use the menu (for code readability)
+                enum{menu_f, train_flight, train_f_duration, train_price, train_category};
+
+                std::cout   << "Select the required data: \n"
+                            << "(0) Return to the menu\n"
+                            << "(1) Show data about train (sorted by selected flight)\n"
+                            << "(2) Show data about train (sorted by flight duration)\n"
+                            << "(3) Show data about train (sorted by ticket price)\n"
+                            << "(4) Show data about train (sorted by all categories)\n"
+                            << "Your choise: ";
+
+                std::cin >> second_choise;
+                std::cout << single_delimiter;
+
+                if(second_choise == menu_f)
+                {
+                    Menu();
+                }
+                else if(second_choise == train_flight)
+                {
+                    //show information about train (sorted by selected flight)
+                }
+                else if(second_choise == train_f_duration)
+                {
+                    //show information about train (sorted by flight duration)
+                }
+                else if(second_choise == train_price)
+                {
+                    //show information about train (sorted by ticket price)
+                }
+                else if(second_choise == train_category)
+                {
+                    //show information about train (sorted by all categories)
+                }
+                else
+                {
+                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    Menu();
+                }
             break;
 
             case cancelled_flights:
-                //data about cancelled_flights
+                //enum type to use the menu (for code readability)
+                enum{menu_g, can_directions, can_routes};
+
+                std::cout   << "Select the required data: \n"
+                            << "(0) Return to the menu\n"
+                            << "(1) Show data about canceled flights in a given direction\n"
+                            << "(2) Show canceled flights on the specified route\n"
+                            << "Your choise: ";
+                
+                std::cin >> second_choise;
+                std::cout << single_delimiter;
+
+                if(second_choise == menu_g)
+                {
+                    Menu();
+                }
+                else if(second_choise == can_directions)
+                {
+                    //show information about canceled flights in a given direction
+                }
+                else if(second_choise == can_routes)
+                {
+                    //show information about canceled flights on the specified route
+                }
+                else
+                {
+                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    Menu();
+                }
             break;
 
             case delayed_flights:
