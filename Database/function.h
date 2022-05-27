@@ -31,3 +31,5 @@ SOFTWARE.
                                             clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 void outputAdmin(std::vector<Administration> &vec);
+void outputDriver(std::vector<Rolling_stock_driver> &vec);
+void outputWorker(std::vector<Worker> &vec);

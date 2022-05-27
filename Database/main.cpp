@@ -24,9 +24,8 @@ SOFTWARE.
 
 #include "data.h"
 #include "workers.h"
-// #include "function.h"
 
- //Main menu and global variable for it
+//Main menu and global variable for it
     int choise;
 void Menu()
 {
@@ -57,33 +56,33 @@ void Menu()
 //second menu for displaying department information
 void worker_second_menu(std::string sort_by)
 {
-    std::cout   << "(0) Show administrative department " << sort_by << std::endl
-                << "(1) Show drivers department " << sort_by << std::endl
-                << "(2) Show dispatch department " << sort_by << std::endl
-                << "(3) Show the department of rolling stock repair " << sort_by << std::endl
-                << "(4) Show the department of road repair " << sort_by << std::endl
-                << "(5) Show cash department " << sort_by << std::endl
-                << "(6) Show warehouse department " << sort_by << std::endl
-                << "(7) Show help desk department " << sort_by << std::endl
-                << "(8) Show accounting department " << sort_by << std::endl
+    std::cout   << "(1) Show administrative department " << sort_by << std::endl
+                << "(2) Show drivers department " << sort_by << std::endl
+                << "(3) Show dispatch department " << sort_by << std::endl
+                << "(4) Show the department of rolling stock repair " << sort_by << std::endl
+                << "(5) Show the department of road repair " << sort_by << std::endl
+                << "(6) Show cash department " << sort_by << std::endl
+                << "(7) Show warehouse department " << sort_by << std::endl
+                << "(8) Show help desk department " << sort_by << std::endl
+                << "(9) Show accounting department " << sort_by << std::endl
                 << "\nYour choise: ";
 }
 
 //second menu for displaying brigades information
 void brig_second_menu(std::string sort_by)
 {
-    std::cout   << "(0) Display drivers brigades " << sort_by << std::endl
-                << "(1) Display dispatchers brigades " << sort_by << std::endl
-                << "(2) Show repair brigades " << sort_by << std::endl
-                << "(3) Show brigades of road repairmen " << sort_by << std::endl
+    std::cout   << "(1) Display drivers brigades " << sort_by << std::endl
+                << "(2) Display dispatchers brigades " << sort_by << std::endl
+                << "(3) Show repair brigades " << sort_by << std::endl
+                << "(4) Show brigades of road repairmen " << sort_by << std::endl
                 << "\nYour choise: ";
 }
 
 //menu for displaying information sorted by sex
 void men_or_women_menu()
 {
-    std::cout   << "(0) Display men\n"
-                << "(1) Display women\n"
+    std::cout   << "(1) Display men\n"
+                << "(2) Display women\n"
                 << "\nYour choise: ";
 }
 
@@ -98,13 +97,16 @@ int main()
     int second_choise;
     int third_choise;
 
+    //Error message
+    std::string errorM = "ERROR: Choose the correct option";
+
     //delimiters for better look in the terminal
     std::string single_delimiter = "\n______________________________________________________________\n";
     std::string double_delimiter = "\n==============================================================\n";
 
     //the main cycle of the program
     Menu();
-    while(choise != exit_the_prog)
+    while(choise != exit_the_prog && choise <= Creator_of_the_program)
     {
         switch (choise)
         {
@@ -139,19 +141,92 @@ int main()
                 }
                 else if(second_choise == all_employers)
                 {
-                    worker_second_menu("");
-                    std::cin >> third_choise;
-                    if(third_choise == 0)
-                    {
-                        outputAdmin(adminList);
-                    }
+                    //outputting all employers
+                    std::cout   << double_delimiter
+                                << "ADMINISTRATION DEPARTMENT" << std::endl;
+                    outputAdmin(adminList);
+
+                    std::cout   << double_delimiter
+                                << "DRIVER DEPARTMENT" << std::endl;
+                    outputDriver(driverList);
+
+                    std::cout   << double_delimiter
+                                << "DISPATCH DEPARTMENT" << std::endl;
+                    outputWorker(dispatcherList);
+
+                    std::cout   << double_delimiter
+                                << "ROLLING STOCK REPAIR DEPARTMENT" << std::endl;
+                    outputWorker(rollStRepairmanList);
+
+                    std::cout   << double_delimiter
+                                << "ROAD REPAIR DEPARTMENT" << std::endl;
+                    outputWorker(roadRepairmanList);
+
+                    std::cout   << double_delimiter
+                                << "CASH DEPARTMENT" << std::endl;
+                    outputWorker(cashierList);
+
+                    std::cout   << double_delimiter
+                                << "WAREHOUSE DEPARTMENT" << std::endl;
+                    outputWorker(warehousemanList);
+
+                    std::cout   << double_delimiter
+                                << "HELP DESK DEPARTMENT" << std::endl;
+                    outputWorker(helperList);
+
+                    std::cout   << double_delimiter
+                                << "ACCOUNTING DEPARTMENT" << std::endl;
+                    outputWorker(accounterList);
+
                     Menu();
                     break;
                 }
                 else if(second_choise == workers_by_dep)
                 {
                     worker_second_menu("sorted by department");
-                    //show all information about workers (sort by department)
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        outputAdmin(adminList);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        outputDriver(driverList);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        outputWorker(dispatcherList);
+                    }
+                    else if(third_choise == 4)
+                    {
+                        outputWorker(rollStRepairmanList);
+                    }
+                    else if(third_choise == 5)
+                    {
+                        outputWorker(roadRepairmanList);
+                    }
+                    else if(third_choise == 6)
+                    {
+                        outputWorker(cashierList);
+                    }
+                    else if(third_choise == 7)
+                    {
+                        outputWorker(warehousemanList);
+                    }
+                    else if(third_choise == 8)
+                    {
+                        outputWorker(helperList);
+                    }
+                    else if(third_choise == 9)
+                    {
+                        outputWorker(accounterList);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
                     Menu();
                     break;
                 }
@@ -205,7 +280,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -263,7 +338,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -304,7 +379,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -345,7 +420,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -396,7 +471,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -442,7 +517,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -478,7 +553,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -519,7 +594,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -566,7 +641,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -602,7 +677,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -659,7 +734,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -700,7 +775,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -741,7 +816,7 @@ int main()
                 }
                 else
                 {
-                    std::cout << "ERROR: Choose the correct option" << std::endl;
+                    std::cout << errorM << std::endl;
                     Menu();
                     break;
                 }
@@ -769,10 +844,12 @@ int main()
             break;
             
             default:
-                std::cout << "ERROR: Choose the correct option" << std::endl;
+                std::cout << errorM << std::endl;
             break;
         }
     }
+
+    std::cout << "The program is stopped" << std::endl;
 
     return 0;
 }

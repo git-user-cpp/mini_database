@@ -25,8 +25,7 @@ SOFTWARE.
 #pragma once
 #include "data.h"
 
-// std::vector<Administration> adminList;
-
+//Administration staff
 std::vector<Administration> adminList
 {
     Administration("Randy", "Garden", 25, "man", 0, false, 150000.0, 2, "Administration", "Director of the Administration Department"),
@@ -38,4 +37,84 @@ std::vector<Administration> adminList
     Administration("Oleksii", "Digger", 45, "man", 0, false, 144000.0, 6, "Administration", "Director of the Warehouse Department"),
     Administration("Lida", "Smart", 30, "woman", 1, true, 150000.0, 10, "Administration", "Director of the Help Desk Department"),
     Administration("Wordlana", "Tou", 45, "woman", 2, true, 149000.0, 20, "Administration", "Director of the Accounting Department")
+};
+
+//Staff of rolling stock drivers
+std::vector<Rolling_stock_driver> driverList
+{
+    Rolling_stock_driver("Peter", "Griphin", 45, "man", 3, true, 120000, 20, "Drivers Department", 2022),
+    Rolling_stock_driver("Rongshin", "Friend", 29, "man", 0, false, 115000, 5, "Drivers Department", 2022),
+    Rolling_stock_driver("John", "Cena", 45, "man", 2, true, 122000, 21, "Drivers Department", 2021),
+    Rolling_stock_driver("Lana", "Loop", 32, "woman", 0, false, 125000, 8, "Drivers Department", 2022),
+    Rolling_stock_driver("Rohn", "Unicorn", 22, "man", 0, false, 120000, 1, "Drivers Department", 2021),
+    Rolling_stock_driver("Dr", "Noper", 60, "man", 0, false, 135000, 45, "Drivers Department", 2022),
+    Rolling_stock_driver("Pavlo", "Syla", 27, "man", 0, false, 129000, 2, "Drivers Department", 2022),
+    Rolling_stock_driver("Yrii", "Shkvarok", 20, "man", 0, false, 100000, 1, "Drivers Department", 2021)
+};
+
+//Dispatcher staff
+std::vector<Worker> dispatcherList
+{
+    Worker("Alex", "Simple", 20, "man", 3, true, 110000, 2, "Dispatch Department"),
+    Worker("Mary", "Strange", 25, "woman", 5, true, 110000, 7, "Dispatch Department"),
+    Worker("G", "Man", 50, "man", 0, false, 110000, 4, "Dispatch Department"),
+    Worker("Ellie", "Sallinger", 52, "woman", 3, true, 110000, 30, "Dispatch Department")
+};
+
+//Rolling stock repair staff
+std::vector<Worker> rollStRepairmanList
+{
+    Worker("Leonid", "Dendrovskyi", 65, "man", 6, true, 105000, 45, "Rolling Stock Repair Department"),
+    Worker("Petro", "Dendy", 50, "man", 0, false, 110000, 4, "Rolling Stock Repair Department"),
+    Worker("Lida", "K", 40, "woman", 1, true, 115000, 15, "Rolling Stock Repair Department"),
+    Worker("Marta", "Blossom", 22, "woman", 0, false, 110000, 1, "Rolling Stock Repair Department"),
+    Worker("Stepan", "Labudiak", 20, "man", 0, false, 120000, 3, "Rolling Stock Repair Department"),
+    Worker("Antony", "Rab", 50, "man", 0, false, 110000, 4, "Rolling Stock Repair Department"),
+    Worker("Evkakii", "Pidzapoinyi", 60, "man", 15, true, 118000, 42, "Rolling Stock Repair Department"),
+    Worker("Vika", "Beauty", 19, "woman", 0, false, 109000, 1, "Rolling Stock Repair Department")
+};
+
+//Road repair staff
+std::vector<Worker> roadRepairmanList
+{
+    Worker("Wiki", "Aidep", 30, "woman", 3, true, 102000, 8, "Road Repair Department"),
+    Worker("Luke", "Sky", 54, "man", 0, false, 100000, 31, "Road Repair Department"),
+    Worker("Lana", "Lux", 23, "woman", 0, false, 106000, 4, "Road Repair Department"),
+    Worker("Piter", "Ripper", 50, "man", 5, true, 107000, 4, "Road Repair Department"),
+    Worker("Sam", "Vector", 93, "man", 12, true, 108000, 4, "Road Repair Department"),
+    Worker("Martin", "Pepe", 23, "man", 0, false, 107500, 4, "Road Repair Department"),
+    Worker("Li", "A", 60, "woman", 4, true, 111000, 40, "Road Repair Department"),
+    Worker("Andy", "Coocker", 50, "man", 0, false, 110000, 4, "Road Repair Department")
+};
+
+//Cash desk staff
+std::vector<Worker> cashierList
+{
+    Worker("Maddie", "Mad", 60, "woman", 4, true, 111000, 40, "Cash Department"),
+    Worker("Lisa", "Salt", 62, "woman", 10, true, 115050, 40, "Cash Department"),
+    Worker("Isabella", "Damn", 75, "woman", 0, false, 100000, 55, "Cash Department"),
+    Worker("Katie", "Dream", 66, "woman", 1, true, 111000, 46, "Cash Department")
+};
+
+//Warehouse staff
+std::vector<Worker> warehousemanList
+{
+    Worker("Tom", "Dream", 66, "man", 1, true, 150000, 46, "Warehouse Department"),
+    Worker("Teddie", "Bear", 67, "man", 6, true, 145000, 45, "Warehouse Department"),
+    Worker("Daniel", "Founder", 66, "man", 1, true, 112000, 5, "Warehouse Department"),
+    Worker("Roman", "Buriak", 60, "man", 2, true, 135000, 21, "Warehouse Department")
+};
+
+//Support staff
+std::vector<Worker> helperList
+{
+    Worker("Roman", "Freeze", 35, "man", 2, true, 90000, 10, "Help Desk Department"),
+    Worker("Lara", "Freeze", 28, "woman", 2, true, 95000, 7, "Help Desk Department")
+};
+
+//Accounting staff
+std::vector<Worker> accounterList
+{
+    Worker("Tetiana", "Korobka", 35, "woman", 0, false, 149000, 10, "Accounting Department"),
+    Worker("Iryna", "Med", 30, "woman", 1, true, 148500, 6, "Accounting Department")
 };

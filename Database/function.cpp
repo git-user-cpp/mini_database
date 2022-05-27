@@ -40,3 +40,17 @@ void outputAdmin(std::vector<Administration> &vec)
         el.output(el);
     }
 }
+void outputDriver(std::vector<Rolling_stock_driver> &vec)
+{
+    for(auto &el : vec)
+    {
+        el.output(el);
+    }
+}
+void outputWorker(std::vector<Worker> &vec)
+{
+    for(auto &el : vec)
+    {
+        el.output(el);
+    }
+}

@@ -96,7 +96,6 @@ Worker::Worker()
 };
 
 //overloaded constructor for the Worker class
-/*
 Worker::Worker(std::string name, std::string surname, int age, 
                 std::string sex, int number_of_children, bool the_presence_of_children,
                 double salary, int experience, std::string department)
@@ -108,11 +107,10 @@ Worker::Worker(std::string name, std::string surname, int age,
     this->setNumOfChildren(number_of_children);
     this->setThePresenceOfChildren(the_presence_of_children);
     
-    this->salary = salary;
-    this->experience = experience;
-    this->department = department;
+    this->setSalary(salary);
+    this->setExperience(experience);
+    this->setDepartment(department);
 }
-*/
 
 //default destructor for the Worker class
 Worker::~Worker(){};
@@ -179,7 +177,7 @@ Administration::Administration(std::string name, std::string surname, int age,
     this->setExperience(experience);
     this->setDepartment(department);
 
-    this->position = position;
+    this->setPosition(position);
 };
 
 //default destructor for the Administration class
@@ -197,7 +195,7 @@ std::string Administration::getPosition()
     return position;
 }
 
-//overloaded output function for Administration class
+//overloaded output function for the Administration class
 void Administration::output(Administration &el)
 {
     std::cout   << "--------------------------------------------------------------" << std::endl
@@ -211,5 +209,58 @@ void Administration::output(Administration &el)
                 << "Experience: " << el.getExperience() << std::endl
                 << "Department: " << el.getDepartment() << std::endl
                 << "Position: " << el.getPosition() << std::endl
+                << "--------------------------------------------------------------" << std::endl;
+}
+
+//default constructor for Rolling_stock_driver class
+Rolling_stock_driver::Rolling_stock_driver(){};
+
+//overloaded constructor for the Rolling_stock_driver class
+Rolling_stock_driver::Rolling_stock_driver(std::string name, std::string surname, int age, 
+                std::string sex, int number_of_children, bool the_presence_of_children,
+                double salary, int experience, std::string department, int year_of_medical_examination)
+{
+    this->setName(name);
+    this->setSurname(surname);
+    this->setAge(age);
+    this->setSex(sex);
+    this->setNumOfChildren(number_of_children);
+    this->setThePresenceOfChildren(the_presence_of_children);
+    this->setSalary(salary);
+    this->setExperience(experience);
+    this->setDepartment(department);
+
+    this->setYearOfMed(year_of_medical_examination);
+};
+
+//default destructor for the Rolling_stock_driver class
+Rolling_stock_driver::~Rolling_stock_driver(){};
+
+//setters for the Rolling_stock_driver class
+void Rolling_stock_driver::setYearOfMed(int year_of_medical_examination)
+{
+    this->year_of_medical_examination = year_of_medical_examination;
+}
+
+//getters for the Rolling_stock_driver class
+int Rolling_stock_driver::getYearOfMed()
+{
+    return year_of_medical_examination;
+}
+
+//overloaded output function for the Rolling_stock_driver class
+void Rolling_stock_driver::output(Rolling_stock_driver &el)
+{
+    std::cout   << "--------------------------------------------------------------" << std::endl
+                << "Name & surname: " << el.getName() << ' '
+                << el.getSurname() << std::endl
+                << "Age: " << el.getAge() << std::endl
+                << "Sex: " << el.getSex() << std::endl
+                << "Num. of children: " << el.getNumOfChildren() << std::endl
+                << "Presence of children(0-no; 1-yes): " << el.getThePresenceOfChildren() << std::endl
+                << "Salary: " << el.getSalary() << std::endl
+                << "Experience: " << el.getExperience() << std::endl
+                << "Department: " << el.getDepartment() << std::endl
+                << "Year of med. ex.: " << el.getYearOfMed() << std::endl
                 << "--------------------------------------------------------------" << std::endl;
 }

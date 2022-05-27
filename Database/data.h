@@ -70,9 +70,9 @@ class Worker : public Human
 
     public:
         Worker();
-        /* Worker(std::string name, std::string surname, int age, 
+        Worker(std::string name, std::string surname, int age, 
                     std::string sex, int number_of_children, bool the_presence_of_children,
-                    double salary, int experience, std::string department);*/
+                    double salary, int experience, std::string department);
         ~Worker();
 
         //setters
@@ -85,6 +85,7 @@ class Worker : public Human
         int getExperience();
         std::string getDepartment();
 
+        //function for outputting data
         void output(Worker &el);
 };
 
@@ -92,6 +93,7 @@ class Administration : public Worker
 {
     private:
         std::string position;
+
     public:
         Administration();
         Administration(std::string name, std::string surname, int age, 
@@ -105,7 +107,30 @@ class Administration : public Worker
         //getters
         std::string getPosition();
 
+        //function for outputting data
         void output(Administration &el);
+};
+
+class Rolling_stock_driver : public Worker
+{
+    private:
+        int year_of_medical_examination;
+
+    public:
+        Rolling_stock_driver();
+        Rolling_stock_driver(std::string name, std::string surname, int age, 
+                std::string sex, int number_of_children, bool the_presence_of_children,
+                double salary, int experience, std::string department, int year_of_medical_examination);
+        ~Rolling_stock_driver();
+
+        //setters
+        void setYearOfMed(int year_of_medical_examination);
+
+        //getters
+        int getYearOfMed();
+
+        //function for outputting data
+        void output(Rolling_stock_driver &el);
 };
 
 #include "function.h"
