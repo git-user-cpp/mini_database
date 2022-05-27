@@ -1,6 +1,6 @@
 # mini_database
 
-This database is implemented in the C++ programming language. It was developed in order to complete the task of the course work.
+This database is implemented in C++ programming language. It was developed in order to complete the task of the course work.
 
 ## ⚠️ LICENSE ⚠️
 
