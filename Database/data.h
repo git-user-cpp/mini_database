@@ -25,3 +25,87 @@ SOFTWARE.
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
+
+class Human
+{
+    private:
+        std::string name;
+        std::string surname;
+
+        int age;
+        std::string sex;
+        int number_of_children;
+        bool the_presence_of_children;
+
+    public:
+        Human();
+        ~Human();
+
+        //setters
+        void setName(std::string name);
+        void setSurname(std::string surname);
+        void setAge(int age);
+        void setSex(std::string sex);
+        void setNumOfChildren(int num);
+        void setThePresenceOfChildren(bool ch);
+
+        //getters
+        std::string getName();
+        std::string getSurname();
+        int getAge();
+        std::string getSex();
+        int getNumOfChildren();
+        bool getThePresenceOfChildren();
+
+        void output(Human &el);
+};
+
+class Worker : public Human
+{
+    private:
+        double salary;
+        int experience;
+        std::string department;
+
+    public:
+        Worker();
+        /* Worker(std::string name, std::string surname, int age, 
+                    std::string sex, int number_of_children, bool the_presence_of_children,
+                    double salary, int experience, std::string department);*/
+        ~Worker();
+
+        //setters
+        void setSalary(double salary);
+        void setExperience(int experience);
+        void setDepartment(std::string department);
+
+        //getters
+        double getSalary();
+        int getExperience();
+        std::string getDepartment();
+
+        void output(Worker &el);
+};
+
+class Administration : public Worker
+{
+    private:
+        std::string position;
+    public:
+        Administration();
+        Administration(std::string name, std::string surname, int age, 
+                std::string sex, int number_of_children, bool the_presence_of_children,
+                double salary, int experience, std::string department, std::string position);
+        ~Administration();
+        
+        //setters
+        void setPosition(std::string position);
+        
+        //getters
+        std::string getPosition();
+
+        void output(Administration &el);
+};
+
+#include "function.h"

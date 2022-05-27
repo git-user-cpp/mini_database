@@ -23,6 +23,8 @@ SOFTWARE.
 */
 
 #include "data.h"
+#include "workers.h"
+// #include "function.h"
 
  //Main menu and global variable for it
     int choise;
@@ -49,18 +51,18 @@ void Menu()
 
     std::cin >> choise;
 
-    std::cout << "---------------------------------------------\n";
+    std::cout << "--------------------------------------------------------------\n";
 }
 
 //second menu for displaying department information
 void worker_second_menu(std::string sort_by)
 {
     std::cout   << "(0) Show administrative department " << sort_by << std::endl
-                << "(1) Show driver department " << sort_by << std::endl
+                << "(1) Show drivers department " << sort_by << std::endl
                 << "(2) Show dispatch department " << sort_by << std::endl
-                << "(3) Show the department of rolling stock repairmen " << sort_by << std::endl
-                << "(4) Show the department of road repairmen " << sort_by << std::endl
-                << "(5) Show checkout department " << sort_by << std::endl
+                << "(3) Show the department of rolling stock repair " << sort_by << std::endl
+                << "(4) Show the department of road repair " << sort_by << std::endl
+                << "(5) Show cash department " << sort_by << std::endl
                 << "(6) Show warehouse department " << sort_by << std::endl
                 << "(7) Show help desk department " << sort_by << std::endl
                 << "(8) Show accounting department " << sort_by << std::endl
@@ -133,55 +135,79 @@ int main()
                 if(second_choise == menu_a)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == all_employers)
                 {
                     worker_second_menu("");
-                    //show all directors and employees here (not sorted)
+                    std::cin >> third_choise;
+                    if(third_choise == 0)
+                    {
+                        outputAdmin(adminList);
+                    }
+                    Menu();
+                    break;
                 }
                 else if(second_choise == workers_by_dep)
                 {
                     worker_second_menu("sorted by department");
                     //show all information about workers (sort by department)
+                    Menu();
+                    break;
                 }
                 else if(second_choise == workers_by_exp)
                 {
                     worker_second_menu("sorted by experience");
                     //show all information about workers (sort by experience)
+                    Menu();
+                    break;
                 }
                 else if(second_choise == workers_by_sex)
                 {
                     worker_second_menu("sorted by sex");
                     //show all information about workers (sort by sex)
+                    Menu();
+                    break;
                 }
                 else if(second_choise == workers_by_age)
                 {
                     worker_second_menu("sorted by age");
                     //show all information about workers (sort by age)
+                    Menu();
+                    break;
                 }
                 else if(second_choise == workers_by_child)
                 {
                     worker_second_menu("sorted by the presence of children");
                     //show all information about workers (sort by presence of children)
+                    Menu();
+                    break;
                 }
                 else if(second_choise == workers_by_num_child)
                 {
                     worker_second_menu("sorted by number of children");
                     //show all information about workers (sort by number of children)
+                    Menu();
+                    break;
                 }
                 else if(second_choise == workers_by_salary)
                 {
                     worker_second_menu("sorted by salary");
                     //show all information about workers (sort by salary)
+                    Menu();
+                    break;
                 }
                 else if(second_choise == directors)
                 {
                     //show all information about all directors
+                    Menu();
+                    break;
                 }
                 else
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -209,6 +235,7 @@ int main()
                 if(second_choise == menu_b)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == all_brig)
                 {
@@ -238,6 +265,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -260,6 +288,7 @@ int main()
                 if(second_choise == menu_c)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == mexam_sex)
                 {
@@ -277,6 +306,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -299,6 +329,7 @@ int main()
                 if(second_choise == menu_d)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == loc_stay)
                 {
@@ -316,6 +347,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -340,6 +372,7 @@ int main()
                 if(second_choise == menu_e)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == insp_by_time)
                 {
@@ -365,6 +398,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -388,6 +422,7 @@ int main()
                 if(second_choise == menu_f)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == train_flight)
                 {
@@ -409,6 +444,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -430,6 +466,7 @@ int main()
                 if(second_choise == menu_g)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == can_directions)
                 {
@@ -443,6 +480,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -465,6 +503,7 @@ int main()
                 if(second_choise == menu_h)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == flight_reason)
                 {
@@ -482,6 +521,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -506,6 +546,7 @@ int main()
                 if(second_choise == menu_i)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == tickets_period)
                 {
@@ -527,6 +568,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -548,6 +590,7 @@ int main()
                 if(second_choise == menu_j)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == list_route)
                 {
@@ -561,6 +604,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -587,6 +631,7 @@ int main()
                 if(second_choise == menu_k)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == pass_flight)
                 {
@@ -616,6 +661,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -638,6 +684,7 @@ int main()
                 if(second_choise == menu_l)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == unp_tick_flight)
                 {
@@ -655,6 +702,7 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
@@ -664,9 +712,9 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_m, ret_tick_flight, ret_tick_day, ret_tick_route};
 
-                std::cout   << "Select the required data: "
-                            << "(0) Return to the menu"
-                            << "(1) Show the data of returned tickets on the specified flight"
+                std::cout   << "Select the required data: \n"
+                            << "(0) Return to the menu\n"
+                            << "(1) Show the data of returned tickets on the specified route\n"
                             << "(2) Show returned tickets details on the specified day\n"
                             << "(3) Show the data of returned tickets on the specified route\n"
                             << "Your choise: ";
@@ -677,6 +725,7 @@ int main()
                 if(second_choise == menu_m)
                 {
                     Menu();
+                    break;
                 }
                 else if(second_choise == ret_tick_flight)
                 {
@@ -694,18 +743,25 @@ int main()
                 {
                     std::cout << "ERROR: Choose the correct option" << std::endl;
                     Menu();
+                    break;
                 }
 
                 Menu();
             break;
 
-            /*WRITE HERE NAME & SURNAME*/
             case Creator_of_the_program:
+                // std::cout   << "====================================================================\n"
+                //             << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                //             << "University\n"
+                //             << "           Work made by student\n"
+                //             << "                       name surname\n"
+                //             << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                //             << "====================================================================\n";
+
                 std::cout   << "====================================================================\n"
                             << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                            << "University\n"
-                            << "           Work made by student\n"
-                            << "                       name surname\n"
+                            << "      ---> Creator of this program: git-user-cpp (m!haly4) <---     \n"
+                            << "           ---> Link: https://github.com/git-user-cpp <---          \n"
                             << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                             << "====================================================================\n";
 
