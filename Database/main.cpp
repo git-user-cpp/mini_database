@@ -96,6 +96,7 @@ int main()
 
     int second_choise;
     int third_choise;
+    int fourth_choise;
 
     //Error message
     std::string errorM = "ERROR: Choose the correct option";
@@ -141,7 +142,7 @@ int main()
                 }
                 else if(second_choise == all_employers)
                 {
-                    //outputting all employers
+                    //outputting all employees
                     std::cout   << double_delimiter
                                 << "ADMINISTRATION DEPARTMENT" << std::endl;
                     outputAdmin(adminList);
@@ -183,6 +184,7 @@ int main()
                 }
                 else if(second_choise == workers_by_dep)
                 {
+                    //outputting all employees data sorted by department
                     worker_second_menu("sorted by department");
                     std::cin >> third_choise;
 
@@ -232,49 +234,372 @@ int main()
                 }
                 else if(second_choise == workers_by_exp)
                 {
+                    //outputting employees data sorted by experience
                     worker_second_menu("sorted by experience");
-                    //show all information about workers (sort by experience)
+                    std::cin >> third_choise;
+                    
+                    if(third_choise == 1)
+                    {
+                        sortAdminByExp(adminList);
+                        outputAdmin(adminList);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        sortDriverByExp(driverList);
+                        outputDriver(driverList);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        sortWorkerByExp(dispatcherList);
+                        outputWorker(dispatcherList);
+                    }
+                    else if(third_choise == 4)
+                    {
+                        sortWorkerByExp(rollStRepairmanList);
+                        outputWorker(rollStRepairmanList);
+                    }
+                    else if(third_choise == 5)
+                    {
+                        sortWorkerByExp(roadRepairmanList);
+                        outputWorker(roadRepairmanList);
+                    }
+                    else if(third_choise == 6)
+                    {
+                        sortWorkerByExp(cashierList);
+                        outputWorker(cashierList);
+                    }
+                    else if(third_choise == 7)
+                    {
+                        sortWorkerByExp(warehousemanList);
+                        outputWorker(warehousemanList);
+                    }
+                    else if(third_choise == 8)
+                    {
+                        sortWorkerByExp(helperList);
+                        outputWorker(helperList);
+                    }
+                    else if(third_choise == 9)
+                    {
+                        sortWorkerByExp(accounterList);
+                        outputWorker(accounterList);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
                     Menu();
                     break;
                 }
                 else if(second_choise == workers_by_sex)
                 {
+                    //outputting all employees data sorted by sex
                     worker_second_menu("sorted by sex");
-                    //show all information about workers (sort by sex)
+                    std::cin >> third_choise;
+                    
+                    if(third_choise == 1)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputAdminBySex(adminList, fourth_choise);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputDriverBySex(driverList, fourth_choise);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputWorkerBySex(dispatcherList, fourth_choise);
+                    }
+                    else if(third_choise == 4)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputWorkerBySex(rollStRepairmanList, fourth_choise);
+                    }
+                    else if(third_choise == 5)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputWorkerBySex(roadRepairmanList, fourth_choise);
+                    }
+                    else if(third_choise == 6)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputWorkerBySex(cashierList, fourth_choise);
+                    }
+                    else if(third_choise == 7)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputWorkerBySex(warehousemanList, fourth_choise);
+                    }
+                    else if(third_choise == 8)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputWorkerBySex(helperList, fourth_choise);
+                    }
+                    else if(third_choise == 9)
+                    {
+                        men_or_women_menu();
+                        std::cin >> fourth_choise;
+
+                        outputWorkerBySex(accounterList, fourth_choise);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
                     Menu();
                     break;
                 }
                 else if(second_choise == workers_by_age)
                 {
+                    //outputting all employees data sorted by age
                     worker_second_menu("sorted by age");
-                    //show all information about workers (sort by age)
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        sortAdminByAge(adminList);
+                        outputAdmin(adminList);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        sortDriverByAge(driverList);
+                        outputDriver(driverList);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        sortWorkerByAge(dispatcherList);
+                        outputWorker(dispatcherList);
+                    }
+                    else if(third_choise == 4)
+                    {
+                        sortWorkerByAge(rollStRepairmanList);
+                        outputWorker(rollStRepairmanList);
+                    }
+                    else if(third_choise == 5)
+                    {
+                        sortWorkerByAge(roadRepairmanList);
+                        outputWorker(roadRepairmanList);
+                    }
+                    else if(third_choise == 6)
+                    {
+                        sortWorkerByAge(cashierList);
+                        outputWorker(cashierList);
+                    }
+                    else if(third_choise == 7)
+                    {
+                        sortWorkerByAge(warehousemanList);
+                        outputWorker(warehousemanList);
+                    }
+                    else if(third_choise == 8)
+                    {
+                        sortWorkerByAge(helperList);
+                        outputWorker(helperList);
+                    }
+                    else if(third_choise == 9)
+                    {
+                        sortWorkerByAge(accounterList);
+                        outputWorker(accounterList);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
                     Menu();
                     break;
                 }
                 else if(second_choise == workers_by_child)
                 {
+                    //outputting all employees data sorted by the presence of children
                     worker_second_menu("sorted by the presence of children");
-                    //show all information about workers (sort by presence of children)
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        outputAdminByChild(adminList);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        outputDriverByChild(driverList);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        outputWorkerByChild(dispatcherList);
+                    }
+                    else if(third_choise == 4)
+                    {
+                        outputWorkerByChild(rollStRepairmanList);
+                    }
+                    else if(third_choise == 5)
+                    {
+                        outputWorkerByChild(roadRepairmanList);
+                    }
+                    else if(third_choise == 6)
+                    {
+                        outputWorkerByChild(cashierList);
+                    }
+                    else if(third_choise == 7)
+                    {
+                        outputWorkerByChild(warehousemanList);
+                    }
+                    else if(third_choise == 8)
+                    {
+                        outputWorkerByChild(helperList);
+                    }
+                    else if(third_choise == 9)
+                    {
+                        outputWorkerByChild(accounterList);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
                     Menu();
                     break;
                 }
                 else if(second_choise == workers_by_num_child)
                 {
+                    //outputting all employees data sorted by number of children
                     worker_second_menu("sorted by number of children");
-                    //show all information about workers (sort by number of children)
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        sortAdminByChildNum(adminList);
+                        outputAdmin(adminList);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        sortDriverByChildNum(driverList);
+                        outputDriver(driverList);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        sortWorkerByChildNum(dispatcherList);
+                        outputWorker(dispatcherList);
+                    }
+                    else if(third_choise == 4)
+                    {
+                        sortWorkerByChildNum(rollStRepairmanList);
+                        outputWorker(rollStRepairmanList);
+                    }
+                    else if(third_choise == 5)
+                    {
+                        sortWorkerByChildNum(roadRepairmanList);
+                        outputWorker(roadRepairmanList);
+                    }
+                    else if(third_choise == 6)
+                    {
+                        sortWorkerByChildNum(cashierList);
+                        outputWorker(cashierList);
+                    }
+                    else if(third_choise == 7)
+                    {
+                        sortWorkerByChildNum(warehousemanList);
+                        outputWorker(warehousemanList);
+                    }
+                    else if(third_choise == 8)
+                    {
+                        sortWorkerByChildNum(helperList);
+                        outputWorker(helperList);
+                    }
+                    else if(third_choise == 9)
+                    {
+                        sortWorkerByChildNum(accounterList);
+                        outputWorker(accounterList);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
                     Menu();
                     break;
                 }
                 else if(second_choise == workers_by_salary)
                 {
+                    //outputting all employees data sorted by salary
                     worker_second_menu("sorted by salary");
-                    //show all information about workers (sort by salary)
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        sortAdminBySalary(adminList);
+                        outputAdmin(adminList);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        sortDriverBySalary(driverList);
+                        outputDriver(driverList);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        sortWorkerBySalary(dispatcherList);
+                        outputWorker(dispatcherList);
+                    }
+                    else if(third_choise == 4)
+                    {
+                        sortWorkerBySalary(rollStRepairmanList);
+                        outputWorker(rollStRepairmanList);
+                    }
+                    else if(third_choise == 5)
+                    {
+                        sortWorkerBySalary(roadRepairmanList);
+                        outputWorker(roadRepairmanList);
+                    }
+                    else if(third_choise == 6)
+                    {
+                        sortWorkerBySalary(cashierList);
+                        outputWorker(cashierList);
+                    }
+                    else if(third_choise == 7)
+                    {
+                        sortWorkerBySalary(warehousemanList);
+                        outputWorker(warehousemanList);
+                    }
+                    else if(third_choise == 8)
+                    {
+                        sortWorkerBySalary(helperList);
+                        outputWorker(helperList);
+                    }
+                    else if(third_choise == 9)
+                    {
+                        sortWorkerBySalary(accounterList);
+                        outputWorker(accounterList);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
                     Menu();
                     break;
                 }
                 else if(second_choise == directors)
                 {
-                    //show all information about all directors
+                    //outputting all directors data
+                    outputAdmin(adminList);
+
                     Menu();
                     break;
                 }

@@ -25,11 +25,65 @@ SOFTWARE.
 #pragma once
 #include "data.h"
 
-// template<class T>
-// void outputting(std::vector<T> &vec);    //in function `main': \
-                                            main.cpp:(.text+0x8de): undefined reference to `void outputting<Administration>(std::vector<Administration, std::allocator<Administration> >&)' \
-                                            clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
+//functions for outputting info
 void outputAdmin(std::vector<Administration> &vec);
 void outputDriver(std::vector<Rolling_stock_driver> &vec);
 void outputWorker(std::vector<Worker> &vec);
+
+
+//function for sorting data of "Administration" class by experience
+void sortAdminByExp(std::vector<Administration> &vec);
+
+//function for sorting data of "Administration" class by sex
+void outputAdminBySex(std::vector<Administration> &vec, int sex);
+
+//function for sorting data of "Administration" class by age
+void sortAdminByAge(std::vector<Administration> &vec);
+
+//function for sorting data of "Administration" class by the presence of child
+void outputAdminByChild(std::vector<Administration> &vec);
+
+//function for sorting data of "Administration" class by number of children
+void sortAdminByChildNum(std::vector<Administration> &vec);
+
+//function for sorting data of "Administration" class by salary
+void sortAdminBySalary(std::vector<Administration> &vec);
+
+
+//function for sorting data of "Rolling_stock_driver" class by experience
+void sortDriverByExp(std::vector<Rolling_stock_driver> &vec);
+
+//function for sorting data of "Rolling_stock_driver" class by sex
+void outputDriverBySex(std::vector<Rolling_stock_driver> &vec, int sex);
+
+//function for sorting data of "Rolling_stock_driver" class by age
+void sortDriverByAge(std::vector<Rolling_stock_driver> &vec);
+
+//function for sorting data of "Rolling_stock_driver" class by the presence of child
+void outputDriverByChild(std::vector<Rolling_stock_driver> &vec);
+
+//function for sorting data of "Rolling_stock_driver" class by number of children
+void sortDriverByChildNum(std::vector<Rolling_stock_driver> &vec);
+
+//function for sorting data of "Rolling_stock_driver" class by salary
+void sortDriverBySalary(std::vector<Rolling_stock_driver> &vec);
+
+
+//function for sorting data of "Worker" class by experience
+void sortWorkerByExp(std::vector<Worker> &vec);
+
+//function for sorting data of "Worker" class by sex
+void outputWorkerBySex(std::vector<Worker> &vec, int sex);
+
+//function for sorting data of "Worker" class by age
+void sortWorkerByAge(std::vector<Worker> &vec);
+
+//function for sorting data of "Worker" class by the presence of child
+void outputWorkerByChild(std::vector<Worker> &vec);
+
+//function for sorting data of "Worker" class by number of children
+void sortWorkerByChildNum(std::vector<Worker> &vec);
+
+//function for sorting data of "Worker" class by salary
+void sortWorkerBySalary(std::vector<Worker> &vec);

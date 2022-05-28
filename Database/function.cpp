@@ -24,15 +24,8 @@ SOFTWARE.
 
 #include "function.h"
 
-// template<class T>
-// void outputting(std::vector<T> &vec)
-// {
-//     for(auto &el : vec)
-//     {
-//         el.output(&el);
-//     }
-// };
 
+//functions for outputting info
 void outputAdmin(std::vector<Administration> &vec)
 {
     for(auto &el : vec)
@@ -40,6 +33,7 @@ void outputAdmin(std::vector<Administration> &vec)
         el.output(el);
     }
 }
+
 void outputDriver(std::vector<Rolling_stock_driver> &vec)
 {
     for(auto &el : vec)
@@ -47,10 +41,332 @@ void outputDriver(std::vector<Rolling_stock_driver> &vec)
         el.output(el);
     }
 }
+
 void outputWorker(std::vector<Worker> &vec)
 {
     for(auto &el : vec)
     {
         el.output(el);
+    }
+}
+
+
+//FUNCTIONS FOR SORTING DATA OF "Administration" CLASS
+
+//function for sorting data of "Administration" class by experience
+void sortAdminByExp(std::vector<Administration> &vec)
+{
+    Administration tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getExperience()) > (vec.at(j).getExperience()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Administration" class by sex
+void outputAdminBySex(std::vector<Administration> &vec, int sex)
+{
+    for(auto &el : vec)
+    {
+        if(sex == 1 && el.getSex() == "man")
+        {
+            el.output(el);
+        }
+        else if(sex == 2 && el.getSex() == "woman")
+        {
+            el.output(el);
+        }
+    }
+}
+
+//function for sorting data of "Administration" class by age
+void sortAdminByAge(std::vector<Administration> &vec)
+{
+    Administration tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getAge()) > (vec.at(j).getAge()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Administration" class by the presence of child
+void outputAdminByChild(std::vector<Administration> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getThePresenceOfChildren() == true)
+        {
+            el.output(el);
+        }
+    }
+}
+
+//function for sorting data of "Administration" class by number of children
+void sortAdminByChildNum(std::vector<Administration> &vec)
+{
+    Administration tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getNumOfChildren()) > (vec.at(j).getNumOfChildren()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Administration" class by salary
+void sortAdminBySalary(std::vector<Administration> &vec)
+{
+    Administration tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getSalary()) > (vec.at(j).getSalary()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+
+//FUNCTIONS FOR SORTING DATA OF "Rolling_stock_driver" CLASS
+
+//function for sorting data of "Rolling_stock_driver" class by experience
+void sortDriverByExp(std::vector<Rolling_stock_driver> &vec)
+{
+    Rolling_stock_driver tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getExperience()) > (vec.at(j).getExperience()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Rolling_stock_driver" class by sex
+void outputDriverBySex(std::vector<Rolling_stock_driver> &vec, int sex)
+{
+    for(auto &el : vec)
+    {
+        if(sex == 1 && el.getSex() == "man")
+        {
+            el.output(el);
+        }
+        else if(sex == 2 && el.getSex() == "woman")
+        {
+            el.output(el);
+        }
+    }
+}
+
+//function for sorting data of "Rolling_stock_driver" class by age
+void sortDriverByAge(std::vector<Rolling_stock_driver> &vec)
+{
+    Rolling_stock_driver tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getAge()) > (vec.at(j).getAge()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Rolling_stock_driver" class by the presence of child
+void outputDriverByChild(std::vector<Rolling_stock_driver> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getThePresenceOfChildren() == true)
+        {
+            el.output(el);
+        }
+    }
+}
+
+//function for sorting data of "Rolling_stock_driver" class by number of children
+void sortDriverByChildNum(std::vector<Rolling_stock_driver> &vec)
+{
+    Rolling_stock_driver tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getNumOfChildren()) > (vec.at(j).getNumOfChildren()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Rolling_stock_driver" class by salary
+void sortDriverBySalary(std::vector<Rolling_stock_driver> &vec)
+{
+    Rolling_stock_driver tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getSalary()) > (vec.at(j).getSalary()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+
+//FUNCTIONS FOR SORTING DATA OF "Worker" CLASS
+
+//function for sorting data of "Worker" class by experience
+void sortWorkerByExp(std::vector<Worker> &vec)
+{
+    Worker tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getExperience()) > (vec.at(j).getExperience()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Worker" class by sex
+void outputWorkerBySex(std::vector<Worker> &vec, int sex)
+{
+    for(auto &el : vec)
+    {
+        if(sex == 1 && el.getSex() == "man")
+        {
+            el.output(el);
+        }
+        else if(sex == 2 && el.getSex() == "woman")
+        {
+            el.output(el);
+        }
+    }
+}
+
+//function for sorting data of "Worker" class by age
+void sortWorkerByAge(std::vector<Worker> &vec)
+{
+    Worker tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getAge()) > (vec.at(j).getAge()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Worker" class by the presence of child
+void outputWorkerByChild(std::vector<Worker> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getThePresenceOfChildren() == true)
+        {
+            el.output(el);
+        }
+    }
+}
+
+//function for sorting data of "Worker" class by number of children
+void sortWorkerByChildNum(std::vector<Worker> &vec)
+{
+    Worker tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getNumOfChildren()) > (vec.at(j).getNumOfChildren()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Worker" class by salary
+void sortWorkerBySalary(std::vector<Worker> &vec)
+{
+    Worker tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getSalary()) > (vec.at(j).getSalary()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
     }
 }
