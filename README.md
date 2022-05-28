@@ -28,3 +28,24 @@ SOFTWARE.
 
 ## 💻 How to use this database 💻
 
+1) ⚠️ **The application is designed for Linux, so avoid using other systems or remake the program to avoid bugs.** ⚠️
+2) 🗂️ Download *all* files and put them in a one directory.
+3) ⚒️ Compile the program with *clang++* or *g++*, whether you like.
+    - Сompilation example
+    ```
+    clang++ -o main main.cpp data.cpp function.cpp
+    ```
+4) 💥 Then, in your directory will appear file *"main"*.
+    - If you want to check files in current directory
+    ```
+    ls -alR
+    ```
+    - Or
+    ```
+    ls -a -l -R
+    ```
+5) 🌠 Execute the program with command:
+    ```
+    ./main
+    ```
+6) 👷 Select the desired function by pressing **1** or **2** or **3** or **4 ...** + **Enter**. If you want to close the app, press **0** + **Enter** in main menu.
