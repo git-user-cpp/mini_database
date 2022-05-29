@@ -133,4 +133,104 @@ class Rolling_stock_driver : public Worker
         void output(Rolling_stock_driver &el);
 };
 
+class Ticket
+{
+    private:
+        std::string route;
+        double ticketPrice;
+    public:
+        Ticket(std::string route, double price)
+        {
+            this->route = route;
+            this->ticketPrice = price;
+        }
+
+        //setters
+        void setRoute(std::string route);
+        void setTicketPrice(double price);
+
+        //getters
+        std::string getRoute();
+        double getTicketPrice();
+};
+
+class Locomotive
+{
+    private:
+        std::string route;
+        int serialNum;
+        int workspaceNum;
+        int dateOfProd;
+        int maxspeed;
+        std::string brand;
+        std::string fuel;
+        int numOfRoutes;
+        int numOfRoutesBeforeRepair;
+        int numOfRepair;
+        std::string dateOfComeBack;
+        int daysOnStation;
+        std::string yearOfTechExam;
+        std::string routeStatus;
+        std::string routeReason;
+        std::string category;
+        int routeDuration;
+
+        int numOfHandedTickets;
+            
+    public:
+        Locomotive();
+        Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxspeed,
+                    std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
+                    int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
+                    std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
+                    std::string route, int numOfHandedTickets);
+        ~Locomotive();
+
+        //setters
+        void setSerialNum(int num);
+        void setWorkspaceNum(int num);
+        void setDateOfProd(int date);
+        void setBrand(std::string brand);
+        void setNumOfRoutes(int routes);
+        void setNumOfRoutesBeforeRepair(int routesBeforeRepair);
+        void setNumOfRepair(int numOfRepair);
+        void setDateOfComeback(std::string date);
+        void setDaysOnStation(int days);
+        void setYearOfTechExam(std::string year);
+
+        //getters
+        int getSerialNum();
+        int getWorkspaceNum();
+        int getDateOfProd();
+        int getMaxSpeed();
+        std::string getBrand();
+        std::string getFuel();
+        int getNumOfRoutes();
+        int getNumOfRoutesBeforeRepair();
+        int getNumOfRepair();
+        std::string getDateOfComeback();
+        int getDaysOnStation();
+        std::string getYearOfTechExam();
+        std::string getRoute();
+        std::string getRouteStatus();
+        std::string getCategory();
+        int getRouteDuration();
+        std::string getRouteReason();
+        int getNumOfHandedTickets();
+
+        void output(Locomotive &el);
+};
+/*
+class Vagon : public Locomotive
+{
+    public:
+        Vagon();
+        Vagon(int serialNum, int workspaceNum, int dateOfProd,
+                    std::string brand, int numOfRoutes, int numOfRoutesBeforeRepair,
+                    int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam);
+        ~Vagon();
+
+        void output(Vagon &el);
+};*/
+
 #include "function.h"

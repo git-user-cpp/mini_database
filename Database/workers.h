@@ -52,6 +52,24 @@ std::vector<Rolling_stock_driver> driverList
     Rolling_stock_driver("Yrii", "Shkvarok", 20, "man", 0, false, 100000, 1, "Drivers Department", 2021)
 };
 
+//The crew of drivers
+std::vector<Rolling_stock_driver> firstDriverCrew
+{
+    driverList[0],
+    driverList[1],
+    driverList[2],
+    driverList[3]
+};
+
+//The crew of drivers
+std::vector<Rolling_stock_driver> secondDriverCrew
+{
+    driverList[4],
+    driverList[5],
+    driverList[6],
+    driverList[7]
+};
+
 //Dispatcher staff
 std::vector<Worker> dispatcherList
 {
@@ -74,6 +92,24 @@ std::vector<Worker> rollStRepairmanList
     Worker("Vika", "Beauty", 19, "woman", 0, false, 109000, 1, "Rolling Stock Repair Department")
 };
 
+//The crew of rolling stock repairmen
+std::vector<Worker> firstRollStRepairmanCrew
+{
+    rollStRepairmanList[0],
+    rollStRepairmanList[1],
+    rollStRepairmanList[2],
+    rollStRepairmanList[3]
+};
+
+//The crew of rolling stock repairmen
+std::vector<Worker> secondRollStRepairmanCrew
+{
+    rollStRepairmanList[4],
+    rollStRepairmanList[5],
+    rollStRepairmanList[6],
+    rollStRepairmanList[7]
+};
+
 //Road repair staff
 std::vector<Worker> roadRepairmanList
 {
@@ -85,6 +121,24 @@ std::vector<Worker> roadRepairmanList
     Worker("Martin", "Pepe", 23, "man", 0, false, 107500, 4, "Road Repair Department"),
     Worker("Li", "A", 60, "woman", 4, true, 111000, 40, "Road Repair Department"),
     Worker("Andy", "Coocker", 50, "man", 0, false, 110000, 4, "Road Repair Department")
+};
+
+//The crew of road repairmen
+std::vector<Worker> firstRoadRepairmanCrew
+{
+    roadRepairmanList[0],
+    roadRepairmanList[1],
+    roadRepairmanList[2],
+    roadRepairmanList[3]
+};
+
+//The crew of road repairmen
+std::vector<Worker> secondRoadRepairmanCrew
+{
+    roadRepairmanList[4],
+    roadRepairmanList[5],
+    roadRepairmanList[6],
+    roadRepairmanList[7]
 };
 
 //Cash desk staff
@@ -118,3 +172,23 @@ std::vector<Worker> accounterList
     Worker("Tetiana", "Korobka", 35, "woman", 0, false, 149000, 10, "Accounting Department"),
     Worker("Iryna", "Med", 30, "woman", 1, true, 148500, 6, "Accounting Department")
 };
+
+std::vector<Ticket> ticketList
+{
+    Ticket("Kyiv-Lviv", 150.50),
+    Ticket("Uzhhorod-Lviv", 75.50)
+};
+
+std::vector<Locomotive> locomList
+{
+    Locomotive(45, 1, 1975, 35, "LAZ", "diesel", 9576, 9, 150, "20.05.2022", 2, "2022", "Canceled", "technical", "passenger", 9, "Kyiv-Lviv", 50),
+    Locomotive(67, 2, 1975, 35, "LAZ", "diesel", 9214, 12, 143, "22.05.2022", 1, "2022", "Delayed", "technical", "cargo", 3, "Uzhhorod-Lviv", 5)
+};
+/*
+std::vector<Vagon> vagonList
+{
+    Vagon(122, 1, 1974, "LAZ", 9576, 5, 147, "20.05.2022", 2, "2022"),
+    Vagon(123, 2, 1974, "LAZ", 9576, 6, 144, "20.05.2022", 2, "2022"),
+    Vagon(124, 3, 1974, "LAZ", 9214, 12, 140, "22.05.2022", 1, "2022"),
+    Vagon(125, 4, 1974, "LAZ", 9214, 10, 157, "22.05.2022", 1, "2022")
+};*/

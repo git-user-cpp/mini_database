@@ -24,6 +24,9 @@ SOFTWARE.
 
 #include "data.h"
 
+
+//HUMAN CLASS
+
 //default constructor and default destructor for the Human class
 Human::Human(){};
 Human::~Human(){};
@@ -79,6 +82,9 @@ bool Human::getThePresenceOfChildren()
 {
     return the_presence_of_children;
 }
+
+
+//WORKER CLASS
 
 //default constructor for the Worker class
 Worker::Worker()
@@ -159,6 +165,9 @@ void Worker::output(Worker &el)
                 << "--------------------------------------------------------------" << std::endl;
 }
 
+
+//ADMINISTRATION CLASS
+
 //default constructor for the Administration class
 Administration::Administration(){};
 
@@ -212,6 +221,9 @@ void Administration::output(Administration &el)
                 << "--------------------------------------------------------------" << std::endl;
 }
 
+
+//ROLLING STOCK DRIVER CLASS
+
 //default constructor for Rolling_stock_driver class
 Rolling_stock_driver::Rolling_stock_driver(){};
 
@@ -264,3 +276,245 @@ void Rolling_stock_driver::output(Rolling_stock_driver &el)
                 << "Year of med. ex.: " << el.getYearOfMed() << std::endl
                 << "--------------------------------------------------------------" << std::endl;
 }
+
+
+//TICKET CLASS
+
+//setters for the "Ticket" class
+void Ticket::setRoute(std::string route)
+{
+    this->route = route;
+}
+void Ticket::setTicketPrice(double price)
+{
+    this->ticketPrice = price;
+}
+
+//getters for the "Ticket" class
+std::string Ticket::getRoute()
+{
+    return route;
+}
+double Ticket::getTicketPrice()
+{
+    return ticketPrice;
+}
+
+
+//LOCOMOTIVE CLASS
+
+//default constructor for "Locomotive" class
+Locomotive::Locomotive(){};
+
+//overloaded constructor for "Locomotive" class
+Locomotive::Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxspeed,
+                    std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
+                    int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
+                    std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
+                    std::string route, int numOfHandedTickets)
+{
+    this->serialNum = serialNum;
+    this->workspaceNum = workspaceNum;
+    this->dateOfProd = dateOfProd;
+    this->maxspeed = maxspeed;
+    this->brand = brand;
+    this->fuel = fuel;
+    this->numOfRoutes = numOfRoutes;
+    this->numOfRoutesBeforeRepair = numOfRoutesBeforeRepair;
+    this->numOfRepair = numOfRepair;
+    this->dateOfComeBack = dateOfComeBack;
+    this->daysOnStation = daysOnStation;
+    this->yearOfTechExam = yearOfTechExam;
+    this->routeStatus = routeStatus;
+    this->routeReason = routeReason;
+    this->category = category;
+    this->routeDuration = routeDuration;
+    this->route = route;
+    this->numOfHandedTickets = numOfHandedTickets;
+};
+
+//default destructor for "Locomotive" class
+Locomotive::~Locomotive(){};
+
+//setters for the "Locomotive" class
+void Locomotive::setSerialNum(int num)
+{
+    this->serialNum = num;
+}
+void Locomotive::setWorkspaceNum(int num)
+{
+    this->workspaceNum = num;
+}
+void Locomotive::setDateOfProd(int date)
+{
+    this->dateOfProd = date;
+}
+void Locomotive::setBrand(std::string brand)
+{
+    this->brand = brand;
+}
+void Locomotive::setNumOfRoutes(int routes)
+{
+    this->numOfRoutes = routes;
+}
+void Locomotive::setNumOfRoutesBeforeRepair(int routesBeforeRepair)
+{
+    this->numOfRoutesBeforeRepair = routesBeforeRepair;
+}
+void Locomotive::setNumOfRepair(int numOfRepair)
+{
+    this->numOfRepair = numOfRepair;
+}
+void Locomotive::setDateOfComeback(std::string date)
+{
+    this->dateOfComeBack = date;
+}
+void Locomotive::setDaysOnStation(int days)
+{
+    this->daysOnStation = days;
+}
+void Locomotive::setYearOfTechExam(std::string year)
+{
+    this->yearOfTechExam = year;
+}
+
+//getters for the "Locomotive" class
+int Locomotive::getSerialNum()
+{
+    return serialNum;
+}
+int Locomotive::getWorkspaceNum()
+{
+    return workspaceNum;
+}
+int Locomotive::getDateOfProd()
+{
+    return dateOfProd;
+}
+int Locomotive::getMaxSpeed()
+{
+    return maxspeed;
+}
+std::string Locomotive::getBrand()
+{
+    return brand;
+}
+std::string Locomotive::getFuel()
+{
+    return fuel;
+}
+int Locomotive::getNumOfRoutes()
+{
+    return numOfRoutes;
+}
+int Locomotive::getNumOfRoutesBeforeRepair()
+{
+    return numOfRoutesBeforeRepair;
+}
+int Locomotive::getNumOfRepair()
+{
+    return numOfRepair;
+}
+std::string Locomotive::getDateOfComeback()
+{
+    return dateOfComeBack;
+}
+int Locomotive::getDaysOnStation()
+{
+    return daysOnStation;
+}
+std::string Locomotive::getYearOfTechExam()
+{
+    return yearOfTechExam;
+}
+std::string Locomotive::getRoute()
+{
+    return route;
+}
+std::string Locomotive::getRouteStatus()
+{
+    return routeStatus;
+}
+std::string Locomotive::getCategory()
+{
+    return category;
+}
+int Locomotive::getRouteDuration()
+{
+    return routeDuration;
+}
+std::string Locomotive::getRouteReason()
+{
+    return routeReason;
+}
+int Locomotive::getNumOfHandedTickets()
+{
+    return numOfHandedTickets;
+}
+
+//output function for the "Locomotive" class
+void Locomotive::output(Locomotive &el)
+{
+    std::cout   << "--------------------------------------------------------------" << std::endl
+                << "Serial number: " << el.getSerialNum() << std::endl
+                << "Workspace number: " << el.getWorkspaceNum() << std::endl
+                << "Production date: " << el.getDateOfProd() << std::endl
+                << "Max. speed: " << el.getMaxSpeed() << std::endl
+                << "Brand: " << el.getBrand() << std::endl
+                << "Fuel: " << el.getFuel() << std::endl
+                << "Num. of routes: " << el.getNumOfRoutes() << std::endl
+                << "Num. of routes before repair: " << el.getNumOfRoutesBeforeRepair() << std::endl
+                << "Num. of repair: " << el.getNumOfRepair() << std::endl
+                << "Date of come back: " << el.getDateOfComeback() << std::endl
+                << "Days on station: " << el.getDaysOnStation() << std::endl
+                << "Year of tech. exam: " << el.getYearOfTechExam() << std::endl
+                << "Route status: " << el.getRouteStatus() << std::endl
+                << "Route reason: " << el.getRouteReason() << std::endl
+                << "Category: " << el.getCategory() << std::endl
+                << "Route duration: " << el.getRouteDuration() << std::endl
+                << "Route: " << el.getRoute() << std::endl
+                << "Num. of handed tickets: " << el.getNumOfHandedTickets() << std::endl
+                << "--------------------------------------------------------------" << std::endl;
+}
+
+
+//VAGON CLASS
+/*
+//default constructor for "Vagon" class
+Vagon::Vagon(){};
+
+//overloaded constructor for "Vagon" class
+Vagon::Vagon(int serialNum, int workspaceNum, int dateOfProd,
+                    std::string brand, int numOfRoutes, int numOfRoutesBeforeRepair,
+                    int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam)
+{
+    this->setSerialNum(serialNum);
+    this->setWorkspaceNum(workspaceNum);
+    this->setDateOfProd(dateOfProd);
+    this->setBrand(brand);
+    this->setNumOfRoutes(numOfRoutes);
+    this->setNumOfRoutesBeforeRepair(numOfRoutesBeforeRepair);
+    this->setNumOfRepair(numOfRepair);
+    this->setDateOfComeback(dateOfComeBack);
+    this->setDaysOnStation(daysOnStation);
+    this->setYearOfTechExam(yearOfTechExam);
+}
+
+//default destructor for "Vagon" class
+Vagon::~Vagon(){};
+
+void output(Vagon &el)
+{
+    std::cout   << "--------------------------------------------------------------" << std::endl
+                << "Serial number: " << el.getSerialNum() << std::endl
+                << "Workspace number: " << el.getWorkspaceNum() << std::endl
+                << "Production date: " << el.getDateOfProd() << std::endl
+                << "Brand: " << el.getBrand() << std::endl
+                << "Num. of routes: " << el.getNumOfRoutes() << std::endl
+                << "Num. of routes before repair: " << el.getNumOfRoutesBeforeRepair() << std::endl
+                << "Num. of repair: " << el.getNumOfRepair() << std::endl
+                << "Date of come back: " << el.getDateOfComeback() << std::endl
+                << "Days on station: " << el.getDaysOnStation() << std::endl
+                << "Year of tech. exam: " << el.getYearOfTechExam() << std::endl
+                << "--------------------------------------------------------------" << std::endl;
+}*/

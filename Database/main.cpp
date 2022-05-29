@@ -72,9 +72,8 @@ void worker_second_menu(std::string sort_by)
 void brig_second_menu(std::string sort_by)
 {
     std::cout   << "(1) Display drivers brigades " << sort_by << std::endl
-                << "(2) Display dispatchers brigades " << sort_by << std::endl
-                << "(3) Show repair brigades " << sort_by << std::endl
-                << "(4) Show brigades of road repairmen " << sort_by << std::endl
+                << "(2) Show repair brigades " << sort_by << std::endl
+                << "(3) Show brigades of road repairmen " << sort_by << std::endl
                 << "\nYour choise: ";
 }
 
@@ -639,27 +638,296 @@ int main()
                 }
                 else if(second_choise == all_brig)
                 {
-                    //show information about all brigades
+                    //outputting crews of driver department
+                    std::cout   << double_delimiter
+                                << "DRIVER DEPARTMENT" << std::endl
+                                << "First crew" << std::endl;
+                    outputDriver(firstDriverCrew);
+                    std::cout   << single_delimiter
+                                << "Second crew" << std::endl;
+                    outputDriver(secondDriverCrew);
+
+                    //outputting crews of rolling stock repair department
+                    std::cout   << double_delimiter
+                                << "ROLLING STOCK REPAIR DEPARTMENT" << std::endl
+                                << "First crew" << std::endl;
+                    outputWorker(firstRollStRepairmanCrew);
+                    std::cout   << single_delimiter
+                                << "Second crew" << std::endl;
+                    outputWorker(secondRollStRepairmanCrew);
+
+                    //outputting crews of road repair department
+                    std::cout   << double_delimiter
+                                << "ROAD REPAIR DEPARTMENT" << std::endl
+                                << "First crew" << std::endl;
+                    outputWorker(firstRoadRepairmanCrew);
+                    std::cout   << single_delimiter
+                                << "Second crew" << std::endl;
+                    outputWorker(secondRoadRepairmanCrew);
+                    
+                    Menu();
+                    break;
                 }
                 else if(second_choise == brig_by_dep)
                 {
-                    //show information about brigades (sort by department)
+                    brig_second_menu("sorted by department");
+                    std::cin >> third_choise;
+                    
+                    if(third_choise == 1)
+                    {
+                        std::cout   << "First crew" << std::endl;
+                        outputDriver(firstDriverCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew" << std::endl;
+                        outputDriver(secondDriverCrew);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        std::cout   << "First crew" << std::endl;
+                        outputWorker(firstRollStRepairmanCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew" << std::endl;
+                        outputWorker(secondRollStRepairmanCrew);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        std::cout   << "First crew" << std::endl;
+                        outputWorker(firstRoadRepairmanCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew" << std::endl;
+                        outputWorker(secondRoadRepairmanCrew);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
+                    Menu();
+                    break;
                 }
                 else if(second_choise == brig_by_loc)
                 {
-                    //show information about brigades (sort by locomotives)
+                    //outputting crews sorted by locomotive
+                    brig_second_menu("sorted by locomotive");
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        std::cout   << "First crew (locomotive #001)" << std::endl;
+                        outputDriver(firstDriverCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew (locomotive #002)" << std::endl;
+                        outputDriver(secondDriverCrew);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        std::cout   << "First crew (locomotive #001)" << std::endl;
+                        outputWorker(firstRollStRepairmanCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew (locomotive #002)" << std::endl;
+                        outputWorker(secondRollStRepairmanCrew);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        std::cout   << "First crew (locomotive #001)" << std::endl;
+                        outputWorker(firstRoadRepairmanCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew (locomotive #002)" << std::endl;
+                        outputWorker(secondRoadRepairmanCrew);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
+                    Menu();
+                    break;
                 }
                 else if(second_choise == brig_by_age)
                 {
-                    //show information about brigades (sort by age)
+                    //outputting crews sorted by age
+                    brig_second_menu("sorted by age");
+                    std::cin >> third_choise;
+                    
+                    if(third_choise == 1)
+                    {
+                        std::cout   << "First crew" << std::endl;
+                        sortDriverByAge(firstDriverCrew);
+                        outputDriver(firstDriverCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew" << std::endl;
+                        sortDriverByAge(secondDriverCrew);
+                        outputDriver(secondDriverCrew);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        std::cout   << "First crew" << std::endl;
+                        sortWorkerByAge(firstRollStRepairmanCrew);
+                        outputWorker(firstRollStRepairmanCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew" << std::endl;
+                        sortWorkerByAge(secondRollStRepairmanCrew);
+                        outputWorker(secondRollStRepairmanCrew);
+                    }
+                    else if(third_choise == 3)
+                    {
+                        std::cout   << "First crew" << std::endl;
+                        sortWorkerByAge(firstRoadRepairmanCrew);
+                        outputWorker(firstRoadRepairmanCrew);
+                        std::cout   << single_delimiter
+                                    << "Second crew" << std::endl;
+                        sortWorkerByAge(secondRoadRepairmanCrew);
+                        outputWorker(secondRoadRepairmanCrew);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
+                    Menu();
+                    break;
                 }
                 else if(second_choise == brig_by_sum_salary)
                 {
-                    //show information about brigades (sort by summary salary)
+                    //outputting crews sorted by sum of salary
+                    brig_second_menu("sorted by sum of salary");
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        if(sortDriverBySumSalary(firstDriverCrew) > sortDriverBySumSalary(secondDriverCrew))
+                        {
+                            std::cout   << "First crew" << std::endl;
+                            outputDriver(firstDriverCrew);
+                            std::cout   << single_delimiter
+                                        << "Second crew" << std::endl;
+                            outputDriver(secondDriverCrew);
+                        }
+                        else
+                        {
+                            std::cout   << "Second crew" << std::endl;
+                            outputDriver(secondDriverCrew);
+                            std::cout   << single_delimiter
+                                        << "First crew" << std::endl;
+                            outputDriver(firstDriverCrew);
+                        }
+                    }
+                    else if(third_choise == 2)
+                    {
+                        if(sortWorkerBySumSalary(firstRollStRepairmanCrew) > sortWorkerBySumSalary(secondRollStRepairmanCrew))
+                        {
+                            std::cout   << "First crew" << std::endl;
+                            outputWorker(firstRollStRepairmanCrew);
+                            std::cout   << single_delimiter
+                                        << "Second crew" << std::endl;
+                            outputWorker(secondRollStRepairmanCrew);
+                        }
+                        else
+                        {
+                            std::cout   << "Second crew" << std::endl;
+                            outputWorker(secondRollStRepairmanCrew);
+                            std::cout   << single_delimiter
+                                        << "First crew" << std::endl;
+                            outputWorker(firstRollStRepairmanCrew);
+                        }
+                    }
+                    else if(third_choise == 3)
+                    {
+                        if(sortWorkerBySumSalary(firstRoadRepairmanCrew) > sortWorkerBySumSalary(secondRoadRepairmanCrew))
+                        {
+                            std::cout   << "First crew" << std::endl;
+                            outputWorker(firstRoadRepairmanCrew);
+                            std::cout   << single_delimiter
+                                        << "Second crew" << std::endl;
+                            outputWorker(secondRoadRepairmanCrew);
+                        }
+                        else
+                        {
+                            std::cout   << "Second crew" << std::endl;
+                            outputWorker(secondRoadRepairmanCrew);
+                            std::cout   << single_delimiter
+                                        << "First crew" << std::endl;
+                            outputWorker(firstRoadRepairmanCrew);
+                        }
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
+                    Menu();
+                    break;
                 }
                 else if(second_choise == brig_by_avar_salary)
                 {
-                    //show information about brigades (sort by avarage salary)
+                    //outputting crews sorted by average salary
+                    brig_second_menu("sorted by average salary");
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        if(sortDriverByAvgSalary(firstDriverCrew) > sortDriverByAvgSalary(secondDriverCrew))
+                        {
+                            std::cout   << "First crew" << std::endl;
+                            outputDriver(firstDriverCrew);
+                            std::cout   << single_delimiter
+                                        << "Second crew" << std::endl;
+                            outputDriver(secondDriverCrew);
+                        }
+                        else
+                        {
+                            std::cout   << "Second crew" << std::endl;
+                            outputDriver(secondDriverCrew);
+                            std::cout   << single_delimiter
+                                        << "First crew" << std::endl;
+                            outputDriver(firstDriverCrew);
+                        }
+                    }
+                    else if(third_choise == 2)
+                    {
+                        if(sortWorkerByAvgSalary(firstRollStRepairmanCrew) > sortWorkerByAvgSalary(secondRollStRepairmanCrew))
+                        {
+                            std::cout   << "First crew" << std::endl;
+                            outputWorker(firstRollStRepairmanCrew);
+                            std::cout   << single_delimiter
+                                        << "Second crew" << std::endl;
+                            outputWorker(secondRollStRepairmanCrew);
+                        }
+                        else
+                        {
+                            std::cout   << "Second crew" << std::endl;
+                            outputWorker(secondRollStRepairmanCrew);
+                            std::cout   << single_delimiter
+                                        << "First crew" << std::endl;
+                            outputWorker(firstRollStRepairmanCrew);
+                        }
+                    }
+                    else if(third_choise == 3)
+                    {
+                        if(sortWorkerByAvgSalary(firstRoadRepairmanCrew) > sortWorkerByAvgSalary(secondRoadRepairmanCrew))
+                        {
+                            std::cout   << "First crew" << std::endl;
+                            outputWorker(firstRoadRepairmanCrew);
+                            std::cout   << single_delimiter
+                                        << "Second crew" << std::endl;
+                            outputWorker(secondRoadRepairmanCrew);
+                        }
+                        else
+                        {
+                            std::cout   << "Second crew" << std::endl;
+                            outputWorker(secondRoadRepairmanCrew);
+                            std::cout   << single_delimiter
+                                        << "First crew" << std::endl;
+                            outputWorker(firstRoadRepairmanCrew);
+                        }
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
+                    Menu();
+                    break;
                 }
                 else
                 {
@@ -692,15 +960,20 @@ int main()
                 }
                 else if(second_choise == mexam_sex)
                 {
-                    //show information about driver's medical examination (sorted by sex)
+                    men_or_women_menu();
+                    std::cin >> fourth_choise;
+
+                    outputDriverMedBySex(driverList, fourth_choise);
                 }
                 else if(second_choise == mexam_age)
                 {
-                    //show information about driver's medical examination (sorted by age)
+                    sortDriverByAge(driverList);
+                    outputDriverMedByAge(driverList);
                 }
                 else if(second_choise == mexam_salary)
                 {
-                    //show information about driver's medical examination (sorted by salary)
+                    sortDriverBySalary(driverList);
+                    outputDriverMedBySalary(driverList);
                 }
                 else
                 {
@@ -718,12 +991,12 @@ int main()
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
-                            << "(1) Show data about the locomotive's stay at the station\n"
-                            << "(2) Show locomotive come back time data\n"
-                            << "(3) Show data on the number of trips of the locomotive\n"
+                            << "(1) Show data about the locomotives sorted by staying at the station\n"
+                            << "(2) Show locomotives data sorted by come back time\n"
+                            << "(3) Show locomotives data sorted by number of routes\n"
                             << "Your choise: ";
 
-                std::cin >> second_choise;;
+                std::cin >> second_choise;
                 std::cout << single_delimiter;
 
                 if(second_choise == menu_d)
@@ -733,7 +1006,8 @@ int main()
                 }
                 else if(second_choise == loc_stay)
                 {
-                    //show information about the locomotive's stay at the station
+                    sortLocByStaying(locomList);
+                    outputLocomotive(locomList);
                 }
                 else if(second_choise == loc_comeback)
                 {
@@ -762,7 +1036,7 @@ int main()
                             << "(1) Show locomotive inspection data (sorted by time period)\n"
                             << "(2) Show locomotive inspection data (sorted by repair time)\n"
                             << "(3) Show data on the number of repairs of the locomotive\n"
-                            << "(4) Show locomotive inspection data (sorted by flights before overhaul)\n"
+                            << "(4) Show locomotive inspection data (sorted by routes before overhaul)\n"
                             << "(5) Show locomotive inspection data (sorted by age)\n"
                             << "Your choise: ";
 
@@ -810,8 +1084,8 @@ int main()
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
-                            << "(1) Show data about train (sorted by selected flight)\n"
-                            << "(2) Show data about train (sorted by flight duration)\n"
+                            << "(1) Show data about train (sorted by selected route)\n"
+                            << "(2) Show data about train (sorted by route duration)\n"
                             << "(3) Show data about train (sorted by ticket price)\n"
                             << "(4) Show data about train (sorted by all categories)\n"
                             << "Your choise: ";
@@ -856,8 +1130,8 @@ int main()
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
-                            << "(1) Show data about canceled flights in a given direction\n"
-                            << "(2) Show canceled flights on the specified route\n"
+                            << "(1) Show data about canceled routes in a given direction\n"
+                            << "(2) Show canceled routes on the specified route\n"
                             << "Your choise: ";
                 
                 std::cin >> second_choise;
@@ -892,8 +1166,8 @@ int main()
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
-                            << "(1) Show flight delays (sorted by reason)\n"
-                            << "(2) Show flight delays (sorted by specified route)\n"
+                            << "(1) Show route delays (sorted by reason)\n"
+                            << "(2) Show route delays (sorted by specified route)\n"
                             << "(3) Show the number of tickets handed in during the delay\n"
                             << "Your choise: ";
 
@@ -1073,7 +1347,7 @@ int main()
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
-                            << "(1) Show data on unpurchased tickets on the specified flight\n"
+                            << "(1) Show data on unpurchased tickets on the specified route\n"
                             << "(2) Show data on unpurchased tickets on the specified day\n"
                             << "(3) Show data on unpurchased tickets on the specified route\n"
                             << "Your choise: ";

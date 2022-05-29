@@ -30,7 +30,11 @@ SOFTWARE.
 void outputAdmin(std::vector<Administration> &vec);
 void outputDriver(std::vector<Rolling_stock_driver> &vec);
 void outputWorker(std::vector<Worker> &vec);
+void outputLocomotive(std::vector<Locomotive> &vec);
+// void outputVagon(std::vector<Vagon> &vec);
 
+
+//ADMINISTRATION CLASS
 
 //function for sorting data of "Administration" class by experience
 void sortAdminByExp(std::vector<Administration> &vec);
@@ -51,6 +55,8 @@ void sortAdminByChildNum(std::vector<Administration> &vec);
 void sortAdminBySalary(std::vector<Administration> &vec);
 
 
+//DRIVER CLASS
+
 //function for sorting data of "Rolling_stock_driver" class by experience
 void sortDriverByExp(std::vector<Rolling_stock_driver> &vec);
 
@@ -69,6 +75,23 @@ void sortDriverByChildNum(std::vector<Rolling_stock_driver> &vec);
 //function for sorting data of "Rolling_stock_driver" class by salary
 void sortDriverBySalary(std::vector<Rolling_stock_driver> &vec);
 
+//function for sorting data of "Rolling_stock_driver" class by sum of salary
+double sortDriverBySumSalary(std::vector<Rolling_stock_driver> &vec);
+
+//function for sorting data of "Rolling_stock_driver" class by avg salary
+double sortDriverByAvgSalary(std::vector<Rolling_stock_driver> &vec);
+
+//function for sorting medical examination data of "Rolling_stock_driver" class by sex
+void outputDriverMedBySex(std::vector<Rolling_stock_driver> &vec, int sex);
+
+//function for sorting medical examination data of "Rolling_stock_driver" class by age
+void outputDriverMedByAge(std::vector<Rolling_stock_driver> &vec);
+
+//function for sorting medical examination data of "Rolling_stock_driver" class by salary
+void outputDriverMedBySalary(std::vector<Rolling_stock_driver> &vec);
+
+
+//WORKER CLASS
 
 //function for sorting data of "Worker" class by experience
 void sortWorkerByExp(std::vector<Worker> &vec);
@@ -87,3 +110,15 @@ void sortWorkerByChildNum(std::vector<Worker> &vec);
 
 //function for sorting data of "Worker" class by salary
 void sortWorkerBySalary(std::vector<Worker> &vec);
+
+//function for sorting data of "Worker" class by sum of salary
+double sortWorkerBySumSalary(std::vector<Worker> &vec);
+
+//function for sorting data of "Worker" class by avg salary
+double sortWorkerByAvgSalary(std::vector<Worker> &vec);
+
+
+//LOCOMOTIVE CLASS
+
+//function for sorting data of "Locomotive" class by days spent for staying on station
+void sortLocByStaying(std::vector<Locomotive> &vec);
