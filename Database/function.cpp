@@ -55,17 +55,17 @@ void outputLocomotive(std::vector<Locomotive> &vec)
 {
     for(auto &el : vec)
     {
-        el.output(el);
+        el.outputLoc(el);
     }
 }
-/*
+
 void outputVagon(std::vector<Vagon> &vec)
 {
     for(auto &el : vec)
     {
-        el.output(el);
+        el.outputVag(el);
     }
-}*/
+}
 
 
 //FUNCTIONS FOR SORTING DATA OF "Administration" CLASS
@@ -485,6 +485,82 @@ void sortWorkerBySalary(std::vector<Worker> &vec)
 }
 
 
+
+//FUNCTIONS FOR SORTING DATA OF "Train" CLASS
+
+//outputting the first train
+void outputFirstTrain(std::vector<Locomotive> &vec, std::vector<Vagon> &vag)
+{
+    std::cout << "First train" << std::endl;
+    vec[0].outputLoc(vec[0]);
+    vag[0].outputVag(vag[0]);
+    vag[1].outputVag(vag[1]);
+}
+
+//outputting the second train
+void outputSecondTrain(std::vector<Locomotive> &vec, std::vector<Vagon> &vag)
+{
+    std::cout << "Second train" << std::endl;
+    vec[1].outputLoc(vec[1]);
+    vag[2].outputVag(vag[2]);
+    vag[3].outputVag(vag[3]);
+}
+
+//function for sorting data of trains by route duration
+void outputTrainsByRouteDuration(std::vector<Locomotive> &vec, std::vector<Vagon> &vag)
+{
+    if(vec[0].getRouteDuration() > vec[0].getRouteDuration())
+    {
+        outputFirstTrain(vec, vag);
+        outputSecondTrain(vec, vag);
+    }
+    else
+    {
+        outputSecondTrain(vec, vag);
+        outputFirstTrain(vec, vag);
+    }
+}
+
+//function for sorting data of trains by ticket price
+void outputTrainsByTicketPrice(std::vector<Locomotive> &vec, 
+                                std::vector<Vagon> &vag,
+                                std::vector<Ticket> &tick)
+{
+    for(auto &el : tick)
+    {
+        if((el.getRoute() == vec[0].getRoute()) && (el.getTicketPrice() > 100))
+        {
+            outputFirstTrain(vec, vag); 
+            outputSecondTrain(vec, vag);
+            break;
+        }
+        else
+        {
+            outputSecondTrain(vec, vag);
+            outputFirstTrain(vec, vag);
+            break;
+        }
+    }
+
+}
+
+//function for outputting the trains data by category
+void outputTrainByPassCategory(std::vector<Locomotive> &vec, std::vector<Vagon> &vag)
+{
+    if(vec[0].getCategory() == "passenger")
+    {
+        outputFirstTrain(vec, vag);
+    }
+}
+void outputTrainByCargoCategory(std::vector<Locomotive> &vec, std::vector<Vagon> &vag)
+{
+    if(vec[1].getCategory() == "cargo")
+    {
+        outputSecondTrain(vec, vag);
+    }
+}
+
+
 //FUNCTIONS FOR SORTING DATA OF "Locomotive" CLASS
 
 //function for sorting data of "Locomotive" class by days spent for staying on station
@@ -502,6 +578,177 @@ void sortLocByStaying(std::vector<Locomotive> &vec)
                 vec.at(i) = vec.at(j);
                 vec.at(j) = tmp;
             }
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by comeback date
+void sortLocByComeBack(std::vector<Locomotive> &vec)
+{
+    Locomotive tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getDateOfComeback()) < (vec.at(j).getDateOfComeback()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by number of routes
+void sortLocByNumOfRoutes(std::vector<Locomotive> &vec)
+{
+    Locomotive tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getNumOfRoutes()) > (vec.at(j).getNumOfRoutes()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by examination period
+void outputLocByExamPeriod(std::vector<Locomotive> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getYearOfTechExam() == "2022")
+        {
+            el.outputLoc(el);
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by examination time
+void sortLocByExamTime(std::vector<Locomotive> &vec)
+{
+    Locomotive tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getYearOfTechExam()) > (vec.at(j).getYearOfTechExam()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by number of repairs
+void sortLocByRepairNum(std::vector<Locomotive> &vec)
+{
+    Locomotive tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getNumOfRepair()) > (vec.at(j).getNumOfRepair()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by number of routes before overhaul
+void sortLocByNumOfRoutesBefore(std::vector<Locomotive> &vec)
+{
+    Locomotive tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getNumOfRoutesBeforeRepair()) > (vec.at(j).getNumOfRoutesBeforeRepair()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by age
+void sortLocByAge(std::vector<Locomotive> &vec)
+{
+    Locomotive tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getDateOfProd()) < (vec.at(j).getDateOfProd()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by status
+void outputLocByStatus(std::vector<Locomotive> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getRouteStatus() == "Canceled")
+        {
+            std::cout << el.getRoute() << std::endl;
+            break;
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by status
+void outputLocByReason(std::vector<Locomotive> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getRouteReason() == "technical")
+        {
+            std::cout   << el.getRoute() << std::endl
+                        << el.getRouteReason() << std::endl;
+            break;
+        }
+    }
+}
+
+//function for sorting data of "Locomotive" class by handed tickets
+void outputLocByHandedTick(std::vector<Locomotive> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getRoute() == "Kyiv-Lviv")
+        {
+            std::cout   << el.getRoute() << std::endl
+                        << el.getNumOfHandedTickets() << std::endl;
+        }
+        if(el.getRoute() == "Uzhhorod-Lviv")
+        {
+            std::cout   << el.getRoute() << std::endl
+                        << el.getNumOfHandedTickets() << std::endl;
         }
     }
 }

@@ -38,8 +38,8 @@ void Menu()
                 << "(4) Output of station locomotives" << std::endl
                 << "(5) Output of inspection data of locomotives of the station" << std::endl
                 << "(6) Output of station trains" << std::endl
-                << "(7) Output of canceled flights" << std::endl
-                << "(8) Output of data of detained flights" << std::endl
+                << "(7) Output of canceled routes" << std::endl
+                << "(8) Output of data of detained routes" << std::endl
                 << "(9) Output of data on ticket sales" << std::endl
                 << "(10) Output of route category data" << std::endl
                 << "(11) Output of passenger data" << std::endl
@@ -609,6 +609,8 @@ int main()
                     break;
                 }
 
+                std::cout <<  single_delimiter;
+
                 Menu();
             break;
 
@@ -936,6 +938,8 @@ int main()
                     break;
                 }
 
+                std::cout <<  single_delimiter;
+
                 Menu();
             break;
 
@@ -960,6 +964,7 @@ int main()
                 }
                 else if(second_choise == mexam_sex)
                 {
+                    //outputting medial examination data sorted by sex
                     men_or_women_menu();
                     std::cin >> fourth_choise;
 
@@ -967,11 +972,13 @@ int main()
                 }
                 else if(second_choise == mexam_age)
                 {
+                    //outputting medial examination data sorted by age
                     sortDriverByAge(driverList);
                     outputDriverMedByAge(driverList);
                 }
                 else if(second_choise == mexam_salary)
                 {
+                    //outputting medial examination data sorted by salary
                     sortDriverBySalary(driverList);
                     outputDriverMedBySalary(driverList);
                 }
@@ -981,6 +988,8 @@ int main()
                     Menu();
                     break;
                 }
+
+                std::cout <<  single_delimiter;
 
                 Menu();
             break;
@@ -1006,16 +1015,21 @@ int main()
                 }
                 else if(second_choise == loc_stay)
                 {
+                    //outputting locomotives data sorted by staying on the station
                     sortLocByStaying(locomList);
                     outputLocomotive(locomList);
                 }
                 else if(second_choise == loc_comeback)
                 {
-                    //show information about locomotive come back time data
+                    //outputting locomotives data sorted by come back time
+                    sortLocByComeBack(locomList);
+                    outputLocomotive(locomList);
                 }
                 else if(second_choise == loc_count_trips)
                 {
-                    //show information about the number of trips of the locomotive
+                    //outputting locomotives data sorted by number of routes
+                    sortLocByNumOfRoutes(locomList);
+                    outputLocomotive(locomList);
                 }
                 else
                 {
@@ -1023,6 +1037,8 @@ int main()
                     Menu();
                     break;
                 }
+
+                std::cout <<  single_delimiter;
 
                 Menu();
             break;
@@ -1035,7 +1051,7 @@ int main()
                             << "(0) Return to the menu\n"
                             << "(1) Show locomotive inspection data (sorted by time period)\n"
                             << "(2) Show locomotive inspection data (sorted by repair time)\n"
-                            << "(3) Show data on the number of repairs of the locomotive\n"
+                            << "(3) Show locomotive inspection data (sorted by number of repairs)\n"
                             << "(4) Show locomotive inspection data (sorted by routes before overhaul)\n"
                             << "(5) Show locomotive inspection data (sorted by age)\n"
                             << "Your choise: ";
@@ -1050,23 +1066,32 @@ int main()
                 }
                 else if(second_choise == insp_by_time)
                 {
-                    //show information about locomotive inspection data (sorted by time period)
+                    //outputting locomotives data sorted by examination time
+                    outputLocByExamPeriod(locomList);
                 }
                 else if(second_choise == insp_by_repair)
                 {
-                    //show information about locomotive inspection data (sorted by repair time)
+                    //outputting locomotives data sorted by examination time
+                    sortLocByExamTime(locomList);
+                    outputLocomotive(locomList);
                 }
                 else if(second_choise == insp_by_rep_count)
                 {
-                    //show information about the number of repairs of the locomotive
+                    //outputting locomotives data sorted by number of repairs
+                    sortLocByRepairNum(locomList);
+                    outputLocomotive(locomList);
                 }
                 else if(second_choise == insp_by_flights)
                 {
-                    //show information about locomotive inspection data (sorted by flights before overhaul)
+                    //outputting locomotives data sorted by number of routes before overhaul
+                    sortLocByNumOfRoutesBefore(locomList);
+                    outputLocomotive(locomList);
                 }
                 else if(second_choise == insp_by_age)
                 {
-                    //show information about locomotive inspection data (sorted by age)
+                    //outputting locomotives data sorted by age
+                    sortLocByAge(locomList);
+                    outputLocomotive(locomList);
                 }
                 else
                 {
@@ -1074,6 +1099,8 @@ int main()
                     Menu();
                     break;
                 }
+
+                std::cout <<  single_delimiter;
 
                 Menu();
             break;
@@ -1100,19 +1127,68 @@ int main()
                 }
                 else if(second_choise == train_flight)
                 {
-                    //show information about train (sorted by selected flight)
+                    //outputting trains data sorted by route
+
+                    //lambda function for outputting a part of the menu
+                    auto route_menu = []()
+                    {
+                        std::cout   << "1) Kyiv-Lviv" << std::endl
+                                    << "2) Uzhhorod-Lviv" << std::endl
+                                    << "Your choise: ";
+                    };
+                    route_menu();
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        outputFirstTrain(locomList, vagonList);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        outputSecondTrain(locomList, vagonList);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
                 }
                 else if(second_choise == train_f_duration)
                 {
-                    //show information about train (sorted by flight duration)
+                    //outputting trains data sorted by route duration
+                    outputTrainsByRouteDuration(locomList, vagonList);
                 }
                 else if(second_choise == train_price)
                 {
-                    //show information about train (sorted by ticket price)
+                    //outputting trains data sorted by ticket price
+                    outputTrainsByTicketPrice(locomList, vagonList, ticketList);
                 }
                 else if(second_choise == train_category)
                 {
-                    //show information about train (sorted by all categories)
+                    //outputting trains data sorted by category
+
+                    //lambda function for outputting a part of the menu
+                    auto route_menu = []()
+                    {
+                        std::cout   << "1) Passenger" << std::endl
+                                    << "2) Cargo" << std::endl
+                                    << "Your choise: ";
+                    };
+                    route_menu();
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        outputTrainByPassCategory(locomList, vagonList);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        outputTrainByCargoCategory(locomList, vagonList);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
+
                 }
                 else
                 {
@@ -1120,35 +1196,33 @@ int main()
                     Menu();
                     break;
                 }
+
+                std::cout <<  single_delimiter;
 
                 Menu();
             break;
 
             case cancelled_flights:
                 //enum type to use the menu (for code readability)
-                enum{menu_g, can_directions, can_routes};
+                enum{menu_g, can_route,};
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
-                            << "(1) Show data about canceled routes in a given direction\n"
-                            << "(2) Show canceled routes on the specified route\n"
+                            << "(1) Show data about canceled routes in a given route\n"
                             << "Your choise: ";
                 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
 
+                //outputting data of cancelled routes
                 if(second_choise == menu_g)
                 {
                     Menu();
                     break;
                 }
-                else if(second_choise == can_directions)
+                else if(second_choise == can_route)
                 {
-                    //show information about canceled flights in a given direction
-                }
-                else if(second_choise == can_routes)
-                {
-                    //show information about canceled flights on the specified route
+                    outputLocByStatus(locomList);
                 }
                 else
                 {
@@ -1156,6 +1230,8 @@ int main()
                     Menu();
                     break;
                 }
+
+                std::cout << single_delimiter;
 
                 Menu();
             break;
@@ -1181,15 +1257,15 @@ int main()
                 }
                 else if(second_choise == flight_reason)
                 {
-                    //show information about flight delays (sorted by reason)
+                    outputLocByReason(locomList);
                 }
                 else if(second_choise == flight_route)
                 {
-                    //show information about flight delays (sorted by specified route)
+                    outputLocByHandedTick(locomList);
                 }
                 else if(second_choise == handedIn_tickets)
                 {
-                    //show information about the number of tickets handed in during the delay
+                    outputLocByHandedTick(locomList);
                 }
                 else
                 {
@@ -1197,6 +1273,8 @@ int main()
                     Menu();
                     break;
                 }
+
+                std::cout <<  single_delimiter;
 
                 Menu();
             break;
@@ -1245,6 +1323,8 @@ int main()
                     break;
                 }
 
+                std::cout <<  single_delimiter;
+
                 Menu();
             break;
 
@@ -1280,6 +1360,8 @@ int main()
                     Menu();
                     break;
                 }
+
+                std::cout <<  single_delimiter;
 
                 Menu();
             break;
@@ -1338,6 +1420,8 @@ int main()
                     break;
                 }
 
+                std::cout <<  single_delimiter;
+
                 Menu();
             break;
 
@@ -1379,6 +1463,8 @@ int main()
                     break;
                 }
 
+                std::cout <<  single_delimiter;
+
                 Menu();
             break;
 
@@ -1419,6 +1505,8 @@ int main()
                     Menu();
                     break;
                 }
+
+                std::cout <<  single_delimiter;
 
                 Menu();
             break;

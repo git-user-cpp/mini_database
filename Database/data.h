@@ -154,7 +154,10 @@ class Ticket
         double getTicketPrice();
 };
 
-class Locomotive
+class Locomotive;
+class Vagon;
+
+class Train
 {
     private:
         std::string route;
@@ -174,29 +177,31 @@ class Locomotive
         std::string routeReason;
         std::string category;
         int routeDuration;
-
         int numOfHandedTickets;
-            
+
     public:
-        Locomotive();
-        Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxspeed,
-                    std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
-                    int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
-                    std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
-                    std::string route, int numOfHandedTickets);
-        ~Locomotive();
+        Train();
+        ~Train();
 
         //setters
         void setSerialNum(int num);
         void setWorkspaceNum(int num);
         void setDateOfProd(int date);
+        void setMaxSpeed(int max);
         void setBrand(std::string brand);
+        void setFuel(std::string fuel);
         void setNumOfRoutes(int routes);
         void setNumOfRoutesBeforeRepair(int routesBeforeRepair);
         void setNumOfRepair(int numOfRepair);
         void setDateOfComeback(std::string date);
         void setDaysOnStation(int days);
         void setYearOfTechExam(std::string year);
+        void setRouteStatus(std::string status);
+        void setRouteReason(std::string reason);
+        void setCategory(std::string category);
+        void setRouteDuration(int duration);
+        void setRoute(std::string route);
+        void setNumOfHandedTickets(int num);
 
         //getters
         int getSerialNum();
@@ -217,10 +222,23 @@ class Locomotive
         int getRouteDuration();
         std::string getRouteReason();
         int getNumOfHandedTickets();
-
-        void output(Locomotive &el);
 };
-/*
+
+class Locomotive : public Train
+{
+            
+    public:
+        Locomotive();
+        Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxspeed,
+                    std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
+                    int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
+                    std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
+                    std::string route, int numOfHandedTickets);
+        ~Locomotive();
+
+        void outputLoc(Locomotive &el);
+};
+
 class Vagon : public Locomotive
 {
     public:
@@ -230,7 +248,7 @@ class Vagon : public Locomotive
                     int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam);
         ~Vagon();
 
-        void output(Vagon &el);
-};*/
+        void outputVag(Vagon &el);
+};
 
 #include "function.h"

@@ -31,7 +31,7 @@ void outputAdmin(std::vector<Administration> &vec);
 void outputDriver(std::vector<Rolling_stock_driver> &vec);
 void outputWorker(std::vector<Worker> &vec);
 void outputLocomotive(std::vector<Locomotive> &vec);
-// void outputVagon(std::vector<Vagon> &vec);
+void outputVagon(std::vector<Vagon> &vec);
 
 
 //ADMINISTRATION CLASS
@@ -118,7 +118,55 @@ double sortWorkerBySumSalary(std::vector<Worker> &vec);
 double sortWorkerByAvgSalary(std::vector<Worker> &vec);
 
 
+//TRAIN
+
+//outputting the first train
+void outputFirstTrain(std::vector<Locomotive> &vec, std::vector<Vagon> &vag);
+
+//outputting the second train
+void outputSecondTrain(std::vector<Locomotive> &vec, std::vector<Vagon> &vag);
+
+//function for sorting data of trains by route duration
+void outputTrainsByRouteDuration(std::vector<Locomotive> &vec, std::vector<Vagon> &vag);
+
+//function for sorting data of trains by ticket price
+void outputTrainsByTicketPrice(std::vector<Locomotive> &vec, std::vector<Vagon> &vag, std::vector<Ticket> &tick);
+
+//function for outputting the trains data by category
+void outputTrainByPassCategory(std::vector<Locomotive> &vec, std::vector<Vagon> &vag);
+void outputTrainByCargoCategory(std::vector<Locomotive> &vec, std::vector<Vagon> &vag);
+
 //LOCOMOTIVE CLASS
 
 //function for sorting data of "Locomotive" class by days spent for staying on station
 void sortLocByStaying(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by comeback date
+void sortLocByComeBack(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by number of routes
+void sortLocByNumOfRoutes(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by examination period
+void outputLocByExamPeriod(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by examination time
+void sortLocByExamTime(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by number of repairs
+void sortLocByRepairNum(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by number of routes before overhaul
+void sortLocByNumOfRoutesBefore(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by age
+void sortLocByAge(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by status
+void outputLocByStatus(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by status
+void outputLocByReason(std::vector<Locomotive> &vec);
+
+//function for sorting data of "Locomotive" class by handed tickets
+void outputLocByHandedTick(std::vector<Locomotive> &vec);

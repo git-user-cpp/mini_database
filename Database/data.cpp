@@ -301,159 +301,165 @@ double Ticket::getTicketPrice()
 }
 
 
-//LOCOMOTIVE CLASS
+//TRAIN CLASS
 
-//default constructor for "Locomotive" class
-Locomotive::Locomotive(){};
+//default constructor for "Train" class
+Train::Train(){};
 
-//overloaded constructor for "Locomotive" class
-Locomotive::Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxspeed,
-                    std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
-                    int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
-                    std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
-                    std::string route, int numOfHandedTickets)
-{
-    this->serialNum = serialNum;
-    this->workspaceNum = workspaceNum;
-    this->dateOfProd = dateOfProd;
-    this->maxspeed = maxspeed;
-    this->brand = brand;
-    this->fuel = fuel;
-    this->numOfRoutes = numOfRoutes;
-    this->numOfRoutesBeforeRepair = numOfRoutesBeforeRepair;
-    this->numOfRepair = numOfRepair;
-    this->dateOfComeBack = dateOfComeBack;
-    this->daysOnStation = daysOnStation;
-    this->yearOfTechExam = yearOfTechExam;
-    this->routeStatus = routeStatus;
-    this->routeReason = routeReason;
-    this->category = category;
-    this->routeDuration = routeDuration;
-    this->route = route;
-    this->numOfHandedTickets = numOfHandedTickets;
-};
-
-//default destructor for "Locomotive" class
-Locomotive::~Locomotive(){};
+//default destructor for "Train" class
+Train::~Train(){};
 
 //setters for the "Locomotive" class
-void Locomotive::setSerialNum(int num)
+void Train::setSerialNum(int num)
 {
     this->serialNum = num;
 }
-void Locomotive::setWorkspaceNum(int num)
+void Train::setWorkspaceNum(int num)
 {
     this->workspaceNum = num;
 }
-void Locomotive::setDateOfProd(int date)
+void Train::setDateOfProd(int date)
 {
     this->dateOfProd = date;
 }
-void Locomotive::setBrand(std::string brand)
+
+void Train::setMaxSpeed(int max)
+{
+    this->maxspeed = max;
+}
+void Train::setBrand(std::string brand)
 {
     this->brand = brand;
 }
-void Locomotive::setNumOfRoutes(int routes)
+void Train::setFuel(std::string fuel)
+{
+    this->fuel = fuel;
+}
+void Train::setNumOfRoutes(int routes)
 {
     this->numOfRoutes = routes;
 }
-void Locomotive::setNumOfRoutesBeforeRepair(int routesBeforeRepair)
+void Train::setNumOfRoutesBeforeRepair(int routesBeforeRepair)
 {
     this->numOfRoutesBeforeRepair = routesBeforeRepair;
 }
-void Locomotive::setNumOfRepair(int numOfRepair)
+void Train::setNumOfRepair(int numOfRepair)
 {
     this->numOfRepair = numOfRepair;
 }
-void Locomotive::setDateOfComeback(std::string date)
+void Train::setDateOfComeback(std::string date)
 {
     this->dateOfComeBack = date;
 }
-void Locomotive::setDaysOnStation(int days)
+void Train::setDaysOnStation(int days)
 {
     this->daysOnStation = days;
 }
-void Locomotive::setYearOfTechExam(std::string year)
+void Train::setYearOfTechExam(std::string year)
 {
     this->yearOfTechExam = year;
 }
+void Train::setRouteStatus(std::string status)
+{
+    this->routeStatus = status;
+}
+void Train::setRouteReason(std::string reason)
+{
+    this->routeReason = reason;
+}
+void Train::setCategory(std::string category)
+{
+    this->category = category;
+}
+void Train::setRouteDuration(int duration)
+{
+    this->routeDuration = duration;
+}
+void Train::setRoute(std::string route)
+{
+    this->route = route;
+}
+void Train::setNumOfHandedTickets(int num)
+{
+    this->numOfHandedTickets = num;
+}
 
 //getters for the "Locomotive" class
-int Locomotive::getSerialNum()
+int Train::getSerialNum()
 {
     return serialNum;
 }
-int Locomotive::getWorkspaceNum()
+int Train::getWorkspaceNum()
 {
     return workspaceNum;
 }
-int Locomotive::getDateOfProd()
+int Train::getDateOfProd()
 {
     return dateOfProd;
 }
-int Locomotive::getMaxSpeed()
+int Train::getMaxSpeed()
 {
     return maxspeed;
 }
-std::string Locomotive::getBrand()
+std::string Train::getBrand()
 {
     return brand;
 }
-std::string Locomotive::getFuel()
+std::string Train::getFuel()
 {
     return fuel;
 }
-int Locomotive::getNumOfRoutes()
+int Train::getNumOfRoutes()
 {
     return numOfRoutes;
 }
-int Locomotive::getNumOfRoutesBeforeRepair()
+int Train::getNumOfRoutesBeforeRepair()
 {
     return numOfRoutesBeforeRepair;
 }
-int Locomotive::getNumOfRepair()
+int Train::getNumOfRepair()
 {
     return numOfRepair;
 }
-std::string Locomotive::getDateOfComeback()
+std::string Train::getDateOfComeback()
 {
     return dateOfComeBack;
 }
-int Locomotive::getDaysOnStation()
+int Train::getDaysOnStation()
 {
     return daysOnStation;
 }
-std::string Locomotive::getYearOfTechExam()
+std::string Train::getYearOfTechExam()
 {
     return yearOfTechExam;
 }
-std::string Locomotive::getRoute()
+std::string Train::getRoute()
 {
     return route;
 }
-std::string Locomotive::getRouteStatus()
+std::string Train::getRouteStatus()
 {
     return routeStatus;
 }
-std::string Locomotive::getCategory()
+std::string Train::getCategory()
 {
     return category;
 }
-int Locomotive::getRouteDuration()
+int Train::getRouteDuration()
 {
     return routeDuration;
 }
-std::string Locomotive::getRouteReason()
+std::string Train::getRouteReason()
 {
     return routeReason;
 }
-int Locomotive::getNumOfHandedTickets()
+int Train::getNumOfHandedTickets()
 {
     return numOfHandedTickets;
 }
 
 //output function for the "Locomotive" class
-void Locomotive::output(Locomotive &el)
+void Locomotive::outputLoc(Locomotive &el)
 {
     std::cout   << "--------------------------------------------------------------" << std::endl
                 << "Serial number: " << el.getSerialNum() << std::endl
@@ -477,9 +483,62 @@ void Locomotive::output(Locomotive &el)
                 << "--------------------------------------------------------------" << std::endl;
 }
 
+//output function for the "Vagon" class
+void Vagon::outputVag(Vagon &el)
+{
+    std::cout   << "--------------------------------------------------------------" << std::endl
+                << "Serial number: " << el.getSerialNum() << std::endl
+                << "Workspace number: " << el.getWorkspaceNum() << std::endl
+                << "Production date: " << el.getDateOfProd() << std::endl
+                << "Brand: " << el.getBrand() << std::endl
+                << "Num. of routes: " << el.getNumOfRoutes() << std::endl
+                << "Num. of routes before repair: " << el.getNumOfRoutesBeforeRepair() << std::endl
+                << "Num. of repair: " << el.getNumOfRepair() << std::endl
+                << "Date of come back: " << el.getDateOfComeback() << std::endl
+                << "Days on station: " << el.getDaysOnStation() << std::endl
+                << "Year of tech. exam: " << el.getYearOfTechExam() << std::endl
+                << "--------------------------------------------------------------" << std::endl;
+}
+
+
+//LOCOMOTIVE CLASS
+
+//default constructor for "Locomotive" class
+Locomotive::Locomotive(){};
+
+//overloaded constructor for "Locomotive" class
+Locomotive::Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxspeed,
+                    std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
+                    int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
+                    std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
+                    std::string route, int numOfHandedTickets)
+{
+    this->setSerialNum(serialNum);
+    this->setWorkspaceNum(workspaceNum);
+    this->setDateOfProd(dateOfProd);
+    this->setMaxSpeed(maxspeed);
+    this->setBrand(brand);
+    this->setFuel(fuel);
+    this->setNumOfRoutes(numOfRoutes);
+    this->setNumOfRoutesBeforeRepair(numOfRoutesBeforeRepair);
+    this->setNumOfRepair(numOfRepair);
+    this->setDateOfComeback(dateOfComeBack);
+    this->setDaysOnStation(daysOnStation);
+    this->setYearOfTechExam(yearOfTechExam);
+    this->setRouteStatus(routeStatus);
+    this->setRouteReason(routeReason);
+    this->setCategory(category);
+    this->setRouteDuration(routeDuration);
+    this->setRoute(route);
+    this->setNumOfHandedTickets(numOfHandedTickets);
+};
+
+//default destructor for "Locomotive" class
+Locomotive::~Locomotive(){};
+
 
 //VAGON CLASS
-/*
+
 //default constructor for "Vagon" class
 Vagon::Vagon(){};
 
@@ -498,23 +557,7 @@ Vagon::Vagon(int serialNum, int workspaceNum, int dateOfProd,
     this->setDateOfComeback(dateOfComeBack);
     this->setDaysOnStation(daysOnStation);
     this->setYearOfTechExam(yearOfTechExam);
-}
+};
 
 //default destructor for "Vagon" class
 Vagon::~Vagon(){};
-
-void output(Vagon &el)
-{
-    std::cout   << "--------------------------------------------------------------" << std::endl
-                << "Serial number: " << el.getSerialNum() << std::endl
-                << "Workspace number: " << el.getWorkspaceNum() << std::endl
-                << "Production date: " << el.getDateOfProd() << std::endl
-                << "Brand: " << el.getBrand() << std::endl
-                << "Num. of routes: " << el.getNumOfRoutes() << std::endl
-                << "Num. of routes before repair: " << el.getNumOfRoutesBeforeRepair() << std::endl
-                << "Num. of repair: " << el.getNumOfRepair() << std::endl
-                << "Date of come back: " << el.getDateOfComeback() << std::endl
-                << "Days on station: " << el.getDaysOnStation() << std::endl
-                << "Year of tech. exam: " << el.getYearOfTechExam() << std::endl
-                << "--------------------------------------------------------------" << std::endl;
-}*/
