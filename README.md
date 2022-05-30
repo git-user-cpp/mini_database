@@ -28,7 +28,7 @@ SOFTWARE.
 
 ## 💻 How to use this database 💻
 
-1) ⚠️ **The application is designed for Linux, so avoid using other systems or remake the program to avoid bugs.** ⚠️
+1) ⚠️ **The application is designed for Linux, so avoid using other systems or remake the program to avoid bugs.** ⚠️ 
 2) 🗂️ Download *all* files and put them in a one directory.
 3) ⚒️ Compile the program with *clang++* or *g++*, whether you like.
     - Сompilation example
