@@ -67,6 +67,14 @@ void outputVagon(std::vector<Vagon> &vec)
     }
 }
 
+void outputPassenger(std::vector<Passenger> &vec)
+{
+    for(auto &el : vec)
+    {
+        el.outputPass(el);
+    }
+}
+
 
 //FUNCTIONS FOR SORTING DATA OF "Administration" CLASS
 
@@ -708,8 +716,11 @@ void sortLocByAge(std::vector<Locomotive> &vec)
     }
 }
 
-//function for sorting data of "Locomotive" class by status
-void outputLocByStatus(std::vector<Locomotive> &vec)
+
+//FUNCTIONS FOR SORTING DATA OF ROUTES
+
+//function for sorting data of route by status
+void outputRouteByStatus(std::vector<Locomotive> &vec)
 {
     for(auto &el : vec)
     {
@@ -721,34 +732,248 @@ void outputLocByStatus(std::vector<Locomotive> &vec)
     }
 }
 
-//function for sorting data of "Locomotive" class by status
-void outputLocByReason(std::vector<Locomotive> &vec)
+//function for sorting data of route by reason
+void outputRouteByReason(std::vector<Locomotive> &vec)
 {
     for(auto &el : vec)
     {
         if(el.getRouteReason() == "technical")
         {
-            std::cout   << el.getRoute() << std::endl
-                        << el.getRouteReason() << std::endl;
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Reason: " << el.getRouteReason() << std::endl;
             break;
         }
     }
 }
 
-//function for sorting data of "Locomotive" class by handed tickets
-void outputLocByHandedTick(std::vector<Locomotive> &vec)
+//function for sorting data of route by handed tickets
+void outputRouteByHandedTick(std::vector<Locomotive> &vec)
 {
     for(auto &el : vec)
     {
         if(el.getRoute() == "Kyiv-Lviv")
         {
-            std::cout   << el.getRoute() << std::endl
-                        << el.getNumOfHandedTickets() << std::endl;
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Number of handed tickets: " << el.getNumOfHandedTickets() << std::endl;
         }
         if(el.getRoute() == "Uzhhorod-Lviv")
         {
-            std::cout   << el.getRoute() << std::endl
-                        << el.getNumOfHandedTickets() << std::endl;
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Number of handed tickets: " << el.getNumOfHandedTickets() << std::endl;
+        }
+    }
+}
+
+//function for sorting data of route by category
+void outputRouteByCategory(std::vector<Locomotive> &vec, int choise)
+{
+    for(auto &el : vec)
+    {
+        if(el.getCategory() == "passenger" && choise == 1)
+        {
+            std::cout   << "Route: " << el.getRoute() << std::endl;
+            break;
+        }
+        else if(el.getCategory() == "cargo" && choise == 2)
+        {
+            std::cout   << "Route: " << el.getRoute() << std::endl;
+            break;
+        }
+    }
+}
+
+
+//FUNCTIONS FOR SORTING DATA OF TICKETS
+
+//function for sorting data of tickets sold
+void outputTickBySold(std::vector<Locomotive> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getDateOfComeback() == "20.05.2022")
+        {
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Date of come back: " << el.getDateOfComeback() << std::endl
+                        << "Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl;
+        }
+
+        std::cout << std::endl;
+
+        if(el.getDateOfComeback() == "22.05.2022")
+        {
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Date of come back: " << el.getDateOfComeback() << std::endl
+                        << "Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl;
+        }
+    }
+}
+
+//function for sorting data of tickets by route duration
+void outputTickByDuration(std::vector<Locomotive> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getRouteDuration() == 9)
+        {
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Route duration: " << el.getRouteDuration() << std::endl
+                        << "Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl;
+        }
+
+        std::cout << std::endl;
+
+        if(el.getRouteDuration() == 3)
+        {
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Route duration: " << el.getRouteDuration() << std::endl
+                        << "Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl;
+        }
+    }
+}
+
+//function for sorting data of tickets by price
+void outputTickByPrice(std::vector<Locomotive> &vec, std::vector<Ticket> &ticket)
+{
+    for(auto &el : vec)
+    {
+        if(el.getRoute() == ticket[0].getRoute())
+        {
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Ticket price: " << ticket[0].getTicketPrice() << " UAH" << std::endl;
+        }
+
+        std::cout << std::endl;
+
+        if(el.getRoute() == ticket[1].getRoute())
+        {
+            std::cout   << "Route: " << el.getRoute() << std::endl
+                        << "Ticket price: " << ticket[1].getTicketPrice() << " UAH" << std::endl;
+        }
+    }
+}
+
+
+//FUNCTIONS FOR SORTING DATA OF CATEGORIES
+
+//function for sorting data of category
+void outputCategoryByRoutes(std::vector<Locomotive> &vec)
+{
+    for(auto &el : vec)
+    {
+        std::cout   << "Route: " << el.getRoute() << std::endl
+                    << "Category: " << el.getCategory() << std::endl << std::endl;
+    }
+}
+
+
+//FUNCTIONS FOR SORTING DATA OF "Passenger" CLASS
+
+//function for sorting data of "Passenger" class by route
+void outputPassByRoute(std::vector<Passenger> &vec, int route)
+{
+    if(route == 1)
+    {
+        for(auto &el : vec)
+        {
+            if(el.getRoute() == "Kyiv-Lviv")
+            {
+                el.outputPass(el);
+            }
+        }
+    }
+    else if(route == 2)
+    {
+        for(auto &el : vec)
+        {
+            if(el.getRoute() == "Uzhhorod-Lviv")
+            {
+                el.outputPass(el);
+            }
+        }
+    }
+}
+
+//function for sorting data of "Passenger" class by departure day
+void sortPassByDep(std::vector<Passenger> &vec)
+{
+    Passenger tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getDepDate()) < (vec.at(j).getDepDate()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Passenger" class by departure abroad day
+void sortPassByDepAbr(std::vector<Passenger> &vec)
+{
+    Passenger tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getDepAbroadDate()) < (vec.at(j).getDepAbroadDate()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Passenger" class by luggage
+void outputPassByLuggage(std::vector<Passenger> &vec)
+{
+    for(auto &el : vec)
+    {
+        if(el.getLuggage() != "no")
+        {
+            el.outputPass(el);
+        }
+    }
+}
+
+//function for sorting data of "Passenger" class by age
+void sortPassByAge(std::vector<Passenger> &vec)
+{
+    Passenger tmp;
+
+    for(int i = 0; i < vec.size(); i++)
+    {
+        for(int j = 0; j < (i + 1); j++)
+        {
+            if((vec.at(i).getAge()) < (vec.at(j).getAge()))
+            {
+                tmp = vec.at(i);
+                vec.at(i) = vec.at(j);
+                vec.at(j) = tmp;
+            }
+        }
+    }
+}
+
+//function for sorting data of "Passenger" class by sex
+void outputPassBySex(std::vector<Passenger> &vec, int sex)
+{
+    for(auto &el : vec)
+    {
+        if(sex == 1 && el.getSex() == "man")
+        {
+            el.outputPass(el);
+        }
+        else if(sex == 2 && el.getSex() == "woman")
+        {
+            el.outputPass(el);
         }
     }
 }

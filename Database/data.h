@@ -61,6 +61,35 @@ class Human
         void output(Human &el);
 };
 
+class Passenger : public Human
+{
+    private:
+        std::string route;
+        std::string depDate;
+        std::string depAbroadDate;
+        std::string luggage;
+    public:
+        Passenger();
+        Passenger(std::string name, std::string surname, int age, std::string sex,
+                    std::string route, std::string depDate, std::string depAbroadDate, std::string luggage);
+        ~Passenger();
+
+        //setters
+        void setRoute(std::string route);
+        void setDepDate(std::string date);
+        void setDepAbroadDate(std::string date);
+        void setLuggage(std::string luggage);
+
+        //getters
+        std::string getRoute();
+        std::string getDepDate();
+        std::string getDepAbroadDate();
+        std::string getLuggage();
+
+        //function for outputting data
+        void outputPass(Passenger &el);
+};
+
 class Worker : public Human
 {
     private:
@@ -177,6 +206,7 @@ class Train
         std::string routeReason;
         std::string category;
         int routeDuration;
+        int numOfSoldTickets;
         int numOfHandedTickets;
 
     public:
@@ -202,6 +232,7 @@ class Train
         void setRouteDuration(int duration);
         void setRoute(std::string route);
         void setNumOfHandedTickets(int num);
+        void setNumOfSoldTickets(int num);
 
         //getters
         int getSerialNum();
@@ -222,6 +253,7 @@ class Train
         int getRouteDuration();
         std::string getRouteReason();
         int getNumOfHandedTickets();
+        int getNumOfSoldTickets();
 };
 
 class Locomotive : public Train
@@ -233,7 +265,7 @@ class Locomotive : public Train
                     std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
                     int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
                     std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
-                    std::string route, int numOfHandedTickets);
+                    std::string route, int numOfSoldTickets, int numOfHandedTickets);
         ~Locomotive();
 
         void outputLoc(Locomotive &el);

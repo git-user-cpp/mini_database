@@ -1222,7 +1222,7 @@ int main()
                 }
                 else if(second_choise == can_route)
                 {
-                    outputLocByStatus(locomList);
+                    outputRouteByStatus(locomList);
                 }
                 else
                 {
@@ -1250,6 +1250,7 @@ int main()
                 std::cin >> second_choise;
                 std::cout <<  single_delimiter;
 
+                //outputting data of delayed routes
                 if(second_choise == menu_h)
                 {
                     Menu();
@@ -1257,15 +1258,15 @@ int main()
                 }
                 else if(second_choise == flight_reason)
                 {
-                    outputLocByReason(locomList);
+                    outputRouteByReason(locomList);
                 }
                 else if(second_choise == flight_route)
                 {
-                    outputLocByHandedTick(locomList);
+                    outputRouteByHandedTick(locomList);
                 }
                 else if(second_choise == handedIn_tickets)
                 {
-                    outputLocByHandedTick(locomList);
+                    outputRouteByHandedTick(locomList);
                 }
                 else
                 {
@@ -1281,20 +1282,20 @@ int main()
 
             case tickets_sales:
                 //enum type to use the menu (for code readability)
-                enum{menu_i, tickets_period, tickets_per_route, tickets_route_duration,
+                enum{menu_i, tickets_period, tickets_route_duration,
                         tickets_by_price};
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
                             << "(1) Show the average number of tickets sold over a given period of time\n"
-                            << "(2) Show the average number of tickets sold per route\n"
-                            << "(3) Show the average number of tickets sold by route duration\n"
-                            << "(4) Show the average number of tickets sold (sorted by ticket price)\n"
+                            << "(2) Show the average number of tickets sold (sorted by route duration)\n"
+                            << "(3) Show the average number of tickets sold (sorted by ticket price)\n"
                             << "Your choise: ";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
 
+                //outputting data of tickets sold
                 if(second_choise == menu_i)
                 {
                     Menu();
@@ -1302,19 +1303,15 @@ int main()
                 }
                 else if(second_choise == tickets_period)
                 {
-                    //show information about the average number of tickets sold over a given period of time
-                }
-                else if(second_choise == tickets_per_route)
-                {
-                    //show information about the average number of tickets sold per route
+                    outputTickBySold(locomList);
                 }
                 else if(second_choise == tickets_route_duration)
                 {
-                    //show information about the average number of tickets sold by route duration
+                    outputTickByDuration(locomList);
                 }
                 else if(second_choise == tickets_by_price)
                 {
-                    //show information about the average number of tickets sold (sorted by ticket price)
+                    outputTickByPrice(locomList, ticketList);
                 }
                 else
                 {
@@ -1335,12 +1332,13 @@ int main()
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
                             << "(1) Show list of routes of the specified category\n"
-                            << "(2) Show list of categories along the specified route\n"
+                            << "(2) Show list of categories along the routes\n"
                             << "Your choise: ";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
 
+                //outputting data of categories
                 if(second_choise == menu_j)
                 {
                     Menu();
@@ -1348,11 +1346,32 @@ int main()
                 }
                 else if(second_choise == list_route)
                 {
-                    //show information about routes of the specified category
+                    //lambda function for outputting a part of the menu
+                    auto route_menu = []()
+                    {
+                        std::cout   << "1) Passenger" << std::endl
+                                    << "2) Cargo" << std::endl
+                                    << "Your choise: ";
+                    };
+                    route_menu();
+                    std::cin >> third_choise;
+
+                    if(third_choise == 1)
+                    {
+                        outputRouteByCategory(locomList, third_choise);
+                    }
+                    else if(third_choise == 2)
+                    {
+                        outputRouteByCategory(locomList, third_choise);
+                    }
+                    else
+                    {
+                        std::cout << errorM << std::endl;
+                    }
                 }
                 else if(second_choise == list_category)
                 {
-                    //show information about categories along the specified route
+                    outputCategoryByRoutes(locomList);
                 }
                 else
                 {
@@ -1373,9 +1392,9 @@ int main()
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
-                            << "(1) Show passenger data (sorted by specified flight)\n"
-                            << "(2) Show passenger data (sorted by departure on the specified day)\n"
-                            << "(3) Show passenger data (sorted by departure abroad on the specified day)\n"
+                            << "(1) Show passenger data (sorted by specified route)\n"
+                            << "(2) Show passenger data (sorted by departure day)\n"
+                            << "(3) Show passenger data (sorted by departure abroad day)\n"
                             << "(4) Show passenger data (sorted by delivery of things to the luggage compartment)\n"
                             << "(5) Show passenger data (sorted by sex)\n"
                             << "(6) Show passenger data (sorted by age)\n"
@@ -1384,6 +1403,7 @@ int main()
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
 
+                //outputting data of passengers
                 if(second_choise == menu_k)
                 {
                     Menu();
@@ -1391,27 +1411,44 @@ int main()
                 }
                 else if(second_choise == pass_flight)
                 {
-                    //show information about passenger data (sorted by specified flight)
+                    //lambda function for outputting a part of the menu
+                    auto route_menu = []()
+                    {
+                        std::cout   << "1) Kyiv-Lviv" << std::endl
+                                    << "2) Uzhhorod-Lviv" << std::endl
+                                    << "Your choise: ";
+                    };
+
+                    route_menu();
+                    std::cin >> third_choise;
+
+                    outputPassByRoute(passengerList, third_choise);
                 }
                 else if(second_choise == pass_dep_day)
                 {
-                    //show information about passenger data (sorted by departure on the specified day)
+                    sortPassByDep(passengerList);
+                    outputPassenger(passengerList);
                 }
                 else if(second_choise == pass_dep_abr)
                 {
-                    //show information about passenger data (sorted by departure abroad on the specified day)
+                    sortPassByDepAbr(passengerList);
+                    outputPassenger(passengerList);
                 }
                 else if(second_choise == pass_luggage)
                 {
-                    //show information about passenger data (sorted by delivery of things to the luggage compartment)
+                    outputPassByLuggage(passengerList);
                 }
                 else if(second_choise == pass_sex)
-                {
-                    //show information about passenger data (sorted by sex)
+                {   
+                    men_or_women_menu();
+                    std::cin >> third_choise;
+
+                    outputPassBySex(passengerList, third_choise);
                 }
                 else if(second_choise == pass_age)
                 {
-                    //show information about passenger data (sorted by age)
+                    sortPassByAge(passengerList);
+                    outputPassenger(passengerList);
                 }
                 else
                 {

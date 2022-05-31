@@ -32,6 +32,7 @@ void outputDriver(std::vector<Rolling_stock_driver> &vec);
 void outputWorker(std::vector<Worker> &vec);
 void outputLocomotive(std::vector<Locomotive> &vec);
 void outputVagon(std::vector<Vagon> &vec);
+void outputPassenger(std::vector<Passenger> &vec);
 
 
 //ADMINISTRATION CLASS
@@ -136,6 +137,7 @@ void outputTrainsByTicketPrice(std::vector<Locomotive> &vec, std::vector<Vagon> 
 void outputTrainByPassCategory(std::vector<Locomotive> &vec, std::vector<Vagon> &vag);
 void outputTrainByCargoCategory(std::vector<Locomotive> &vec, std::vector<Vagon> &vag);
 
+
 //LOCOMOTIVE CLASS
 
 //function for sorting data of "Locomotive" class by days spent for staying on station
@@ -162,11 +164,56 @@ void sortLocByNumOfRoutesBefore(std::vector<Locomotive> &vec);
 //function for sorting data of "Locomotive" class by age
 void sortLocByAge(std::vector<Locomotive> &vec);
 
-//function for sorting data of "Locomotive" class by status
-void outputLocByStatus(std::vector<Locomotive> &vec);
 
-//function for sorting data of "Locomotive" class by status
-void outputLocByReason(std::vector<Locomotive> &vec);
+//ROUTE
 
-//function for sorting data of "Locomotive" class by handed tickets
-void outputLocByHandedTick(std::vector<Locomotive> &vec);
+//function for sorting data of route by status
+void outputRouteByStatus(std::vector<Locomotive> &vec);
+
+//function for sorting data of route by reason
+void outputRouteByReason(std::vector<Locomotive> &vec);
+
+//function for sorting data of route by reason by handed tickets
+void outputRouteByHandedTick(std::vector<Locomotive> &vec);
+
+//function for sorting data of route by category
+void outputRouteByCategory(std::vector<Locomotive> &vec, int choise);
+
+
+//TICKET
+
+//function for sorting data of tickets sold
+void outputTickBySold(std::vector<Locomotive> &vec);
+
+//function for sorting data of tickets by route duration
+void outputTickByDuration(std::vector<Locomotive> &vec);
+
+//function for sorting data of tickets by price
+void outputTickByPrice(std::vector<Locomotive> &vec, std::vector<Ticket> &ticket);
+
+
+//CATEGORY
+
+//function for sorting data of category
+void outputCategoryByRoutes(std::vector<Locomotive> &vec);
+
+
+//PASSENGER
+
+//function for sorting data of "Passenger" class by route
+void outputPassByRoute(std::vector<Passenger> &vec, int route);
+
+//function for sorting data of "Passenger" class by departure day
+void sortPassByDep(std::vector<Passenger> &vec);
+
+//function for sorting data of "Passenger" class by departure abroad day
+void sortPassByDepAbr(std::vector<Passenger> &vec);
+
+//function for sorting data of "Passenger" class by luggage
+void outputPassByLuggage(std::vector<Passenger> &vec);
+
+//function for sorting data of "Passenger" class by age
+void sortPassByAge(std::vector<Passenger> &vec);
+
+//function for sorting data of "Passenger" class by sex
+void outputPassBySex(std::vector<Passenger> &vec, int sex);

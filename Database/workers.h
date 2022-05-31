@@ -181,8 +181,8 @@ std::vector<Ticket> ticketList
 
 std::vector<Locomotive> locomList
 {
-    Locomotive(45, 1, 1974, 35, "LAZ", "diesel", 9576, 9, 150, "20.05.2022", 2, "2022", "Canceled", "-", "passenger", 9, "Kyiv-Lviv", 50),
-    Locomotive(67, 2, 1975, 35, "LAZ", "diesel", 9214, 12, 143, "22.05.2022", 1, "2021", "Delayed", "technical", "cargo", 3, "Uzhhorod-Lviv", 5)
+    Locomotive(45, 1, 1974, 35, "LAZ", "diesel", 9576, 9, 150, "20.05.2022", 2, "2022", "Canceled", "-", "passenger", 9, "Kyiv-Lviv", 100, 50),
+    Locomotive(67, 2, 1975, 35, "LAZ", "diesel", 9214, 12, 143, "22.05.2022", 1, "2021", "Delayed", "technical", "cargo", 3, "Uzhhorod-Lviv", 55, 5)
 };
 
 std::vector<Vagon> vagonList
@@ -191,4 +191,17 @@ std::vector<Vagon> vagonList
     Vagon(123, 2, 1974, "LAZ", 9576, 6, 144, "20.05.2022", 2, "2022"),
     Vagon(124, 3, 1974, "LAZ", 9214, 12, 140, "22.05.2022", 1, "2022"),
     Vagon(125, 4, 1974, "LAZ", 9214, 10, 157, "22.05.2022", 1, "2022")
+};
+
+std::vector<Passenger> passengerList
+{
+    Passenger("Peter", "Land", 55, "man", "Kyiv-Lviv", "20.05.2022", "-", "yes"),
+    Passenger("Leonid", "Lopux", 15, "man", "Kyiv-Lviv", "20.05.2022", "-", "yes"),
+    Passenger("Lola", "Pravets", 22, "woman", "Kyiv-Lviv", "20.05.2022", "-", "no"),
+    Passenger("Olena", "Fitchyn", 35, "woman", "Kyiv-Lviv", "20.05.2022", "-", "yes"),
+
+    Passenger("Van", "Darkholm", 59, "man", "Uzhhorod-Lviv", "22.05.2022", "19.05.2022", "yes :)"),
+    Passenger("Kylylo", "Popov", 21, "man", "Uzhhorod-Lviv", "22.05.2022", "18.05.2022", "no"),
+    Passenger("Oleg", "Zoliak", 29, "man", "Uzhhorod-Lviv", "22.05.2022", "19.05.2022", "no"),
+    Passenger("Oleksandra", "Grey", 35, "woman", "Uzhhorod-Lviv", "22.05.2022", "17.05.2022", "yes")
 };

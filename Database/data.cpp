@@ -84,6 +84,95 @@ bool Human::getThePresenceOfChildren()
 }
 
 
+//PASSENGER CLASS
+
+//default constructor for the Passenger class
+Passenger::Passenger()
+{
+    this->setName("");
+    this->setSurname("");
+    this->setAge(0);
+    this->setSex("");
+
+    this->setRoute("");
+    this->setLuggage("");
+    this->setDepDate("");
+    this->setDepAbroadDate("");
+};
+
+//overloaded constructor for the Passenger class
+Passenger::Passenger(std::string name, std::string surname, int age, std::string sex,
+                    std::string route, std::string depDate, std::string depAbroadDate, std::string luggage)
+{
+    this->setName(name);
+    this->setSurname(surname);
+    this->setAge(age);
+    this->setSex(sex);
+
+    this->setRoute(route);
+    this->setDepDate(depDate);
+    this->setDepAbroadDate(depAbroadDate);
+    this->setLuggage(luggage);
+};
+
+//default destructor for the Passenger class
+Passenger::~Passenger(){};
+
+//setters for the Passenger class
+void Passenger::setRoute(std::string route)
+{
+    this->route = route;
+}
+void Passenger::setDepDate(std::string date)
+{
+    this->depDate = date;
+}
+void Passenger::setDepAbroadDate(std::string date)
+{
+    this->depAbroadDate = date;
+}
+void Passenger::setLuggage(std::string luggage)
+{
+    this->luggage = luggage;
+}
+
+//getters for the Passenger class
+std::string Passenger::getRoute()
+{
+    return route;
+}
+
+std::string Passenger::getDepDate()
+{
+    return depDate;
+}
+
+std::string Passenger::getDepAbroadDate()
+{
+    return depAbroadDate;
+}
+
+std::string Passenger::getLuggage()
+{
+    return luggage;
+}
+
+//overloaded output function for Worker class
+void Passenger::outputPass(Passenger &el)
+{
+    std::cout   << "--------------------------------------------------------------" << std::endl
+                << "Name & surname: " << el.getName() << ' '
+                << el.getSurname() << std::endl
+                << "Age: " << el.getAge() << std::endl
+                << "Sex: " << el.getSex() << std::endl
+                << "Luggage: " << el.getLuggage() << std::endl
+                << "Route: " << el.getRoute() << std::endl
+                << "Day of departure: " << el.getDepDate() << std::endl
+                << "Day of departure abroad: " << el.getDepAbroadDate() << std::endl
+                << "--------------------------------------------------------------" << std::endl;
+}
+
+
 //WORKER CLASS
 
 //default constructor for the Worker class
@@ -383,6 +472,10 @@ void Train::setNumOfHandedTickets(int num)
 {
     this->numOfHandedTickets = num;
 }
+void Train::setNumOfSoldTickets(int num)
+{
+    this->numOfSoldTickets = num;
+}
 
 //getters for the "Locomotive" class
 int Train::getSerialNum()
@@ -457,6 +550,10 @@ int Train::getNumOfHandedTickets()
 {
     return numOfHandedTickets;
 }
+int Train::getNumOfSoldTickets()
+{
+    return numOfSoldTickets;
+}
 
 //output function for the "Locomotive" class
 void Locomotive::outputLoc(Locomotive &el)
@@ -511,7 +608,7 @@ Locomotive::Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxs
                     std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
                     int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
                     std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
-                    std::string route, int numOfHandedTickets)
+                    std::string route, int numOfSoldTickets, int numOfHandedTickets)
 {
     this->setSerialNum(serialNum);
     this->setWorkspaceNum(workspaceNum);
@@ -530,6 +627,7 @@ Locomotive::Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxs
     this->setCategory(category);
     this->setRouteDuration(routeDuration);
     this->setRoute(route);
+    this->setNumOfSoldTickets(numOfSoldTickets);
     this->setNumOfHandedTickets(numOfHandedTickets);
 };
 
