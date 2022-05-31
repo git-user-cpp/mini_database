@@ -1,4 +1,4 @@
-# mini_database
+# Mini Database
 
 This database is implemented in C++ programming language. It was developed in order to complete the task of the course work.
 
