@@ -1,9 +1,7 @@
 # Mini Database
-
-This database is implemented in C++ programming language. It was developed in order to complete the task of the course work.
+:red_circle: This database is implemented in C++ programming language. It was developed in order to complete the task of the course work. :red_circle:
 
 ## ⚠️ LICENSE ⚠️
-
 MIT License
 
 Copyright (c) 2022 m!haly4
