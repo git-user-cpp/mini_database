@@ -476,6 +476,10 @@ void Train::setNumOfSoldTickets(int num)
 {
     this->numOfSoldTickets = num;
 }
+void Train::setTotalNumOfTickets(int num)
+{
+    this->totalNumOfTickets = num;
+}
 
 //getters for the "Locomotive" class
 int Train::getSerialNum()
@@ -554,6 +558,10 @@ int Train::getNumOfSoldTickets()
 {
     return numOfSoldTickets;
 }
+int Train::getTotalNumOfTickets()
+{
+    return totalNumOfTickets;
+}
 
 //output function for the "Locomotive" class
 void Locomotive::outputLoc(Locomotive &el)
@@ -608,7 +616,7 @@ Locomotive::Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxs
                     std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
                     int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
                     std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
-                    std::string route, int numOfSoldTickets, int numOfHandedTickets)
+                    std::string route, int numOfSoldTickets, int numOfHandedTickets, int totalNumOfTick)
 {
     this->setSerialNum(serialNum);
     this->setWorkspaceNum(workspaceNum);
@@ -629,6 +637,7 @@ Locomotive::Locomotive(int serialNum, int workspaceNum, int dateOfProd, int maxs
     this->setRoute(route);
     this->setNumOfSoldTickets(numOfSoldTickets);
     this->setNumOfHandedTickets(numOfHandedTickets);
+    this->setTotalNumOfTickets(totalNumOfTick);
 };
 
 //default destructor for "Locomotive" class

@@ -186,6 +186,7 @@ int main()
                     //outputting all employees data sorted by department
                     worker_second_menu("sorted by department");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -236,6 +237,7 @@ int main()
                     //outputting employees data sorted by experience
                     worker_second_menu("sorted by experience");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
                     
                     if(third_choise == 1)
                     {
@@ -295,6 +297,7 @@ int main()
                     //outputting all employees data sorted by sex
                     worker_second_menu("sorted by sex");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
                     
                     if(third_choise == 1)
                     {
@@ -372,6 +375,7 @@ int main()
                     //outputting all employees data sorted by age
                     worker_second_menu("sorted by age");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -431,6 +435,7 @@ int main()
                     //outputting all employees data sorted by the presence of children
                     worker_second_menu("sorted by the presence of children");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -481,6 +486,7 @@ int main()
                     //outputting all employees data sorted by number of children
                     worker_second_menu("sorted by number of children");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -540,6 +546,7 @@ int main()
                     //outputting all employees data sorted by salary
                     worker_second_menu("sorted by salary");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -674,6 +681,7 @@ int main()
                 {
                     brig_second_menu("sorted by department");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
                     
                     if(third_choise == 1)
                     {
@@ -712,6 +720,7 @@ int main()
                     //outputting crews sorted by locomotive
                     brig_second_menu("sorted by locomotive");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -750,6 +759,7 @@ int main()
                     //outputting crews sorted by age
                     brig_second_menu("sorted by age");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
                     
                     if(third_choise == 1)
                     {
@@ -794,6 +804,7 @@ int main()
                     //outputting crews sorted by sum of salary
                     brig_second_menu("sorted by sum of salary");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -865,6 +876,7 @@ int main()
                     //outputting crews sorted by average salary
                     brig_second_menu("sorted by average salary");
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -1138,6 +1150,7 @@ int main()
                     };
                     route_menu();
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -1175,6 +1188,7 @@ int main()
                     };
                     route_menu();
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -1355,6 +1369,7 @@ int main()
                     };
                     route_menu();
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     if(third_choise == 1)
                     {
@@ -1421,6 +1436,7 @@ int main()
 
                     route_menu();
                     std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
 
                     outputPassByRoute(passengerList, third_choise);
                 }
@@ -1464,13 +1480,12 @@ int main()
 
             case unredeemed_tickets:
                 //enum type to use the menu (for code readability)
-                enum{menu_l, unp_tick_flight, unp_tick_day, unp_tick_route};
+                enum{menu_l, unp_tick_flight, unp_tick_day};
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
                             << "(1) Show data on unpurchased tickets on the specified route\n"
-                            << "(2) Show data on unpurchased tickets on the specified day\n"
-                            << "(3) Show data on unpurchased tickets on the specified route\n"
+                            << "(2) Show data on unpurchased tickets sorted by day\n"
                             << "Your choise: ";
 
                 std::cin >> second_choise;
@@ -1483,15 +1498,35 @@ int main()
                 }
                 else if(second_choise == unp_tick_flight)
                 {
-                    //show information about unpurchased tickets on the specified flight
+                    //lambda function for outputting a part of the menu
+                    auto route_menu = []()
+                    {
+                        std::cout   << "1) Kyiv-Lviv" << std::endl
+                                    << "2) Uzhhorod-Lviv" << std::endl
+                                    << "Your choise: ";
+                    };
+
+                    route_menu();
+                    std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
+
+                    outputUnpTickByRoute(locomList, third_choise);
                 }
                 else if(second_choise == unp_tick_day)
                 {
-                    //show information about unpurchased tickets on the specified day
-                }
-                else if(second_choise == unp_tick_route)
-                {
-                    //show information about unpurchased tickets on the specified route
+                    //lambda function for outputting a part of the menu
+                    auto route_menu = []()
+                    {
+                        std::cout   << "1) 20.05.22" << std::endl
+                                    << "2) 22.05.22" << std::endl
+                                    << "Your choise: ";
+                    };
+
+                    route_menu();
+                    std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
+                    
+                    outputUnpTickByDate(locomList, third_choise);
                 }
                 else
                 {
@@ -1507,13 +1542,12 @@ int main()
 
             case handed_over_tickets:
                 //enum type to use the menu (for code readability)
-                enum{menu_m, ret_tick_flight, ret_tick_day, ret_tick_route};
+                enum{menu_m, ret_tick_flight, ret_tick_day};
 
                 std::cout   << "Select the required data: \n"
                             << "(0) Return to the menu\n"
                             << "(1) Show the data of returned tickets on the specified route\n"
                             << "(2) Show returned tickets details on the specified day\n"
-                            << "(3) Show the data of returned tickets on the specified route\n"
                             << "Your choise: ";
 
                 std::cin >> second_choise;
@@ -1526,15 +1560,35 @@ int main()
                 }
                 else if(second_choise == ret_tick_flight)
                 {
-                    //show information about returned tickets on the specified flight
+                    //lambda function for outputting a part of the menu
+                    auto route_menu = []()
+                    {
+                        std::cout   << "1) Kyiv-Lviv" << std::endl
+                                    << "2) Uzhhorod-Lviv" << std::endl
+                                    << "Your choise: ";
+                    };
+
+                    route_menu();
+                    std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
+
+                    outputHandOverTickByRoute(locomList, third_choise);
                 }
                 else if(second_choise == ret_tick_day)
                 {
-                    //show information about returned tickets details on the specified day
-                }
-                else if(second_choise == ret_tick_route)
-                {
-                    //show information about returned tickets on the specified route
+                    //lambda function for outputting a part of the menu
+                    auto route_menu = []()
+                    {
+                        std::cout   << "1) 20.05.22" << std::endl
+                                    << "2) 22.05.22" << std::endl
+                                    << "Your choise: ";
+                    };
+
+                    route_menu();
+                    std::cin >> third_choise;
+                    std::cout <<  single_delimiter;
+
+                    outputHandedOverTickByDate(locomList, third_choise);
                 }
                 else
                 {

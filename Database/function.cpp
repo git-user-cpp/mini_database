@@ -852,6 +852,98 @@ void outputTickByPrice(std::vector<Locomotive> &vec, std::vector<Ticket> &ticket
     }
 }
 
+//function for sorting data of unpurchased tickets by route
+void outputUnpTickByRoute(std::vector<Locomotive> &vec, int route)
+{
+    if(route == 1)
+    {
+        for(auto &el : vec)
+        {
+            if(el.getRoute() == "Kyiv-Lviv")
+            {
+                std::cout << "Unredeemed: " << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl;
+            }
+        }
+    }
+    else if(route == 2)
+    {
+        for(auto &el : vec)
+        {
+            if(el.getRoute() == "Uzhhorod-Lviv")
+            {
+                std::cout << "Unredeemed: " << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl;
+            }
+        }
+    }
+}
+
+//function for sorting data of unpurchased tickets by date
+void outputUnpTickByDate(std::vector<Locomotive> &vec, int choise)
+{
+    for(auto &el : vec)
+    {
+        if((choise == 1) && (el.getDateOfComeback() == "20.05.2022"))
+        {
+            std::cout   << el.getRoute() << std::endl
+                        << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl;
+            break;
+        }
+        else if((choise = 2) && (el.getDateOfComeback() == "22.05.2022"))
+        {
+            std::cout   << el.getRoute() << std::endl
+                        << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl;
+            break;
+        }
+    }
+}
+
+//function for sorting data of handed back tickets by route
+void outputHandOverTickByRoute(std::vector<Locomotive> &vec, int route)
+{
+    if(route == 1)
+    {
+        for(auto &el : vec)
+        {
+            if(el.getRoute() == "Kyiv-Lviv")
+            {
+                std::cout   << el.getRoute() << std::endl
+                            << "Handed back: " << el.getNumOfHandedTickets() << std::endl;
+            }
+        }
+    }
+    else if(route == 2)
+    {
+        for(auto &el : vec)
+        {
+            if(el.getRoute() == "Uzhhorod-Lviv")
+            {
+                std::cout   << el.getRoute() << std::endl
+                            << "Handed back: " << el.getNumOfHandedTickets() << std::endl;
+            }
+        }
+    }
+}
+
+//function for sorting data of handed back tickets by date
+void outputHandedOverTickByDate(std::vector<Locomotive> &vec, int choise)
+{
+    for(auto &el : vec)
+    {
+        if((choise == 1) && (el.getDateOfComeback() == "20.05.2022"))
+        {
+            std::cout   << el.getRoute() << std::endl
+                        << el.getNumOfHandedTickets() << std::endl;
+            break;
+        }
+        else if((choise = 2) && (el.getDateOfComeback() == "22.05.2022"))
+        {
+            std::cout   << el.getRoute() << std::endl
+                        << el.getNumOfHandedTickets() << std::endl;
+            break;
+        }
+    }
+}
+
 
 //FUNCTIONS FOR SORTING DATA OF CATEGORIES
 

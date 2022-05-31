@@ -208,6 +208,7 @@ class Train
         int routeDuration;
         int numOfSoldTickets;
         int numOfHandedTickets;
+        int totalNumOfTickets;
 
     public:
         Train();
@@ -233,6 +234,8 @@ class Train
         void setRoute(std::string route);
         void setNumOfHandedTickets(int num);
         void setNumOfSoldTickets(int num);
+        void setTotalNumOfTickets(int num);
+
 
         //getters
         int getSerialNum();
@@ -254,6 +257,7 @@ class Train
         std::string getRouteReason();
         int getNumOfHandedTickets();
         int getNumOfSoldTickets();
+        int getTotalNumOfTickets();
 };
 
 class Locomotive : public Train
@@ -265,7 +269,7 @@ class Locomotive : public Train
                     std::string brand, std::string fuel, int numOfRoutes, int numOfRoutesBeforeRepair,
                     int numOfRepair, std::string dateOfComeBack, int daysOnStation, std::string yearOfTechExam,
                     std::string routeStatus, std::string routeReason, std::string category, int routeDuration,
-                    std::string route, int numOfSoldTickets, int numOfHandedTickets);
+                    std::string route, int numOfSoldTickets, int numOfHandedTickets, int totalNumOfTick);
         ~Locomotive();
 
         void outputLoc(Locomotive &el);

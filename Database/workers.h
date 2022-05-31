@@ -181,8 +181,8 @@ std::vector<Ticket> ticketList
 
 std::vector<Locomotive> locomList
 {
-    Locomotive(45, 1, 1974, 35, "LAZ", "diesel", 9576, 9, 150, "20.05.2022", 2, "2022", "Canceled", "-", "passenger", 9, "Kyiv-Lviv", 100, 50),
-    Locomotive(67, 2, 1975, 35, "LAZ", "diesel", 9214, 12, 143, "22.05.2022", 1, "2021", "Delayed", "technical", "cargo", 3, "Uzhhorod-Lviv", 55, 5)
+    Locomotive(45, 1, 1974, 35, "LAZ", "diesel", 9576, 9, 150, "20.05.2022", 2, "2022", "Canceled", "-", "passenger", 9, "Kyiv-Lviv", 100, 50, 110),
+    Locomotive(67, 2, 1975, 35, "LAZ", "diesel", 9214, 12, 143, "22.05.2022", 1, "2021", "Delayed", "technical", "cargo", 3, "Uzhhorod-Lviv", 55, 5, 100)
 };
 
 std::vector<Vagon> vagonList

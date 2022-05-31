@@ -191,6 +191,18 @@ void outputTickByDuration(std::vector<Locomotive> &vec);
 //function for sorting data of tickets by price
 void outputTickByPrice(std::vector<Locomotive> &vec, std::vector<Ticket> &ticket);
 
+//function for sorting data of unpurchased tickets by route
+void outputUnpTickByRoute(std::vector<Locomotive> &vec, int route);
+
+//function for sorting data of unpurchased tickets by date
+void outputUnpTickByDate(std::vector<Locomotive> &vec, int choise);
+
+//function for sorting data of unpurchased tickets by route
+void outputHandOverTickByRoute(std::vector<Locomotive> &vec, int route);
+
+//function for sorting data of handed back tickets by date
+void outputHandedOverTickByDate(std::vector<Locomotive> &vec, int choise);
+
 
 //CATEGORY
 
