@@ -499,7 +499,9 @@ void sortWorkerBySalary(std::vector<Worker> &vec)
 //outputting the first train
 void outputFirstTrain(std::vector<Locomotive> &vec, std::vector<Vagon> &vag)
 {
-    std::cout << "First train" << std::endl;
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "|                         First train                         |" << std::endl
+                << "|_____________________________________________________________|" << std::endl;
     vec[0].outputLoc(vec[0]);
     vag[0].outputVag(vag[0]);
     vag[1].outputVag(vag[1]);
@@ -508,7 +510,9 @@ void outputFirstTrain(std::vector<Locomotive> &vec, std::vector<Vagon> &vag)
 //outputting the second train
 void outputSecondTrain(std::vector<Locomotive> &vec, std::vector<Vagon> &vag)
 {
-    std::cout << "Second train" << std::endl;
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "|                         Second train                        |" << std::endl
+                << "|_____________________________________________________________|" << std::endl;
     vec[1].outputLoc(vec[1]);
     vag[2].outputVag(vag[2]);
     vag[3].outputVag(vag[3]);
@@ -726,7 +730,9 @@ void outputRouteByStatus(std::vector<Locomotive> &vec)
     {
         if(el.getRouteStatus() == "Canceled")
         {
-            std::cout << el.getRoute() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "|                           " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
             break;
         }
     }
@@ -739,8 +745,11 @@ void outputRouteByReason(std::vector<Locomotive> &vec)
     {
         if(el.getRouteReason() == "technical")
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Reason: " << el.getRouteReason() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Reason: " << el.getRouteReason() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
             break;
         }
     }
@@ -753,13 +762,19 @@ void outputRouteByHandedTick(std::vector<Locomotive> &vec)
     {
         if(el.getRoute() == "Kyiv-Lviv")
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Number of handed tickets: " << el.getNumOfHandedTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Number of handed tickets: " << el.getNumOfHandedTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
         }
         if(el.getRoute() == "Uzhhorod-Lviv")
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Number of handed tickets: " << el.getNumOfHandedTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Number of handed tickets: " << el.getNumOfHandedTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
         }
     }
 }
@@ -771,12 +786,16 @@ void outputRouteByCategory(std::vector<Locomotive> &vec, int choise)
     {
         if(el.getCategory() == "passenger" && choise == 1)
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
             break;
         }
         else if(el.getCategory() == "cargo" && choise == 2)
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
             break;
         }
     }
@@ -792,18 +811,26 @@ void outputTickBySold(std::vector<Locomotive> &vec)
     {
         if(el.getDateOfComeback() == "20.05.2022")
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Date of come back: " << el.getDateOfComeback() << std::endl
-                        << "Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Date of come back: " << el.getDateOfComeback() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
         }
 
         std::cout << std::endl;
 
         if(el.getDateOfComeback() == "22.05.2022")
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Date of come back: " << el.getDateOfComeback() << std::endl
-                        << "Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Date of come back: " << el.getDateOfComeback() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
         }
     }
 }
@@ -815,18 +842,26 @@ void outputTickByDuration(std::vector<Locomotive> &vec)
     {
         if(el.getRouteDuration() == 9)
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Route duration: " << el.getRouteDuration() << std::endl
-                        << "Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Route duration: " << el.getRouteDuration() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
         }
 
         std::cout << std::endl;
 
         if(el.getRouteDuration() == 3)
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Route duration: " << el.getRouteDuration() << std::endl
-                        << "Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Route duration: " << el.getRouteDuration() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Number of tickets sold: " << el.getNumOfSoldTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
         }
     }
 }
@@ -838,16 +873,22 @@ void outputTickByPrice(std::vector<Locomotive> &vec, std::vector<Ticket> &ticket
     {
         if(el.getRoute() == ticket[0].getRoute())
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Ticket price: " << ticket[0].getTicketPrice() << " UAH" << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Ticket price: " << ticket[0].getTicketPrice() << " UAH" << std::endl
+                        << "|_____________________________________________________________" << std::endl;
         }
 
         std::cout << std::endl;
 
         if(el.getRoute() == ticket[1].getRoute())
         {
-            std::cout   << "Route: " << el.getRoute() << std::endl
-                        << "Ticket price: " << ticket[1].getTicketPrice() << " UAH" << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| Route: " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| Ticket price: " << ticket[1].getTicketPrice() << " UAH" << std::endl
+                        << "|_____________________________________________________________" << std::endl;
         }
     }
 }
@@ -861,7 +902,9 @@ void outputUnpTickByRoute(std::vector<Locomotive> &vec, int route)
         {
             if(el.getRoute() == "Kyiv-Lviv")
             {
-                std::cout << "Unredeemed: " << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl;
+                std::cout   << " _____________________________________________________________" << std::endl
+                            << "| Unredeemed: " << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl
+                            << "|_____________________________________________________________" << std::endl;
             }
         }
     }
@@ -871,7 +914,9 @@ void outputUnpTickByRoute(std::vector<Locomotive> &vec, int route)
         {
             if(el.getRoute() == "Uzhhorod-Lviv")
             {
-                std::cout << "Unredeemed: " << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl;
+                std::cout   << " _____________________________________________________________" << std::endl
+                            << "| Unredeemed: " << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl
+                            << "|_____________________________________________________________" << std::endl;
             }
         }
     }
@@ -884,14 +929,20 @@ void outputUnpTickByDate(std::vector<Locomotive> &vec, int choise)
     {
         if((choise == 1) && (el.getDateOfComeback() == "20.05.2022"))
         {
-            std::cout   << el.getRoute() << std::endl
-                        << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| " << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
             break;
         }
         else if((choise = 2) && (el.getDateOfComeback() == "22.05.2022"))
         {
-            std::cout   << el.getRoute() << std::endl
-                        << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| " << el.getTotalNumOfTickets() - el.getNumOfSoldTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
             break;
         }
     }
@@ -906,8 +957,11 @@ void outputHandOverTickByRoute(std::vector<Locomotive> &vec, int route)
         {
             if(el.getRoute() == "Kyiv-Lviv")
             {
-                std::cout   << el.getRoute() << std::endl
-                            << "Handed back: " << el.getNumOfHandedTickets() << std::endl;
+                std::cout   << " _____________________________________________________________" << std::endl
+                            << "| " << el.getRoute() << std::endl
+                            << "|_____________________________________________________________" << std::endl
+                            << "| Handed back: " << el.getNumOfHandedTickets() << std::endl
+                            << "|_____________________________________________________________" << std::endl;
             }
         }
     }
@@ -917,8 +971,11 @@ void outputHandOverTickByRoute(std::vector<Locomotive> &vec, int route)
         {
             if(el.getRoute() == "Uzhhorod-Lviv")
             {
-                std::cout   << el.getRoute() << std::endl
-                            << "Handed back: " << el.getNumOfHandedTickets() << std::endl;
+                std::cout   << " _____________________________________________________________" << std::endl
+                            << "| " << el.getRoute() << std::endl
+                            << "|_____________________________________________________________" << std::endl
+                            << "| Handed back: " << el.getNumOfHandedTickets() << std::endl
+                            << "|_____________________________________________________________" << std::endl;
             }
         }
     }
@@ -931,14 +988,20 @@ void outputHandedOverTickByDate(std::vector<Locomotive> &vec, int choise)
     {
         if((choise == 1) && (el.getDateOfComeback() == "20.05.2022"))
         {
-            std::cout   << el.getRoute() << std::endl
-                        << el.getNumOfHandedTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| " << el.getNumOfHandedTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
             break;
         }
         else if((choise = 2) && (el.getDateOfComeback() == "22.05.2022"))
         {
-            std::cout   << el.getRoute() << std::endl
-                        << el.getNumOfHandedTickets() << std::endl;
+            std::cout   << " _____________________________________________________________" << std::endl
+                        << "| " << el.getRoute() << std::endl
+                        << "|_____________________________________________________________" << std::endl
+                        << "| " << el.getNumOfHandedTickets() << std::endl
+                        << "|_____________________________________________________________" << std::endl;
             break;
         }
     }
@@ -952,8 +1015,11 @@ void outputCategoryByRoutes(std::vector<Locomotive> &vec)
 {
     for(auto &el : vec)
     {
-        std::cout   << "Route: " << el.getRoute() << std::endl
-                    << "Category: " << el.getCategory() << std::endl << std::endl;
+        std::cout   << " _____________________________________________________________" << std::endl
+                    << "| Route: " << el.getRoute() << std::endl
+                    << "|_____________________________________________________________" << std::endl
+                    << "| Category: " << el.getCategory() << std::endl << std::endl
+                    << "|_____________________________________________________________" << std::endl;
     }
 }
 

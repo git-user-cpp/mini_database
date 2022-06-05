@@ -160,16 +160,21 @@ std::string Passenger::getLuggage()
 //overloaded output function for Worker class
 void Passenger::outputPass(Passenger &el)
 {
-    std::cout   << "--------------------------------------------------------------" << std::endl
-                << "Name & surname: " << el.getName() << ' '
-                << el.getSurname() << std::endl
-                << "Age: " << el.getAge() << std::endl
-                << "Sex: " << el.getSex() << std::endl
-                << "Luggage: " << el.getLuggage() << std::endl
-                << "Route: " << el.getRoute() << std::endl
-                << "Day of departure: " << el.getDepDate() << std::endl
-                << "Day of departure abroad: " << el.getDepAbroadDate() << std::endl
-                << "--------------------------------------------------------------" << std::endl;
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "| Name & surname: " << el.getName() << ' ' << el.getSurname() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Age: " << el.getAge() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Sex: " << el.getSex() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Luggage: " << el.getLuggage() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Route: " << el.getRoute() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Day of departure: " << el.getDepDate() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Day of departure abroad: " << el.getDepAbroadDate() << std::endl
+                << "|_____________________________________________________________" << std::endl;
 }
 
 
@@ -241,17 +246,23 @@ std::string Worker::getDepartment()
 //overloaded output function for Worker class
 void Worker::output(Worker &el)
 {
-    std::cout   << "--------------------------------------------------------------" << std::endl
-                << "Name & surname: " << el.getName() << ' '
-                << el.getSurname() << std::endl
-                << "Age: " << el.getAge() << std::endl
-                << "Sex: " << el.getSex() << std::endl
-                << "Num. of children: " << el.getNumOfChildren() << std::endl
-                << "Presence of children(0-no; 1-yes): " << el.getThePresenceOfChildren() << std::endl
-                << "Salary: " << el.getSalary() << std::endl
-                << "Experience: " << el.getExperience() << std::endl
-                << "Department: " << el.getDepartment() << std::endl
-                << "--------------------------------------------------------------" << std::endl;
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "| Name & surname: " << el.getName() << ' ' << el.getSurname() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Age: " << el.getAge() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Sex: " << el.getSex() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of children: " << el.getNumOfChildren() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Presence of children(0-no; 1-yes): " << el.getThePresenceOfChildren() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Salary: " << el.getSalary() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Experience: " << el.getExperience() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Department: " << el.getDepartment() << std::endl
+                << "|_____________________________________________________________" << std::endl;
 }
 
 
@@ -296,18 +307,25 @@ std::string Administration::getPosition()
 //overloaded output function for the Administration class
 void Administration::output(Administration &el)
 {
-    std::cout   << "--------------------------------------------------------------" << std::endl
-                << "Name & surname: " << el.getName() << ' '
-                << el.getSurname() << std::endl
-                << "Age: " << el.getAge() << std::endl
-                << "Sex: " << el.getSex() << std::endl
-                << "Num. of children: " << el.getNumOfChildren() << std::endl
-                << "Presence of children(0-no; 1-yes): " << el.getThePresenceOfChildren() << std::endl
-                << "Salary: " << el.getSalary() << std::endl
-                << "Experience: " << el.getExperience() << std::endl
-                << "Department: " << el.getDepartment() << std::endl
-                << "Position: " << el.getPosition() << std::endl
-                << "--------------------------------------------------------------" << std::endl;
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "| Name & surname: " << el.getName() << ' ' << el.getSurname() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Age: " << el.getAge() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Sex: " << el.getSex() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of children: " << el.getNumOfChildren() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Presence of children(0-no; 1-yes): " << el.getThePresenceOfChildren() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Salary: " << el.getSalary() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Experience: " << el.getExperience() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Department: " << el.getDepartment() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Position: " << el.getPosition() << std::endl
+                << "|_____________________________________________________________" << std::endl;
 }
 
 
@@ -352,18 +370,25 @@ int Rolling_stock_driver::getYearOfMed()
 //overloaded output function for the Rolling_stock_driver class
 void Rolling_stock_driver::output(Rolling_stock_driver &el)
 {
-    std::cout   << "--------------------------------------------------------------" << std::endl
-                << "Name & surname: " << el.getName() << ' '
-                << el.getSurname() << std::endl
-                << "Age: " << el.getAge() << std::endl
-                << "Sex: " << el.getSex() << std::endl
-                << "Num. of children: " << el.getNumOfChildren() << std::endl
-                << "Presence of children(0-no; 1-yes): " << el.getThePresenceOfChildren() << std::endl
-                << "Salary: " << el.getSalary() << std::endl
-                << "Experience: " << el.getExperience() << std::endl
-                << "Department: " << el.getDepartment() << std::endl
-                << "Year of med. ex.: " << el.getYearOfMed() << std::endl
-                << "--------------------------------------------------------------" << std::endl;
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "| Name & surname: " << el.getName() << ' ' << el.getSurname() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Age: " << el.getAge() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Sex: " << el.getSex() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of children: " << el.getNumOfChildren() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Presence of children(0-no; 1-yes): " << el.getThePresenceOfChildren() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Salary: " << el.getSalary() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Experience: " << el.getExperience() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Department: " << el.getDepartment() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Year of med. ex.: " << el.getYearOfMed() << std::endl
+                << "|_____________________________________________________________" << std::endl;
 }
 
 
@@ -566,43 +591,69 @@ int Train::getTotalNumOfTickets()
 //output function for the "Locomotive" class
 void Locomotive::outputLoc(Locomotive &el)
 {
-    std::cout   << "--------------------------------------------------------------" << std::endl
-                << "Serial number: " << el.getSerialNum() << std::endl
-                << "Workspace number: " << el.getWorkspaceNum() << std::endl
-                << "Production date: " << el.getDateOfProd() << std::endl
-                << "Max. speed: " << el.getMaxSpeed() << std::endl
-                << "Brand: " << el.getBrand() << std::endl
-                << "Fuel: " << el.getFuel() << std::endl
-                << "Num. of routes: " << el.getNumOfRoutes() << std::endl
-                << "Num. of routes before repair: " << el.getNumOfRoutesBeforeRepair() << std::endl
-                << "Num. of repair: " << el.getNumOfRepair() << std::endl
-                << "Date of come back: " << el.getDateOfComeback() << std::endl
-                << "Days on station: " << el.getDaysOnStation() << std::endl
-                << "Year of tech. exam: " << el.getYearOfTechExam() << std::endl
-                << "Route status: " << el.getRouteStatus() << std::endl
-                << "Route reason: " << el.getRouteReason() << std::endl
-                << "Category: " << el.getCategory() << std::endl
-                << "Route duration: " << el.getRouteDuration() << std::endl
-                << "Route: " << el.getRoute() << std::endl
-                << "Num. of handed tickets: " << el.getNumOfHandedTickets() << std::endl
-                << "--------------------------------------------------------------" << std::endl;
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "| Serial number: " << el.getSerialNum() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Workspace number: " << el.getWorkspaceNum() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Production date: " << el.getDateOfProd() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Max. speed: " << el.getMaxSpeed() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Brand: " << el.getBrand() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Fuel: " << el.getFuel() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of routes: " << el.getNumOfRoutes() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of routes before repair: " << el.getNumOfRoutesBeforeRepair() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of repair: " << el.getNumOfRepair() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Date of come back: " << el.getDateOfComeback() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Days on station: " << el.getDaysOnStation() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Year of tech. exam: " << el.getYearOfTechExam() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Route status: " << el.getRouteStatus() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Route reason: " << el.getRouteReason() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Category: " << el.getCategory() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Route duration: " << el.getRouteDuration() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Route: " << el.getRoute() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of handed tickets: " << el.getNumOfHandedTickets() << std::endl
+                << "|_____________________________________________________________" << std::endl;
 }
 
 //output function for the "Vagon" class
 void Vagon::outputVag(Vagon &el)
 {
-    std::cout   << "--------------------------------------------------------------" << std::endl
-                << "Serial number: " << el.getSerialNum() << std::endl
-                << "Workspace number: " << el.getWorkspaceNum() << std::endl
-                << "Production date: " << el.getDateOfProd() << std::endl
-                << "Brand: " << el.getBrand() << std::endl
-                << "Num. of routes: " << el.getNumOfRoutes() << std::endl
-                << "Num. of routes before repair: " << el.getNumOfRoutesBeforeRepair() << std::endl
-                << "Num. of repair: " << el.getNumOfRepair() << std::endl
-                << "Date of come back: " << el.getDateOfComeback() << std::endl
-                << "Days on station: " << el.getDaysOnStation() << std::endl
-                << "Year of tech. exam: " << el.getYearOfTechExam() << std::endl
-                << "--------------------------------------------------------------" << std::endl;
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "| Serial number: " << el.getSerialNum() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Workspace number: " << el.getWorkspaceNum() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Production date: " << el.getDateOfProd() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Brand: " << el.getBrand() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of routes: " << el.getNumOfRoutes() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of routes before repair: " << el.getNumOfRoutesBeforeRepair() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Num. of repair: " << el.getNumOfRepair() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Date of come back: " << el.getDateOfComeback() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Days on station: " << el.getDaysOnStation() << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| Year of tech. exam: " << el.getYearOfTechExam() << std::endl
+                << "|_____________________________________________________________" << std::endl;
 }
 
 

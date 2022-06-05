@@ -29,60 +29,101 @@ SOFTWARE.
     int choise;
 void Menu()
 {
-    std::cout << "Select an option:" << std::endl;
-
-    std::cout   << "(0) Exit the program" << std::endl
-                << "(1) Output of employee data" << std::endl
-                << "(2) Output of crew data" << std::endl
-                << "(3) Output of medical examination data of locomotive drivers" << std::endl
-                << "(4) Output of station locomotives" << std::endl
-                << "(5) Output of inspection data of locomotives of the station" << std::endl
-                << "(6) Output of station trains" << std::endl
-                << "(7) Output of canceled routes" << std::endl
-                << "(8) Output of data of detained routes" << std::endl
-                << "(9) Output of data on ticket sales" << std::endl
-                << "(10) Output of route category data" << std::endl
-                << "(11) Output of passenger data" << std::endl
-                << "(12) Output of data of unredeemed tickets" << std::endl
-                << "(13) Output of data on returned tickets" << std::endl
-                << "(14) Display information about the creator of the program" << std::endl
-                << "Your choise: ";
+    std::cout   << std::endl
+                << " _____________________________________________________________ " << std::endl
+                << "|                        Mini database                        |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << " _____________________________________________________________ " << std::endl
+                << "|                      Select an option:                      |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|                    [0] Exit the program                     |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|                 [1] Output of employee data                 |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|                   [2] Output of crew data                   |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "| [3] Output of medical examination data of locomotive drivers|" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|              [4] Output of station locomotives              |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "| [5] Output of inspection data of locomotives of the station |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|                 [6] Output of station trains                |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|                [7] Output of canceled routes                |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|             [8] Output of data of detained routes           |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|              [9] Output of data on ticket sales             |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|              [10] Output of route category data             |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|                 [11] Output of passenger data               |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|          [12] Output of data of unredeemed tickets          |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|           [13] Output of data on returned tickets           |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << "|  [14] Display information about the creator of the program  |" << std::endl
+                << "|_____________________________________________________________|" << std::endl
+                << " _____________________________________________________________ " << std::endl
+                << "                         Your choise:";
 
     std::cin >> choise;
 
-    std::cout << "--------------------------------------------------------------\n";
+    std::cout << "|_____________________________________________________________|" << std::endl << std::endl;
 }
 
 //second menu for displaying department information
 void worker_second_menu(std::string sort_by)
 {
-    std::cout   << "(1) Show administrative department " << sort_by << std::endl
-                << "(2) Show drivers department " << sort_by << std::endl
-                << "(3) Show dispatch department " << sort_by << std::endl
-                << "(4) Show the department of rolling stock repair " << sort_by << std::endl
-                << "(5) Show the department of road repair " << sort_by << std::endl
-                << "(6) Show cash department " << sort_by << std::endl
-                << "(7) Show warehouse department " << sort_by << std::endl
-                << "(8) Show help desk department " << sort_by << std::endl
-                << "(9) Show accounting department " << sort_by << std::endl
-                << "\nYour choise: ";
+    std::cout   << " _____________________________________________________________" << std::endl
+                << "| [1] Show administrative department " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [2] Show drivers department " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [3] Show dispatch department " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [4] Show the department of rolling stock repair " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [5] Show the department of road repair " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [6] Show cash department " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [7] Show warehouse department " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [8] Show help desk department " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [9] Show accounting department " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << " _____________________________________________________________" << std::endl
+                << "                         Your choise:";
 }
 
 //second menu for displaying brigades information
 void brig_second_menu(std::string sort_by)
 {
-    std::cout   << "(1) Display drivers brigades " << sort_by << std::endl
-                << "(2) Show repair brigades " << sort_by << std::endl
-                << "(3) Show brigades of road repairmen " << sort_by << std::endl
-                << "\nYour choise: ";
+    std::cout   << " _____________________________________________________________ " << std::endl
+                << "| [1] Display drivers brigades " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [2] Show repair brigades " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << "| [3] Show brigades of road repairmen " << sort_by << std::endl
+                << "|_____________________________________________________________" << std::endl
+                << " _____________________________________________________________ " << std::endl
+                << "                         Your choise:";
 }
 
 //menu for displaying information sorted by sex
 void men_or_women_menu()
 {
-    std::cout   << "(1) Display men\n"
-                << "(2) Display women\n"
-                << "\nYour choise: ";
+    std::cout   << " ______________________________________________________________ " << std::endl
+                << "|                       [1] Display men                        |" << std::endl
+                << "|______________________________________________________________|" << std::endl
+                << "|                      [2] Display women                       |" << std::endl
+                << "|______________________________________________________________|" << std::endl
+                << " _____________________________________________________________ " << std::endl
+                << "                         Your choise:";
 }
 
 int main()
@@ -101,8 +142,7 @@ int main()
     std::string errorM = "ERROR: Choose the correct option";
 
     //delimiters for better look in the terminal
-    std::string single_delimiter = "\n______________________________________________________________\n";
-    std::string double_delimiter = "\n==============================================================\n";
+    std::string single_delimiter = "|_____________________________________________________________|\n\n";
 
     //the main cycle of the program
     Menu();
@@ -118,18 +158,31 @@ int main()
                         workers_by_sex, workers_by_age, workers_by_child,
                         workers_by_num_child, workers_by_salary, directors};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Display data of all employees\n"
-                            << "(2) Display workers' data sorted by departments\n"
-                            << "(3) Display workers' data sorted by experience\n"
-                            << "(4) Display workers' data sorted by sex\n"
-                            << "(5) Display workers' data sorted by age\n"
-                            << "(6) Display workers' data sorted by the presence of children\n"
-                            << "(7) Display workers' data sorted by number of children\n"
-                            << "(8) Display workers' data sorted by salary\n"
-                            << "(9) Display directors data\n\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|              [1] Display data of all employees              |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|       [2] Display workers' data sorted by departments       |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|        [3] Display workers' data sorted by experience       |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|           [4] Display workers' data sorted by sex           |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|           [5] Display workers' data sorted by age           |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "| [6] Display workers' data sorted by the presence of children|" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|    [7] Display workers' data sorted by number of children   |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|         [8] Display workers' data sorted by salary          |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                  [9] Display directors data                 |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -142,40 +195,49 @@ int main()
                 else if(second_choise == all_employers)
                 {
                     //outputting all employees
-                    std::cout   << double_delimiter
-                                << "ADMINISTRATION DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                   ADMINISTRATION DEPARTMENT                 |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputAdmin(adminList);
 
-                    std::cout   << double_delimiter
-                                << "DRIVER DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                      DRIVER DEPARTMENT                      |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputDriver(driverList);
 
-                    std::cout   << double_delimiter
-                                << "DISPATCH DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                      DISPATCH DEPARTMENT                    |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(dispatcherList);
 
-                    std::cout   << double_delimiter
-                                << "ROLLING STOCK REPAIR DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                ROLLING STOCK REPAIR DEPARTMENT              |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(rollStRepairmanList);
 
-                    std::cout   << double_delimiter
-                                << "ROAD REPAIR DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                    ROAD REPAIR DEPARTMENT                   |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(roadRepairmanList);
 
-                    std::cout   << double_delimiter
-                                << "CASH DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                        CASH DEPARTMENT                      |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(cashierList);
 
-                    std::cout   << double_delimiter
-                                << "WAREHOUSE DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                     WAREHOUSE DEPARTMENT                    |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(warehousemanList);
 
-                    std::cout   << double_delimiter
-                                << "HELP DESK DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                     HELP DESK DEPARTMENT                    |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(helperList);
 
-                    std::cout   << double_delimiter
-                                << "ACCOUNTING DEPARTMENT" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                     ACCOUNTING DEPARTMENT                   |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(accounterList);
 
                     Menu();
@@ -303,6 +365,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputAdminBySex(adminList, fourth_choise);
                     }
@@ -310,6 +373,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputDriverBySex(driverList, fourth_choise);
                     }
@@ -317,6 +381,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputWorkerBySex(dispatcherList, fourth_choise);
                     }
@@ -324,6 +389,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputWorkerBySex(rollStRepairmanList, fourth_choise);
                     }
@@ -331,6 +397,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputWorkerBySex(roadRepairmanList, fourth_choise);
                     }
@@ -338,6 +405,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputWorkerBySex(cashierList, fourth_choise);
                     }
@@ -345,6 +413,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputWorkerBySex(warehousemanList, fourth_choise);
                     }
@@ -352,6 +421,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputWorkerBySex(helperList, fourth_choise);
                     }
@@ -359,6 +429,7 @@ int main()
                     {
                         men_or_women_menu();
                         std::cin >> fourth_choise;
+                        std::cout << single_delimiter;
 
                         outputWorkerBySex(accounterList, fourth_choise);
                     }
@@ -616,8 +687,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -627,15 +696,25 @@ int main()
                         brig_by_age, brig_by_sum_salary,
                         brig_by_avar_salary};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Display brigade from all departments\n"
-                            << "(2) Display brigade in chosen department\n"
-                            << "(3) Display the locomotives' brigade\n"
-                            << "(4) Display brigade (sorted by age)\n"
-                            << "(5) Display brigade (sorted by summary salary)\n"
-                            << "(6) Display brigade (sorted by avarage salary)\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|           [1] Display brigade from all departments          |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|           [2] Display brigade in chosen department          |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|             [3] Display the locomotives' brigade            |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|              [4] Display brigade (sorted by age)            |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|        [5] Display brigade (sorted by summary salary)       |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|        [6] Display brigade (sorted by avarage salary)       |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
                 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -648,30 +727,39 @@ int main()
                 else if(second_choise == all_brig)
                 {
                     //outputting crews of driver department
-                    std::cout   << double_delimiter
-                                << "DRIVER DEPARTMENT" << std::endl
-                                << "First crew" << std::endl;
+                     std::cout  << " _____________________________________________________________ " << std::endl
+                                << "|                      DRIVER DEPARTMENT                      |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl
+                                << "|                          First crew                         |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputDriver(firstDriverCrew);
-                    std::cout   << single_delimiter
-                                << "Second crew" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                          Second crew                        |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputDriver(secondDriverCrew);
 
                     //outputting crews of rolling stock repair department
-                    std::cout   << double_delimiter
-                                << "ROLLING STOCK REPAIR DEPARTMENT" << std::endl
-                                << "First crew" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                ROLLING STOCK REPAIR DEPARTMENT              |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl
+                                << "|                          First crew                         |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(firstRollStRepairmanCrew);
-                    std::cout   << single_delimiter
-                                << "Second crew" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                          Second crew                        |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(secondRollStRepairmanCrew);
 
                     //outputting crews of road repair department
-                    std::cout   << double_delimiter
-                                << "ROAD REPAIR DEPARTMENT" << std::endl
-                                << "First crew" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                    ROAD REPAIR DEPARTMENT                   |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl
+                                << "|                          First crew                         |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(firstRoadRepairmanCrew);
-                    std::cout   << single_delimiter
-                                << "Second crew" << std::endl;
+                    std::cout   << " _____________________________________________________________ " << std::endl
+                                << "|                          Second crew                        |" << std::endl
+                                << "|_____________________________________________________________|" << std::endl;
                     outputWorker(secondRoadRepairmanCrew);
                     
                     Menu();
@@ -685,26 +773,35 @@ int main()
                     
                     if(third_choise == 1)
                     {
-                        std::cout   << "First crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          First crew                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputDriver(firstDriverCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          Second crew                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputDriver(secondDriverCrew);
                     }
                     else if(third_choise == 2)
                     {
-                        std::cout   << "First crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          First crew                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputWorker(firstRollStRepairmanCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          Second crew                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputWorker(secondRollStRepairmanCrew);
                     }
                     else if(third_choise == 3)
                     {
-                        std::cout   << "First crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          First crew                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputWorker(firstRoadRepairmanCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          Second crew                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputWorker(secondRoadRepairmanCrew);
                     }
                     else
@@ -724,26 +821,35 @@ int main()
 
                     if(third_choise == 1)
                     {
-                        std::cout   << "First crew (locomotive #001)" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                 First crew (locomotive #001)                |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputDriver(firstDriverCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew (locomotive #002)" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                 Second crew (locomotive #002)               |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputDriver(secondDriverCrew);
                     }
                     else if(third_choise == 2)
                     {
-                        std::cout   << "First crew (locomotive #001)" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                 First crew (locomotive #001)                |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputWorker(firstRollStRepairmanCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew (locomotive #002)" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                 Second crew (locomotive #002)               |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputWorker(secondRollStRepairmanCrew);
                     }
                     else if(third_choise == 3)
                     {
-                        std::cout   << "First crew (locomotive #001)" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                 First crew (locomotive #001)                |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputWorker(firstRoadRepairmanCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew (locomotive #002)" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                 Second crew (locomotive #002)               |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         outputWorker(secondRoadRepairmanCrew);
                     }
                     else
@@ -763,31 +869,40 @@ int main()
                     
                     if(third_choise == 1)
                     {
-                        std::cout   << "First crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          First crew                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         sortDriverByAge(firstDriverCrew);
                         outputDriver(firstDriverCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          Second crew                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         sortDriverByAge(secondDriverCrew);
                         outputDriver(secondDriverCrew);
                     }
                     else if(third_choise == 2)
                     {
-                        std::cout   << "First crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          First crew                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         sortWorkerByAge(firstRollStRepairmanCrew);
                         outputWorker(firstRollStRepairmanCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          Second crew                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         sortWorkerByAge(secondRollStRepairmanCrew);
                         outputWorker(secondRollStRepairmanCrew);
                     }
                     else if(third_choise == 3)
                     {
-                        std::cout   << "First crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          First crew                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         sortWorkerByAge(firstRoadRepairmanCrew);
                         outputWorker(firstRoadRepairmanCrew);
-                        std::cout   << single_delimiter
-                                    << "Second crew" << std::endl;
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                          Second crew                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl;
                         sortWorkerByAge(secondRoadRepairmanCrew);
                         outputWorker(secondRoadRepairmanCrew);
                     }
@@ -810,18 +925,24 @@ int main()
                     {
                         if(sortDriverBySumSalary(firstDriverCrew) > sortDriverBySumSalary(secondDriverCrew))
                         {
-                            std::cout   << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputDriver(firstDriverCrew);
-                            std::cout   << single_delimiter
-                                        << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputDriver(secondDriverCrew);
                         }
                         else
                         {
-                            std::cout   << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputDriver(secondDriverCrew);
-                            std::cout   << single_delimiter
-                                        << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputDriver(firstDriverCrew);
                         }
                     }
@@ -829,18 +950,24 @@ int main()
                     {
                         if(sortWorkerBySumSalary(firstRollStRepairmanCrew) > sortWorkerBySumSalary(secondRollStRepairmanCrew))
                         {
-                            std::cout   << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(firstRollStRepairmanCrew);
-                            std::cout   << single_delimiter
-                                        << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(secondRollStRepairmanCrew);
                         }
                         else
                         {
-                            std::cout   << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(secondRollStRepairmanCrew);
-                            std::cout   << single_delimiter
-                                        << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(firstRollStRepairmanCrew);
                         }
                     }
@@ -848,18 +975,24 @@ int main()
                     {
                         if(sortWorkerBySumSalary(firstRoadRepairmanCrew) > sortWorkerBySumSalary(secondRoadRepairmanCrew))
                         {
-                            std::cout   << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(firstRoadRepairmanCrew);
-                            std::cout   << single_delimiter
-                                        << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(secondRoadRepairmanCrew);
                         }
                         else
                         {
-                            std::cout   << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(secondRoadRepairmanCrew);
-                            std::cout   << single_delimiter
-                                        << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(firstRoadRepairmanCrew);
                         }
                     }
@@ -882,18 +1015,24 @@ int main()
                     {
                         if(sortDriverByAvgSalary(firstDriverCrew) > sortDriverByAvgSalary(secondDriverCrew))
                         {
-                            std::cout   << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputDriver(firstDriverCrew);
-                            std::cout   << single_delimiter
-                                        << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputDriver(secondDriverCrew);
                         }
                         else
                         {
-                            std::cout   << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputDriver(secondDriverCrew);
-                            std::cout   << single_delimiter
-                                        << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputDriver(firstDriverCrew);
                         }
                     }
@@ -901,18 +1040,24 @@ int main()
                     {
                         if(sortWorkerByAvgSalary(firstRollStRepairmanCrew) > sortWorkerByAvgSalary(secondRollStRepairmanCrew))
                         {
-                            std::cout   << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(firstRollStRepairmanCrew);
-                            std::cout   << single_delimiter
-                                        << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(secondRollStRepairmanCrew);
                         }
                         else
                         {
-                            std::cout   << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(secondRollStRepairmanCrew);
-                            std::cout   << single_delimiter
-                                        << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(firstRollStRepairmanCrew);
                         }
                     }
@@ -920,18 +1065,24 @@ int main()
                     {
                         if(sortWorkerByAvgSalary(firstRoadRepairmanCrew) > sortWorkerByAvgSalary(secondRoadRepairmanCrew))
                         {
-                            std::cout   << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(firstRoadRepairmanCrew);
-                            std::cout   << single_delimiter
-                                        << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(secondRoadRepairmanCrew);
                         }
                         else
                         {
-                            std::cout   << "Second crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          Second crew                        |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(secondRoadRepairmanCrew);
-                            std::cout   << single_delimiter
-                                        << "First crew" << std::endl;
+                            std::cout   << " _____________________________________________________________ " << std::endl
+                                        << "|                          First crew                         |" << std::endl
+                                        << "|_____________________________________________________________|" << std::endl;
                             outputWorker(firstRoadRepairmanCrew);
                         }
                     }
@@ -950,8 +1101,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -959,12 +1108,22 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum {menu_c, mexam_sex, mexam_age, mexam_salary};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show data about driver's medical examination (sorted by sex)\n"
-                            << "(2) Show data about driver's medical examination (sorted by age)\n"
-                            << "(3) Show data about driver's medical examination (sorted by salary)\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|      [1] Show data about driver's medical examination       |" << std::endl
+                            << "|                       (sorted by sex)                       |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|      [2] Show data about driver's medical examination       |" << std::endl
+                            << "|                       (sorted by age)                       |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|      [3] Show data about driver's medical examination       |" << std::endl
+                            << "|                      (sorted by salary)                     |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -979,6 +1138,7 @@ int main()
                     //outputting medial examination data sorted by sex
                     men_or_women_menu();
                     std::cin >> fourth_choise;
+                    std::cout << single_delimiter;
 
                     outputDriverMedBySex(driverList, fourth_choise);
                 }
@@ -1001,8 +1161,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1010,12 +1168,20 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_d, loc_stay, loc_comeback, loc_count_trips};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show data about the locomotives sorted by staying at the station\n"
-                            << "(2) Show locomotives data sorted by come back time\n"
-                            << "(3) Show locomotives data sorted by number of routes\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|       [1] Show data about the locomotives sorted by         |" << std::endl
+                            << "|                   staying at the station                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|     [2] Show locomotives data sorted by come back time      |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|    [3] Show locomotives data sorted by number of routes     |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1050,8 +1216,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1059,14 +1223,26 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_e, insp_by_time, insp_by_repair, insp_by_rep_count, insp_by_flights, insp_by_age};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show locomotive inspection data (sorted by time period)\n"
-                            << "(2) Show locomotive inspection data (sorted by repair time)\n"
-                            << "(3) Show locomotive inspection data (sorted by number of repairs)\n"
-                            << "(4) Show locomotive inspection data (sorted by routes before overhaul)\n"
-                            << "(5) Show locomotive inspection data (sorted by age)\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "| [1] Show locomotive inspection data (sorted by time period) |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "| [2] Show locomotive inspection data (sorted by repair time) |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|             [3] Show locomotive inspection data             |" << std::endl
+                            << "|                (sorted by number of repairs)                |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|             [4] Show locomotive inspection data             |" << std::endl
+                            << "|             (sorted by routes before overhaul)              |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|     [5] Show locomotive inspection data (sorted by age)     |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
+
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1112,8 +1288,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1121,13 +1295,21 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_f, train_flight, train_f_duration, train_price, train_category};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show data about train (sorted by selected route)\n"
-                            << "(2) Show data about train (sorted by route duration)\n"
-                            << "(3) Show data about train (sorted by ticket price)\n"
-                            << "(4) Show data about train (sorted by all categories)\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|     [1] Show data about train (sorted by selected route)    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|     [2] Show data about train (sorted by route duration)    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|      [3] Show data about train (sorted by ticket price)     |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|     [4] Show data about train (sorted by all categories)    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1144,9 +1326,13 @@ int main()
                     //lambda function for outputting a part of the menu
                     auto route_menu = []()
                     {
-                        std::cout   << "1) Kyiv-Lviv" << std::endl
-                                    << "2) Uzhhorod-Lviv" << std::endl
-                                    << "Your choise: ";
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                        [1] Kyiv-Lviv                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << "|                      [2] Uzhhorod-Lviv                      |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << " _____________________________________________________________ " << std::endl
+                                    << "                         Your choise:";
                     };
                     route_menu();
                     std::cin >> third_choise;
@@ -1182,9 +1368,13 @@ int main()
                     //lambda function for outputting a part of the menu
                     auto route_menu = []()
                     {
-                        std::cout   << "1) Passenger" << std::endl
-                                    << "2) Cargo" << std::endl
-                                    << "Your choise: ";
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                        [1] Passenger                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << "|                          [2] Cargo                          |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << " _____________________________________________________________ " << std::endl
+                                    << "                         Your choise:";
                     };
                     route_menu();
                     std::cin >> third_choise;
@@ -1211,8 +1401,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1220,10 +1408,15 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_g, can_route,};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show data about canceled routes in a given route\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|    [1] Show data about canceled routes in a given route     |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
                 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1245,8 +1438,6 @@ int main()
                     break;
                 }
 
-                std::cout << single_delimiter;
-
                 Menu();
             break;
 
@@ -1254,12 +1445,19 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_h, flight_reason, flight_route, handedIn_tickets};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show route delays (sorted by reason)\n"
-                            << "(2) Show route delays (sorted by specified route)\n"
-                            << "(3) Show the number of tickets handed in during the delay\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|           [1] Show route delays (sorted by reason)          |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|      [2] Show route delays (sorted by specified route)      |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|  [3] Show the number of tickets handed in during the delay  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout <<  single_delimiter;
@@ -1289,8 +1487,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1299,12 +1495,22 @@ int main()
                 enum{menu_i, tickets_period, tickets_route_duration,
                         tickets_by_price};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show the average number of tickets sold over a given period of time\n"
-                            << "(2) Show the average number of tickets sold (sorted by route duration)\n"
-                            << "(3) Show the average number of tickets sold (sorted by ticket price)\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|           [1] Show the average number of tickets            |" << std::endl
+                            << "|              sold over a given period of time               |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|         [2] Show the average number of tickets sold         |" << std::endl
+                            << "|                  (sorted by route duration)                 |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|         [3] Show the average number of tickets sold         |" << std::endl
+                            << "|                   (sorted by ticket price)                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1334,8 +1540,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1343,11 +1547,17 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_j, list_route, list_category};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show list of routes of the specified category\n"
-                            << "(2) Show list of categories along the routes\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                    [0] Return to the menu                   |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|      [1] Show list of routes of the specified category      |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|         [2] Show list of categories along the routes        |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1363,9 +1573,13 @@ int main()
                     //lambda function for outputting a part of the menu
                     auto route_menu = []()
                     {
-                        std::cout   << "1) Passenger" << std::endl
-                                    << "2) Cargo" << std::endl
-                                    << "Your choise: ";
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                        [1] Passenger                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << "|                          [2] Cargo                          |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << " _____________________________________________________________ " << std::endl
+                                    << "                         Your choise:";
                     };
                     route_menu();
                     std::cin >> third_choise;
@@ -1395,8 +1609,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1405,15 +1617,26 @@ int main()
                 enum{menu_k, pass_flight, pass_dep_day, pass_dep_abr,
                         pass_luggage, pass_sex, pass_age};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show passenger data (sorted by specified route)\n"
-                            << "(2) Show passenger data (sorted by departure day)\n"
-                            << "(3) Show passenger data (sorted by departure abroad day)\n"
-                            << "(4) Show passenger data (sorted by delivery of things to the luggage compartment)\n"
-                            << "(5) Show passenger data (sorted by sex)\n"
-                            << "(6) Show passenger data (sorted by age)\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|     [1] Show passenger data (sorted by specified route)     |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|      [2] Show passenger data (sorted by departure day)      |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|   [3] Show passenger data (sorted by departure abroad day)  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [4] Show passenger data                   |" << std::endl
+                            << "|  (sorted by delivery of things to the luggage compartment)  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|            [5] Show passenger data (sorted by sex)          |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|            [6] Show passenger data (sorted by age)          |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1429,9 +1652,13 @@ int main()
                     //lambda function for outputting a part of the menu
                     auto route_menu = []()
                     {
-                        std::cout   << "1) Kyiv-Lviv" << std::endl
-                                    << "2) Uzhhorod-Lviv" << std::endl
-                                    << "Your choise: ";
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                        [1] Kyiv-Lviv                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << "|                      [2] Uzhhorod-Lviv                      |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << " _____________________________________________________________ " << std::endl
+                                    << "                         Your choise:";
                     };
 
                     route_menu();
@@ -1458,6 +1685,7 @@ int main()
                 {   
                     men_or_women_menu();
                     std::cin >> third_choise;
+                    std::cout << single_delimiter;
 
                     outputPassBySex(passengerList, third_choise);
                 }
@@ -1473,8 +1701,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1482,11 +1708,17 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_l, unp_tick_flight, unp_tick_day};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show data on unpurchased tickets on the specified route\n"
-                            << "(2) Show data on unpurchased tickets sorted by day\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "| [1] Show data on unpurchased tickets on the specified route |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|     [2] Show data on unpurchased tickets sorted by day      |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1501,9 +1733,13 @@ int main()
                     //lambda function for outputting a part of the menu
                     auto route_menu = []()
                     {
-                        std::cout   << "1) Kyiv-Lviv" << std::endl
-                                    << "2) Uzhhorod-Lviv" << std::endl
-                                    << "Your choise: ";
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                        [1] Kyiv-Lviv                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << "|                      [2] Uzhhorod-Lviv                      |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << " _____________________________________________________________ " << std::endl
+                                    << "                         Your choise:";
                     };
 
                     route_menu();
@@ -1517,9 +1753,13 @@ int main()
                     //lambda function for outputting a part of the menu
                     auto route_menu = []()
                     {
-                        std::cout   << "1) 20.05.22" << std::endl
-                                    << "2) 22.05.22" << std::endl
-                                    << "Your choise: ";
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                        [1] 20.05.22                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << "|                        [2] 22.05.22                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << " _____________________________________________________________ " << std::endl
+                                    << "                         Your choise:";
                     };
 
                     route_menu();
@@ -1535,8 +1775,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1544,11 +1782,17 @@ int main()
                 //enum type to use the menu (for code readability)
                 enum{menu_m, ret_tick_flight, ret_tick_day};
 
-                std::cout   << "Select the required data: \n"
-                            << "(0) Return to the menu\n"
-                            << "(1) Show the data of returned tickets on the specified route\n"
-                            << "(2) Show returned tickets details on the specified day\n"
-                            << "Your choise: ";
+                std::cout   << " _____________________________________________________________ " << std::endl
+                            << "|                  Select the required data:                  |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|                   [0] Return to the menu                    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|[1] Show the data of returned tickets on the specified route |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << "|   [2] Show returned tickets details on the specified day    |" << std::endl
+                            << "|_____________________________________________________________|" << std::endl
+                            << " _____________________________________________________________ " << std::endl
+                            << "                         Your choise:";
 
                 std::cin >> second_choise;
                 std::cout << single_delimiter;
@@ -1563,9 +1807,13 @@ int main()
                     //lambda function for outputting a part of the menu
                     auto route_menu = []()
                     {
-                        std::cout   << "1) Kyiv-Lviv" << std::endl
-                                    << "2) Uzhhorod-Lviv" << std::endl
-                                    << "Your choise: ";
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                        [1] Kyiv-Lviv                        |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << "|                      [2] Uzhhorod-Lviv                      |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << " _____________________________________________________________ " << std::endl
+                                    << "                         Your choise:";
                     };
 
                     route_menu();
@@ -1579,9 +1827,13 @@ int main()
                     //lambda function for outputting a part of the menu
                     auto route_menu = []()
                     {
-                        std::cout   << "1) 20.05.22" << std::endl
-                                    << "2) 22.05.22" << std::endl
-                                    << "Your choise: ";
+                        std::cout   << " _____________________________________________________________ " << std::endl
+                                    << "|                        [1] 20.05.22                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << "|                        [2] 22.05.22                         |" << std::endl
+                                    << "|_____________________________________________________________|" << std::endl
+                                    << " _____________________________________________________________ " << std::endl
+                                    << "                         Your choise:";
                     };
 
                     route_menu();
@@ -1597,8 +1849,6 @@ int main()
                     break;
                 }
 
-                std::cout <<  single_delimiter;
-
                 Menu();
             break;
 
@@ -1613,8 +1863,11 @@ int main()
 
                 std::cout   << "====================================================================\n"
                             << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                            << "      ---> Creator of this program: git-user-cpp (m!haly4) <---     \n"
-                            << "           ---> Link: https://github.com/git-user-cpp <---          \n"
+                            << "    _____________________________________________________________\n"
+                            << "   |  ---> Creator of this program: git-user-cpp (m!haly4) <---  |\n"
+                            << "   |_____________________________________________________________|\n"
+                            << "   |       ---> Link: https://github.com/git-user-cpp <---       |\n"
+                            << "   |_____________________________________________________________|\n\n"
                             << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
                             << "====================================================================\n";
 
@@ -1627,7 +1880,9 @@ int main()
         }
     }
 
-    std::cout << "The program is stopped" << std::endl;
+    std::cout   << " _____________________________________________________________ " << std::endl
+                << "|                   The program is stopped                    |" << std::endl
+                << "|_____________________________________________________________|" << std::endl;
 
     return 0;
 }
