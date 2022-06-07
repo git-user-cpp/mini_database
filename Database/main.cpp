@@ -22,8 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "data.h"
-#include "workers.h"
+#include "data.hpp"
+#include "workers.hpp"
 
 //Main menu and global variable for it
     int choise;
