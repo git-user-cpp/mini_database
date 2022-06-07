@@ -1,4 +1,4 @@
-# Mini Database v1.1.0
+# Mini Database v1.1.1
 :red_circle: This database is implemented in C++ programming language. It was developed in order to complete the task of the course work. :red_circle:
 
 ## ⚠️ LICENSE ⚠️
