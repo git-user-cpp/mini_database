@@ -1,4 +1,24 @@
 # Mini Database v1.1.1
+
+![GitHub all releases](https://img.shields.io/github/downloads/git-user-cpp/mini_database/total?color=00FF00&logo=GitHub&logoColor=00FF00&style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/git-user-cpp/mini_database?color=FFFF00&logo=GitHub&logoColor=FFFF00&style=plastic)
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/git-user-cpp/mini_database?color=ff0000&logo=GitHub&logoColor=ff0000&style=plastic)
+![GitHub Release Date](https://img.shields.io/github/release-date/git-user-cpp/mini_database?color=ff4500&logo=GitHub&logoColor=ff4500&style=plastic)
+![GitHub](https://img.shields.io/github/license/git-user-cpp/mini_database?color=FFD700&logo=GitHub&logoColor=FFD700&style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/git-user-cpp/mini_database?color=7FFFD4&logo=GitHub&logoColor=7FFFD4&style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/git-user-cpp/mini_database?color=red&logo=GitHub&logoColor=red&style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/git-user-cpp/mini_database?color=00BFFF&logo=github&logoColor=00BFFF&style=plastic)
+
+![GitHub contributors](https://img.shields.io/github/contributors-anon/git-user-cpp/mini_database?color=ff0000&logo=github&logoColor=ff0000&style=plastic)
+![GitHub watchers](https://img.shields.io/github/watchers/git-user-cpp/mini_database?color=DC143C&logo=github&logoColor=DC143C&style=plastic)
+![GitHub followers](https://img.shields.io/github/followers/git-user-cpp?color=7FFF00&logo=github&logoColor=7FFF00&style=plastic)
+![GitHub Sponsors](https://img.shields.io/github/sponsors/git-user-cpp?color=00FFFF&logo=github&logoColor=00FFFF&style=plastic)
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/git-user-cpp/mini_database?color=98FB98&logo=github&logoColor=98FB98&style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/git-user-cpp/mini_database?color=98FB98&logo=github&logoColor=98FB98&style=plastic)
+
+#
 :red_circle: This database is implemented in C++ programming language. It was developed in order to complete the task of the course work. :red_circle:
 
 ## ⚠️ LICENSE ⚠️
