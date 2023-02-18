@@ -18,8 +18,11 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/git-user-cpp/mini_database?color=98FB98&logo=github&logoColor=98FB98&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/git-user-cpp/mini_database?color=98FB98&logo=github&logoColor=98FB98&style=plastic)
 
-#
+---
+
 :red_circle: This database is implemented in C++ programming language. It was developed in order to complete the task of the course work. :red_circle:
+
+---
 
 ## ⚠️ LICENSE ⚠️
 MIT License
@@ -44,6 +47,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+---
+
 ## 💻 How to use this database 💻
 
 1) ⚠️ **The application is designed for Linux, so avoid using other systems or remake the program to avoid bugs.** ⚠️ 
@@ -67,3 +72,5 @@ SOFTWARE.
     ./main
     ```
 6) 👷 Select the desired function by pressing **1** or **2** or **3** or **4 ...** + **Enter**. If you want to close the app, press **0** + **Enter** in main menu.
+
+---
